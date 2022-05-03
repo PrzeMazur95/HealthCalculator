@@ -48,6 +48,72 @@ class User extends Dbh {
 
     }
 
+    protected function getUser($username, $pwd){
+
+        $stmt = $this->connect()->prepare('SELECT pwd FROM Users WHERE username = ? OR email = ?');
+
+        if(!$stmt->execute(array($username, $pwd))){
+
+            $stmt = null;
+            header("location: ../login.php?error=stmtfailed");
+            exit();
+
+        }
+
+        if($stmt->rowCount() == 0){
+
+            $stmt = null;
+            header("location: ../login.php?error=notfound");
+            exit();
+
+        }
+
+        $pwdHashed = $stmt->fetchAll();
+        $checkPwd = password_verify($pwd, $pwdHashed[0]['pwd']);
+
+        if($checkPwd == false){
+
+            $stmt = null;
+            header("location: ../login.php?error=wrongpassword");
+            exit();
+
+        } elseif ($checkPwd == true){
+
+            $stmt = $this->connect()->prepare('SELECT * FROM Users WHERE username = ? OR email = ? AND pwd = ?');
+
+            if(!$stmt->execute(array($username, $username, $pwd))){
+
+                $stmt = null;
+                header("location: ../login.php?error=stmtfailed");
+                exit();
+    
+            }
+
+            if($stmt->rowCount() == 0){
+
+                $stmt = null;
+                header("location: ../login.php?error=notfound");
+                exit();
+    
+            }
+
+            $user = $stmt->fetchAll();
+
+            session_start();
+
+            $_SESSION['userid']=$user[0]['id'];
+            $_SESSION['username']=$user[0]['username'];
+
+            $stmt = null;
+
+
+        }
+
+
+        $stmt = null;
+
+    }
+
 }
 
 ?>
