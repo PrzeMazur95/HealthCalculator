@@ -152,4 +152,19 @@ class UserController extends User {
 
     }   
 
+    public function loginUser(){
+
+        if(empty($this->username) || empty($this->pwd)){
+
+            header("location: ../login.php?error=emptyFields");
+            exit();
+
+        } else {
+
+            $this->getUser($this->username, $this->pwd);
+
+        }
+
+    }
+
 }
