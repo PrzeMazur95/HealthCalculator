@@ -72,6 +72,10 @@
                                                         echo "You could not use special chars in username!";
                                                         break;
 
+                                                    case "stmtfailed":
+                                                        echo "Something went wrong with Db connection, contact with Admin!";
+                                                        break;    
+
                                                 }
                                                 echo "</div>";
 

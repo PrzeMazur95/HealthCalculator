@@ -11,7 +11,7 @@ class User extends Dbh {
         if(!$stmt->execute(array($username, $hashedPwd, $email))){
 
             $stmt = null;
-            header("location: ../index.html?error=stmtfailed1");
+            header("location: ../register.php?error=stmtfailed");
             exit();
 
         }
@@ -27,7 +27,7 @@ class User extends Dbh {
         if(!$stmt->execute(array($username, $email))){
 
             $stmt = null;
-            header("location: ../index.html?error=stmtfailed2");
+            header("location: ../register.php?error=stmtfailed");
             exit();
 
         }
