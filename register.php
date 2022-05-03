@@ -47,6 +47,36 @@
                                                     </div>
                                                 </div>
                                             </div>
+                                            <?php if(isset($_GET['error'])){
+                                                
+                                                echo "<div class='alert alert-danger text-center' role='alert'>";
+                                                switch ($_GET['error']){
+
+                                                    case "emptyinput":
+                                                        echo "You have to fill all fields!";
+                                                        break;
+                                                    
+                                                    case "pwdnotMatch":
+                                                        echo "Passwords are not the same!";
+                                                        break;
+
+                                                    case "usernameTaken":
+                                                        echo "User with this name allready exists!";
+                                                        break;
+
+                                                    case "invalidEmail":
+                                                        echo "User with this email allready exists!";
+                                                        break;
+
+                                                    case "invalidUsername":
+                                                        echo "You could not use special chars in username!";
+                                                        break;
+
+                                                }
+                                                echo "</div>";
+
+                                                }
+                                            ?>
                                             <div class="mt-4 mb-0">
                                                 <div class="d-grid"><button class="btn btn-primary btn-block" type="submit" name="submit">Create Account</a></div>
                                             </div>
