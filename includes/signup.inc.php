@@ -13,7 +13,7 @@ include_once "autoloader.inc.php";
 
         $signup->signupUser();
 
-        header("location: ../login.php?error=created");
+        header("location: ../login.php");
 
     }
 
