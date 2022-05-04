@@ -19,5 +19,31 @@ class Weight extends Dbh {
 
     }
 
+    protected function getWeight($user_id){
+
+        $stmt = $this->connect()->prepare('SELECT * FROM Weight WHERE user_id = (?)');
+
+        $stmt->execute([$user_id]);
+
+        $results = $stmt->fetchAll();
+
+        if(!$results){
+
+            return false;
+            $stmt = null;
+            exit();
+
+        } else {
+
+            return $results;
+            $stmt = null;
+            exit();
+
+        }
+
+        return $results;
+
+    }  
+
 }
 ?>
