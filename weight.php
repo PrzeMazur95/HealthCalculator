@@ -135,18 +135,61 @@
                         <div class="row">
                             <div class="col-xl-12">
                                 <div class="card mb-4">
+                                            <?php 
+                                
+                                            if(isset($_GET['error'])){
+                                                
+                                                echo "<div class='alert alert-danger text-center' role='alert'>";
+                                                switch ($_GET['error']){
+
+                                                    case "emptyweight":
+                                                        echo "You have to fill weight field!";
+                                                        break;
+                                                    
+                                                    case "submit":
+                                                        echo "You have to submit the form!";
+                                                        break;
+
+                                                    case "emptyinput":
+                                                        echo "You may be not logged in, or you not filled weight!";
+                                                        break;
+
+                                                    case "invalidEmail":
+                                                        echo "User with this email allready exists!";
+                                                        break;
+
+                                                    case "stmtfailed":
+                                                        echo "Something went wrong with Db connection, contact with Admin!";
+                                                        break;    
+
+                                                }
+                                                echo "</div>";
+
+                                                }
+
+                                                if(isset($_GET['info'])){
+                                                
+                                                    echo "<div class='alert alert-success text-center' role='alert'>";
+                                                    echo "Succes! You have added todays result!";   
+                                                    echo "</div>";
+    
+                                                    }
+                                            ?>
                                     <div class="card-header">
                                         <i class="fas fa-chart-area me-1"></i>
-                                        Add todays weight!
+                                        <h3>Add todays weight!</h2>
                                     </div>
-                                    <form>
+                                    <form action="includes/weight.inc.php" method="post">
                                         <div class="row">
-                                            <div class="col-lg-12">
-                                            <input type="text" class="form-control" placeholder="Type for example : 73,5">
+                                            <div class="col-lg-4">
+                                            <input type="text" class="form-control" name="weight" placeholder="Type your result for example : 73,5" required>
+                                            </div>
+                                            <div class="col-lg-8">
+                                            <input type="text" class="form-control" name="comment" placeholder="Optional type some comment - Maybe yesterday was w cheatday?">
                                             </div>
                                         </div>
                                         <div class="text-center">
-                                            <button type="button" class="btn btn-primary" name="submit" value="Add">Add</button>
+                                            <button type="submit" class="btn btn-primary" name="submit" value="Add">Add</button>
                                             </div>
                                     </form>
                                 </div>
