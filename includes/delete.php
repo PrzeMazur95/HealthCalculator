@@ -8,10 +8,11 @@ if(isset($_GET['id'])){
 
         $table = $_GET['table'];
         $id = $_GET['id'];
+        $userid = $_GET['userid'];
 
         $delete = new DbObjectController();
 
-        $result = $delete->DeleteDbRow($_GET['table'], $_GET['id']);
+        $result = $delete->DeleteDbRow($_GET['table'], $_GET['id'], $_GET['userid']);
 
         if($result){
 

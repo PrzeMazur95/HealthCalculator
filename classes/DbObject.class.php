@@ -2,11 +2,11 @@
 
 class DbObject extends Dbh {
 
-    protected function DeleteRow($id, $table){
+    protected function DeleteRow($id, $table, $userid){
 
-        $stmt = $this->connect()->prepare("DELETE FROM ".$table." WHERE id = (?)");
+        $stmt = $this->connect()->prepare("DELETE FROM ".$table." WHERE id = (?) AND user_id = (?)");
 
-       $result = $stmt->execute([$id]);
+       $result = $stmt->execute([$id, $userid]);
 
         if(!$result){
 
