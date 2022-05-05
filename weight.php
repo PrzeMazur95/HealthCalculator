@@ -147,12 +147,22 @@
                                                 }
 
                                                 if(isset($_GET['info'])){
-                                                
+
                                                     echo "<div class='alert alert-success text-center' role='alert'>";
-                                                    echo "Succes! You have added todays result!";   
+                                                    switch ($_GET['info']){
+                                                        
+                                                        case "properlyAdded":
+                                                            echo "Succes! You have added todays result!"; 
+                                                            break;
+
+                                                        case "deleted":
+                                                            echo "Succes! You have succesfully deleted this result!"; 
+                                                            break;
+                                                    }
+ 
                                                     echo "</div>";
     
-                                                    }
+                                                }
                                             ?>
                                     <div class="card-header">
                                         <i class="fas fa-chart-area me-1"></i>
@@ -211,7 +221,7 @@
                                                 <td><?php echo $row['comment']; ?></td>
                                                 <td>
                                                 <a href="edit.php?id=<?php echo $row['id']; ?>" class="btn btn-primary btn-sm">Edit</a>
-                                                <a href="delete.php?id=<?php echo $row['id']; ?>" class="btn btn-danger btn-sm" onclick="return confirm('Are you sure, you want to delete this result?')">Delete</a>
+                                                <a href="includes/delete.php?id=<?php echo $row['id']; ?>&table=Weight" class="btn btn-danger btn-sm" onclick="return confirm('Are you sure, you want to delete this result?')">Delete</a>
                                                 </td>
                                                     
                                             </tr>
