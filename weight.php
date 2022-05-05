@@ -14,8 +14,8 @@
         $_SESSION['max'] = $_GET['max'];
     } else {
 
-        $min = 50;
-        $max = 180;
+        $_SESSION['min'] = 50;
+        $_SESSION['max'] = 110;
 
     }
 
