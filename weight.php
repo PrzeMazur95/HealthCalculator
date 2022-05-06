@@ -220,7 +220,7 @@
                                                 <td><?php echo $row['weight']; ?></td>
                                                 <td><?php echo $row['comment']; ?></td>
                                                 <td>
-                                                <a href="edit.php?id=<?php echo $row['id']; ?>" class="btn btn-primary btn-sm">Edit</a>
+                                                <a href="includes/edit.php?id=<?php echo $row['id']; ?>&table=Weight&userid=<?php echo $_SESSION['userid'] ?>" class="btn btn-primary btn-sm">Edit</a>
                                                 <a href="includes/delete.php?id=<?php echo $row['id']; ?>&table=Weight&userid=<?php echo $_SESSION['userid'] ?>" class="btn btn-danger btn-sm" onclick="return confirm('Are you sure, you want to delete this result?')">Delete</a>
                                                 </td>
                                                     
