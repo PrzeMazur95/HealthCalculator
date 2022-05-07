@@ -100,6 +100,7 @@
                 <main>
                     <div class="container-fluid px-4">
                         <h1 class="mt-4">Weight control</h1>
+                        <button id="edit">Weight control</button>
                         <div class="row">
                             <div class="col-xl-12">
                                 <div class="card mb-4">
@@ -220,7 +221,7 @@
                                                 <td><?php echo $row['weight']; ?></td>
                                                 <td><?php echo $row['comment']; ?></td>
                                                 <td>
-                                                <a href="includes/edit.php?id=<?php echo $row['id']; ?>&table=Weight&userid=<?php echo $_SESSION['userid'] ?>" class="btn btn-primary btn-sm">Edit</a>
+                                                <a href="includes/edit.php?id=<?php echo $row['id']; ?>&table=Weight&action=edit&userid=<?php echo $_SESSION['userid'] ?>" class="btn btn-primary btn-sm">Edit</a>
                                                 <a href="includes/delete.php?id=<?php echo $row['id']; ?>&table=Weight&userid=<?php echo $_SESSION['userid'] ?>" class="btn btn-danger btn-sm" onclick="return confirm('Are you sure, you want to delete this result?')">Delete</a>
                                                 </td>
                                                     
