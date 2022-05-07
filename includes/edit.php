@@ -1,3 +1,71 @@
+<?php 
+
+session_start();
+
+include_once "autoloader.inc.php";
+
+$properid;
+
+
+
+if(!isset($_SESSION['username'])){
+
+    header("location: login.php?error=loginfirst");
+}
+
+if(isset($_GET['action'])){
+
+    if($_GET['table']=="Weight"){
+
+        $result = new DbObjectView();
+
+        $object = $result->Find_by_id($_GET['table'], $_GET['id'], $_GET['userid']);
+
+        $properid = $_GET['id'];
+        
+        if(!$object){
+
+            header ("location: ../weight.php?error=db");    
+
+        }
+
+    }elseif($_GET['table']=="product"){
+
+        echo "FUTURE PHP CODE TO EDIT PRODUCTS";
+
+    }else{
+
+        header ("location: ../index.php");
+
+    }
+
+} else {
+
+    header ("location: ../index.php");
+
+}
+
+
+if(isset($_POST['Update'])){
+
+
+    $id = $_POST['id'];
+    $date = $_POST['date'];
+    $weight = $_POST['weight'];
+    $comment = $_POST['comment'];
+
+    echo $id;
+    echo $date;
+    echo $weight;
+    echo $comment;
+
+}
+
+
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
