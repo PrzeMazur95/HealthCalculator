@@ -45,5 +45,25 @@ class Weight extends Dbh {
 
     }  
 
+    protected function updateWeight($user_id, $id, $weight, $date, $comment){
+
+        $stmt = $this->connect()->prepare("UPDATE Weight SET weight = (?), datte = (?), comment = (?) WHERE user_id = (?) AND id = (?)");
+
+        if($stmt->execute(array($weight, $date, $comment, $user_id, $id))){
+
+            return true;
+            $stmt = null;
+            exit();
+
+        } else {
+            
+            return false;
+            $stmt = null;
+            exit();
+
+        }
+
+    }
+
 }
 ?>
