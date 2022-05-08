@@ -159,6 +159,10 @@
                                                         case "deleted":
                                                             echo "Succes! You have succesfully deleted this result!"; 
                                                             break;
+
+                                                        case "edited":
+                                                            echo "Succes! You have succesfully edited this result!"; 
+                                                            break;
                                                     }
  
                                                     echo "</div>";
