@@ -4,8 +4,9 @@ class WeightController extends Weight {
 
     private $user_id;
     private $weight;
-    private $date;
+    public $date;
     private $comment;
+    public $id;
 
     public function __construct($user_id, $weight, $comment){
 
@@ -46,6 +47,34 @@ class WeightController extends Weight {
         }
 
         return $result;
+
+    }
+
+
+    public function updateResult(){
+
+        if($this->emptyInput() == false){
+
+            header("location: ../weight.php?error=emptyinput");
+    
+            exit();
+
+        } else {
+
+            if($this->updateWeight($this->user_id, $this->id, $this->weight, $this->date, $this->comment)){
+
+                header("location: ../weight.php?info=edited");
+
+            } else {
+
+                header("location: ../weight.php?error=stmtfailed");
+
+            }
+            
+
+            
+            
+        }
 
     }
 
