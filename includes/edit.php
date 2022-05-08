@@ -39,10 +39,6 @@ if(isset($_GET['action'])){
 
     }
 
-} else {
-
-    header ("location: ../index.php");
-
 }
 
 
@@ -50,14 +46,15 @@ if(isset($_POST['Update'])){
 
 
     $id = $_POST['id'];
+    $userid = $_POST['userid'];
     $date = $_POST['date'];
     $weight = $_POST['weight'];
     $comment = $_POST['comment'];
 
-    echo $id;
-    echo $date;
-    echo $weight;
-    echo $comment;
+    $update = new WeightController($userid, $weight, $comment);
+    $update->id=$id;
+    $update->date=$date;
+    $update->updateResult();
 
 }
 
@@ -211,6 +208,9 @@ if(isset($_POST['Update'])){
                                          </div>
                                         <div class="d-print-none">
                                         <input type="hidden" name="id" value="<?php echo $object[0]['id']; ?>">
+                                        </div>
+                                        <div class="d-print-none">
+                                        <input type="hidden" name="userid" value="<?php echo $object[0]['user_id']; ?>">
                                         </div>
                                     </form>
                                 </div>
