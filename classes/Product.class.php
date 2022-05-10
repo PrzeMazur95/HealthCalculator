@@ -1,68 +1,31 @@
 <?php
 
-class Weight extends Dbh {
+class Product extends Dbh {
 
-    protected function setWeight($user_id, $weight, $date, $comment){
+    protected function setProduct($name,  $kcal,  $protein,  $animal_protein, $vegetable_protein,  $fat,  $saturated_fat,  $monounsaturated_fat, $polyunsaturated_fat, $omega3_acid, $omega6_acid, $carbohydrates, $net_carbohydrates, $sugar,  $fiber,  $salt, $cholesterol, $witamin_k, $witamin_a, $witamin_b1,  $witamin_b2,  $witamin_b5, $witamin_b6,  $biotin,  $folic_acid,  $witamin_b12,  $witamin_c,  $witamin_d,  $witamin_e, $witamin_pp, $calcium, $chlorine, $magnesium, $phosphorus, $potassium, $sodium, $iron, $zinc, $copper,  $manganese, $molybdenum, $iodine, $fluorine, $chrome, $selenium, $description){
 
-        $stmt = $this->connect()->prepare('INSERT INTO Weight (user_id, weight, datte, comment) VALUES (?, ?, ?, ?)');
 
-        if(!$stmt->execute(array($user_id, $weight, $date, $comment))){
-
-            $stmt = null;
-            header("location: ../weight.php?error=stmtfailed");
-            exit();
-
-        }
-
-        $stmt = null;
-        header("location: ../weight.php?info=properlyadded");
-
-    }
-
-    protected function getWeight($user_id){
-
-        $stmt = $this->connect()->prepare('SELECT * FROM Weight WHERE user_id = (?)');
-
-        $stmt->execute([$user_id]);
-
-        $results = $stmt->fetchAll();
-
-        if(!$results){
-
+        $sql = "INSERT INTO Products (name,  kcal,  protein,  animal_protein, vegetable_protein,  fat,  saturated_fat,  monounsaturated_fat, polyunsaturated_fat, omega3_acid, omega6_acid, carbohydrates, net_carbohydrates, sugar,  fiber,  salt, cholesterol,  witamin_k, witamin_a, witamin_b1,  witamin_b2,  witamin_b5, witamin_b6,  biotin,  folic_acid,  witamin_b12,  witamin_c,  witamin_d,  witamin_e, witamin_pp, calcium, chlorine, magnesium, phosphorus, potassium, sodium, iron, zinc, copper,  manganese, molybdenum, iodine, fluorine, chrome, selenium, description) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+        $stmt = $this->connect()->prepare($sql);
+        if(!$stmt->execute(array($name,  $kcal,  $protein,  $animal_protein, $vegetable_protein,  $fat,  $saturated_fat,  $monounsaturated_fat, $polyunsaturated_fat, $omega3_acid, $omega6_acid, $carbohydrates, $net_carbohydrates, $sugar,  $fiber,  $salt, $cholesterol, $witamin_k, $witamin_a, $witamin_b1,  $witamin_b2,  $witamin_b5, $witamin_b6,  $biotin,  $folic_acid,  $witamin_b12,  $witamin_c,  $witamin_d,  $witamin_e, $witamin_pp, $calcium, $chlorine, $magnesium, $phosphorus, $potassium, $sodium, $iron, $zinc, $copper,  $manganese, $molybdenum, $iodine, $fluorine, $chrome, $selenium, $description))){
+            // print_r($stmt->errorInfo());
+            // die();
+            $stmt=null;
             return false;
-            $stmt = null;
-            exit();
+            exit(); 
 
-        } else {
-
-            return $results;
-            $stmt = null;
-            exit();
-
-        }
-
-        return $results;
-
-    }  
-
-    protected function updateWeight($user_id, $id, $weight, $date, $comment){
-
-        $stmt = $this->connect()->prepare("UPDATE Weight SET weight = (?), datte = (?), comment = (?) WHERE user_id = (?) AND id = (?)");
-
-        if($stmt->execute(array($weight, $date, $comment, $user_id, $id))){
-
-            return true;
-            $stmt = null;
-            exit();
-
-        } else {
+            header("location: ../product.php?error=stmtfailed");
             
-            return false;
-            $stmt = null;
+            
+        } else {
+
+            $stmt=null;
+            return true;
             exit();
 
         }
 
+ 
     }
 
 }
