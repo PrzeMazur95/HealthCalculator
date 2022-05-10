@@ -89,8 +89,12 @@
                                                         echo "You have to submit the form!";
                                                         break;
 
-                                                    case "emptyinput":
-                                                        echo "You may be not logged in, or you have not filled the required fields!";
+                                                    case "photo":
+                                                        echo "There were some troubles with uploading your photo!";
+                                                        break;
+
+                                                    case "emptyfields":
+                                                        echo "Those fields are reuired : name, kcal, protein, fat, carbohydrates, sugar and photo)";
                                                         break;
 
                                                     case "stmtfailed":
@@ -108,7 +112,7 @@
                                                     switch ($_GET['info']){
                                                         
                                                         case "properlyAdded":
-                                                            echo "Succes! You have added todays result!"; 
+                                                            echo "Succes! You have added your product!"; 
                                                             break;
 
                                                         case "deleted":
@@ -128,7 +132,7 @@
                                         <i class="fas fa-chart-area me-1"></i>
                                         <h3>Type all informations per 100g</h2>
                                     </div>
-                                    <form action="includes/add_product.inc.php" method="post">
+                                    <form action="includes/add_product.inc.php" enctype="multipart/form-data" method="post">
                                         <div class="row">
                                             <div class="col-lg-4 text-center">
                                             <label for="exampleFormControlTextarea1" >Name</label>
