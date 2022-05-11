@@ -198,6 +198,55 @@ class ProductController extends Product{
         }
 
     }
+
+
+    public function save() {
+
+        if(!empty($this->erorrs)){
+
+            return false;
+
+        }
+
+        if(empty($this->filename) || empty($this->tmp_path)){
+
+            $this->errors[] = "The file was not available";
+            return false;
+
+        }
+
+        $target_path = SITE_ROOT . DS . $this->upload_directory . DS . $this->filename;
+
+        if(file_exists($target_path)){
+
+            $this->errors[] = "The file {$this->filename} already exists";
+            return false; 
+
+        }
+        
+        if(move_uploaded_file($this->tmp_path, $target_path)) {
+
+            if($this->addProductAndPhoto()){
+
+                echo "it works";
+
+                unset($this->tmp_path);
+
+                return true;
+
+            }
+        
+            return true;
+
+        } else {
+
+            $this->errors[] = "The file directory  probably have permission";
+            return false;
+
+        }
+
+
+    }
     
 }
 
