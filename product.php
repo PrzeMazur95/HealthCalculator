@@ -93,6 +93,10 @@
                                                         echo "There were some troubles with uploading your photo!";
                                                         break;
 
+                                                    case "save":
+                                                        echo "There were some troubles with saving photo!";
+                                                        break;
+
                                                     case "emptyfields":
                                                         echo "Those fields are reuired : name, kcal, protein, fat, carbohydrates, sugar and photo)";
                                                         break;
@@ -112,7 +116,7 @@
                                                     switch ($_GET['info']){
                                                         
                                                         case "properlyAdded":
-                                                            echo "Succes! You have added your product!"; 
+                                                            echo "Succes! You have succesfylly added your product!"; 
                                                             break;
 
                                                         case "deleted":
