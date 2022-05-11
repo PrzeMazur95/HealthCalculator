@@ -1,6 +1,8 @@
 <?php
 include_once "autoloader.inc.php";
 
+session_start();
+
 if(isset($_POST['submit'])){
 
     $name = $_POST["name"];
@@ -50,6 +52,7 @@ if(isset($_POST['submit'])){
     $selenium = $_POST["selenium"];
     $description = $_POST["description"];
     $photo = $_FILES['photo'];
+    $_SESSION['error'] = "";
 
     
 
@@ -57,16 +60,18 @@ if(isset($_POST['submit'])){
 
     if(!$file->set_file($photo)){
 
+        $_SESSION['error'] = $file->errors[0];
         header("location: ../product.php?error=photo");
         
     } 
 
     if($file->save()){
 
+        $_SESSION['error'] = "";
         header("location: ../product.php?info=properlyAdded");
 
     } else {
-
+        $_SESSION['error'] = $file->errors[0];
         header("location: ../product.php?error=save");
     }
 
