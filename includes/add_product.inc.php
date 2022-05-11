@@ -1,21 +1,6 @@
 <?php
 include_once "autoloader.inc.php";
 
-$upload_errors = array (
-
-    UPLOAD_ERR_OK => "There is no error",
-    UPLOAD_ERR_INI_SIZE => "The uploaded file exceeds the upload_max_filesize",
-    UPLOAD_ERR_FORM_SIZE => "The uploaded file exceeds the MAX_FILE_SIZE",
-    UPLOAD_ERR_PARTIAL=> "The uploaded file was onlu partlly uploaded",
-    UPLOAD_ERR_NO_FILE => "No file was uploaded",
-    UPLOAD_ERR_NO_TMP_DIR => "Missing a temporary folder",
-    UPLOAD_ERR_CANT_WRITE => "Failed to write file to disk",
-    UPLOAD_ERR_EXTENSION => "A PHP extension stopped the file upload."
-
-
-);
-
-
 if(isset($_POST['submit'])){
 
     $name = $_POST["name"];
@@ -64,46 +49,27 @@ if(isset($_POST['submit'])){
     $chrome = $_POST["chrome"]; 
     $selenium = $_POST["selenium"];
     $description = $_POST["description"];
+    $photo = $_FILES['photo'];
+
     
-  
-    
-    // $temp_name = $_FILES['photo']['tmp_name'];
-    // $the_file = $_FILES['photo']['name'];
-    // $directory = "../uploads";
-    
+
+    $file = new ProductController($name,  $kcal,  $protein,  $animal_protein, $vegetable_protein,  $fat,  $saturated_fat,  $monounsaturated_fat, $polyunsaturated_fat, $omega3_acid, $omega6_acid, $carbohydrates, $net_carbohydrates, $sugar,  $fiber,  $salt, $cholesterol, $witamin_k, $witamin_a, $witamin_b1,  $witamin_b2,  $witamin_b5, $witamin_b6,  $biotin,  $folic_acid,  $witamin_b12,  $witamin_c,  $witamin_d,  $witamin_e, $witamin_pp, $calcium, $chlorine, $magnesium, $phosphorus, $potassium, $sodium, $iron, $zinc, $copper,  $manganese, $molybdenum, $iodine, $fluorine, $chrome, $selenium, $description);
+
+    if(!$file->set_file($photo)){
+
+        header("location: ../product.php?error=photo");
+        
+    } 
+
+    if($file->save()){
+
+        header("location: ../product.php?info=properlyAdded");
+
+    } else {
+
+        header("location: ../product.php?error=save");
+    }
 
 }
-
-    if(empty($name) || empty($kcal) || empty($protein) || empty($fat) || empty($carbohydrates) || empty($sugar)){
-
-        header("location: ../product.php?error=emptyfields");
-        
-    }else{
-
-        // if(!move_uploaded_file($temp_name, $directory."/".$the_file)){
-    
-            
-        //     $the_error = $_FILES['photo']['error'];
-        //     echo $the_message = $upload_errors[$the_error];
-            
-        // } 
-        
-        $newProduct = new ProductController($name,  $kcal,  $protein,  $animal_protein, $vegetable_protein,  $fat,  $saturated_fat,  $monounsaturated_fat, $polyunsaturated_fat, $omega3_acid, $omega6_acid, $carbohydrates, $net_carbohydrates, $sugar,  $fiber,  $salt, $cholesterol, $witamin_k, $witamin_a, $witamin_b1,  $witamin_b2,  $witamin_b5, $witamin_b6,  $biotin,  $folic_acid,  $witamin_b12,  $witamin_c,  $witamin_d,  $witamin_e, $witamin_pp, $calcium, $chlorine, $magnesium, $phosphorus, $potassium, $sodium, $iron, $zinc, $copper,  $manganese, $molybdenum, $iodine, $fluorine, $chrome, $selenium, $description);
-
-        // print_r($newProduct);
-
-        // die();
-
-        if($newProduct->addProduct()){
-
-            header("location: ../product.php?info=properlyAdded");
-
-        } else { 
-
-            header("location: ../product.php?error=stmtfailed");
-
-        } 
-        
-    }
 
 ?>
