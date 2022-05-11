@@ -49,6 +49,26 @@ class ProductController extends Product{
     private $chrome;
     private $selenium;
     private $description;
+
+
+    public $tmp_path;
+    public $ype;
+    public $filename;
+    public $upload_directory = "/uploads/images";
+    public $errors = array();
+    public $upload_errors_array = array (
+
+        UPLOAD_ERR_OK => "There is no error",
+        UPLOAD_ERR_INI_SIZE => "The uploaded file exceeds the upload_max_filesize",
+        UPLOAD_ERR_FORM_SIZE => "The uploaded file exceeds the MAX_FILE_SIZE",
+        UPLOAD_ERR_PARTIAL=> "The uploaded file was onlu partlly uploaded",
+        UPLOAD_ERR_NO_FILE => "No file was uploaded",
+        UPLOAD_ERR_NO_TMP_DIR => "Missing a temporary folder",
+        UPLOAD_ERR_CANT_WRITE => "Failed to write file to disk",
+        UPLOAD_ERR_EXTENSION => "A PHP extension stopped the file upload."
+    
+    
+    );
   
 
 
@@ -120,6 +140,22 @@ class ProductController extends Product{
 
     }
 
+    public function addProductAndPhoto(){
+        
+        if($this->emptyInput()){
+
+            header("location: ../product.php?error=emptyfields");
+
+
+        }else{
+
+            $this->setProductAndPhoto($this->name,  $this->kcal,  $this->protein,  $this->animal_protein, $this->vegetable_protein,  $this->fat,  $this->saturated_fat,  $this->monounsaturated_fat, $this->polyunsaturated_fat, $this->omega3_acid, $this->omega6_acid, $this->carbohydrates, $this->net_carbohydrates, $this->sugar,  $this->fiber,  $this->salt, $this->cholesterol,  $this->witamin_k, $this->witamin_a, $this->witamin_b1,  $this->witamin_b2, $this->witamin_b5, $this->witamin_b6,  $this->biotin,  $this->folic_acid,  $this->witamin_b12,  $this->witamin_c,  $this->witamin_d,  $this->witamin_e, $this->witamin_pp, $this->calcium, $this->chlorine, $this->magnesium, $this->phosphorus, $this->potassium, $this->sodium, $this->iron, $this->zinc, $this->copper,  $this->manganese, $this->molybdenum, $this->iodine, $this->fluorine, $this->chrome, $this->selenium, $this->description, $this->filename);
+        
+
+        }
+
+    }
+
     private function emptyInput(){
 
 
@@ -132,6 +168,34 @@ class ProductController extends Product{
             return false;
         }
 
+
+    }
+
+    public function set_file($file){
+
+        if(empty($file) || !$file || !is_array($file)) {
+
+            $this->errors[] = "There was no file uploaded here";
+            // print_r($this->errors);
+            // die();
+            return false;
+
+        } elseif($file['error'] !=0) {
+
+            $this->errors[] = $this->upload_errors_array[$file['error']];
+            // print_r($this->errors);
+            // die();
+            return false;
+
+        }else{
+
+            $this->filename = basename($file['name']);
+            $this->tmp_path = $file['tmp_name'];
+            $this->type = $file['type'];
+
+            return true;
+
+        }
 
     }
     
