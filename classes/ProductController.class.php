@@ -148,10 +148,16 @@ class ProductController extends Product{
 
         }else{
 
-            $this->setProductAndPhoto($this->name,  $this->kcal,  $this->protein,  $this->animal_protein, $this->vegetable_protein,  $this->fat,  $this->saturated_fat,  $this->monounsaturated_fat, $this->polyunsaturated_fat, $this->omega3_acid, $this->omega6_acid, $this->carbohydrates, $this->net_carbohydrates, $this->sugar,  $this->fiber,  $this->salt, $this->cholesterol,  $this->witamin_k, $this->witamin_a, $this->witamin_b1,  $this->witamin_b2, $this->witamin_b5, $this->witamin_b6,  $this->biotin,  $this->folic_acid,  $this->witamin_b12,  $this->witamin_c,  $this->witamin_d,  $this->witamin_e, $this->witamin_pp, $this->calcium, $this->chlorine, $this->magnesium, $this->phosphorus, $this->potassium, $this->sodium, $this->iron, $this->zinc, $this->copper,  $this->manganese, $this->molybdenum, $this->iodine, $this->fluorine, $this->chrome, $this->selenium, $this->description, $this->filename);
-            
-            return true;
+            if($this->setProductAndPhoto($this->name,  $this->kcal,  $this->protein,  $this->animal_protein, $this->vegetable_protein,  $this->fat,  $this->saturated_fat,  $this->monounsaturated_fat, $this->polyunsaturated_fat, $this->omega3_acid, $this->omega6_acid, $this->carbohydrates, $this->net_carbohydrates, $this->sugar,  $this->fiber,  $this->salt, $this->cholesterol,  $this->witamin_k, $this->witamin_a, $this->witamin_b1,  $this->witamin_b2, $this->witamin_b5, $this->witamin_b6,  $this->biotin,  $this->folic_acid,  $this->witamin_b12,  $this->witamin_c,  $this->witamin_d,  $this->witamin_e, $this->witamin_pp, $this->calcium, $this->chlorine, $this->magnesium, $this->phosphorus, $this->potassium, $this->sodium, $this->iron, $this->zinc, $this->copper,  $this->manganese, $this->molybdenum, $this->iodine, $this->fluorine, $this->chrome, $this->selenium, $this->description, $this->filename)){
 
+                return true;
+
+            } else {
+
+                return false;
+
+            }
+             
         }
 
     }
@@ -224,18 +230,14 @@ class ProductController extends Product{
 
         }
         
-        if($this->addProductAndPhoto()) {
-
-            if(move_uploaded_file($this->tmp_path, $target_path));
+        if($this->addProductAndPhoto() && move_uploaded_file($this->tmp_path, $target_path) ) {
 
             unset($this->tmp_path);
             return true;
-        
-            // return true;
 
         } else {
 
-            $this->errors[] = "The file directory probably doesn't have permission";
+            $this->errors[] = "The file directory probably doesn't have permission, or something went wrong with Db query, contact with Admin";
             return false;
 
         }
