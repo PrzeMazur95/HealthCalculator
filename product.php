@@ -106,6 +106,9 @@
                                                         break;    
 
                                                 }
+
+                                                echo "</br>".$_SESSION['error'];
+
                                                 echo "</div>";
 
                                                 }
