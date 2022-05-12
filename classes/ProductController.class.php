@@ -165,7 +165,7 @@ class ProductController extends Product{
     private function emptyInput(){
 
 
-        if(empty($this->name) || empty($this->kcal) || empty($this->protein) || empty($this->fat) || empty($this->carbohydrates) || empty($this->sugar) || empty($this->fiber) || empty($this->salt) || empty($this->cholesterol)){
+        if(empty($this->name) || empty($this->kcal) || empty($this->protein) || empty($this->fat) || empty($this->carbohydrates) || empty($this->sugar)){
             
             return true;
 
