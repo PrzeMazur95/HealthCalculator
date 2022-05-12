@@ -143,7 +143,7 @@
                                         <div class="row">
                                             <div class="col-lg-4 text-center">
                                             <label for="exampleFormControlTextarea1" >Name</label>
-                                            <input type="text" class="form-control" name="name" required>
+                                            <input type="text" class="form-control" class="form-control" name="name" required>
                                             </div>
                                             <div class="col-lg-4 text-center">
                                             <label for="exampleFormControlTextarea1" >Photo</label>
@@ -151,23 +151,23 @@
                                             </div>
                                             <div class="col-lg-4 text-center">
                                             <label for="exampleFormControlTextarea1" >kCal</label>
-                                            <input type="text" class="form-control" name="kcal" required>
+                                            <input type="text" class="form-control" class="form-control" name="kcal" required>
                                             </div>
                                             <div class="col-lg-3 text-center">
                                             <label for="exampleFormControlTextarea1" >Protein</label>
-                                            <input type="text" class="form-control" name="protein" required>
+                                            <input type="text" class="form-control" class="form-control" name="protein" required>
                                             </div>
                                             <div class="col-lg-3 text-center">
                                             <label for="exampleFormControlTextarea1" >Carbs</label>
-                                            <input type="text" class="form-control" name="carbohydrates" required>
+                                            <input type="text" class="form-control" class="form-control" name="carbohydrates" required>
                                             </div>
                                             <div class="col-lg-3 text-center">
                                             <label for="exampleFormControlTextarea1" >Fat</label>
-                                            <input type="text" class="form-control" name="fat" required>
+                                            <input type="text" class="form-control" class="form-control" name="fat" required>
                                             </div>
                                             <div class="col-lg-3 text-center">
                                             <label for="exampleFormControlTextarea1" >Sugar</label>
-                                            <input type="text" class="form-control" name="sugar" required>
+                                            <input type="text" class="form-control" class="form-control" name="sugar" required>
                                             </div>
                                         </div>
                                         <div class="text-center">
@@ -187,163 +187,163 @@
                                             <div id="product_details"> 
                                                 <div class="form-group text-center">
                                                     <label for="exampleFormControlTextarea1" >Ani. Protein</label>
-                                                    <textarea class="form-control" id="exampleFormControlTextarea2" rows="1" name="animal_protein" placeholder="for example: 100"></textarea>
+                                                    <input type="text" class="form-control" class="form-control" id="exampleFormControlTextarea2" rows="1" name="animal_protein" value=0></input>
                                                 </div>
                                                 <div class="form-group text-center">
                                                     <label for="exampleFormControlTextarea1" >Vege. Protein</label>
-                                                    <textarea class="form-control" id="exampleFormControlTextarea2" rows="1" name="vegetable_protein" placeholder="for example: 100"></textarea>
+                                                    <input type="text" class="form-control" class="form-control" id="exampleFormControlTextarea2" rows="1" name="vegetable_protein" value=0></input>
                                                 </div>
                                                 <div class="form-group text-center">
                                                     <label for="exampleFormControlTextarea1" >Sat. Fat </label>
-                                                    <textarea class="form-control" id="exampleFormControlTextarea2" rows="1" name="saturated_fat" placeholder="for example: 100"></textarea>
+                                                    <input type="text" class="form-control" id="exampleFormControlTextarea2" rows="1" name="saturated_fat" value=0></input>
                                                 </div>
                                                 <div class="form-group text-center">
                                                     <label for="exampleFormControlTextarea1" >Mono Fat</label>
-                                                    <textarea class="form-control" id="exampleFormControlTextarea2" rows="1" name="monounsaturated_fat" placeholder="for example: 100"></textarea>
+                                                    <input type="text" class="form-control" id="exampleFormControlTextarea2" rows="1" name="monounsaturated_fat" value=0></input>
                                                 </div>
                                                 <div class="form-group text-center">
                                                     <label for="exampleFormControlTextarea1" >Poly Fat</label>
-                                                    <textarea class="form-control" id="exampleFormControlTextarea2" rows="1" name="polyunsaturated_fat" placeholder="for example: 100"></textarea>
+                                                    <input type="text" class="form-control" id="exampleFormControlTextarea2" rows="1" name="polyunsaturated_fat" value=0></input>
                                                 </div>
                                                 <div class="form-group text-center">
                                                     <label for="exampleFormControlTextarea1" >Omega3</label>
-                                                    <textarea class="form-control" id="exampleFormControlTextarea2" rows="1" name="omega3_acid" placeholder="for example: 100"></textarea>
+                                                    <input type="text" class="form-control" id="exampleFormControlTextarea2" rows="1" name="omega3_acid" value=0></input>
                                                 </div>
                                                 <div class="form-group text-center">
                                                     <label for="exampleFormControlTextarea1" >Omega6</label>
-                                                    <textarea class="form-control" id="exampleFormControlTextarea2" rows="1" name="omega6_acid" placeholder="for example: 100"></textarea>
+                                                    <input type="text" class="form-control" id="exampleFormControlTextarea2" rows="1" name="omega6_acid" value=0></input>
                                                 </div>
                                                 <div class="form-group text-center">
                                                     <label for="exampleFormControlTextarea1" >Netto Carbs</label>
-                                                    <textarea class="form-control" id="exampleFormControlTextarea2" rows="1" name="net_carbohydrates" placeholder="for example: 100"></textarea>
+                                                    <input type="text" class="form-control" id="exampleFormControlTextarea2" rows="1" name="net_carbohydrates" value=0></input>
                                                 </div>
                                                 <div class="form-group text-center">
                                                     <label for="exampleFormControlTextarea1" >Fiber</label>
-                                                    <textarea class="form-control" id="exampleFormControlTextarea2" rows="1" name="fiber" placeholder="for example: 100"></textarea>
+                                                    <input type="text" class="form-control" id="exampleFormControlTextarea2" rows="1" name="fiber" value=0></input>
                                                 </div>
                                                 <div class="form-group text-center">
                                                     <label for="exampleFormControlTextarea1" >Salt</label>
-                                                    <textarea class="form-control" id="exampleFormControlTextarea2" rows="1" name="salt" placeholder="for example: 100"></textarea>
+                                                    <input type="text" class="form-control" id="exampleFormControlTextarea2" rows="1" name="salt" value=0></input>
                                                 </div>
                                                 <div class="form-group text-center">
                                                     <label for="exampleFormControlTextarea1" >Cholesterol</label>
-                                                    <textarea class="form-control" id="exampleFormControlTextarea2" rows="1" name="cholesterol" placeholder="for example: 100"></textarea>
+                                                    <input type="text" class="form-control" id="exampleFormControlTextarea2" rows="1" name="cholesterol" value=0></input>
                                                 </div>
                                                 <div class="form-group text-center">
                                                     <label for="exampleFormControlTextarea1" >Witamin K</label>
-                                                    <textarea class="form-control" id="exampleFormControlTextarea2" rows="1" name="witamin_k" placeholder="for example: 100"></textarea>
+                                                    <input type="text" class="form-control" id="exampleFormControlTextarea2" rows="1" name="witamin_k" value=0></input>
                                                 </div>
                                                 <div class="form-group text-center">
                                                     <label for="exampleFormControlTextarea1" >Witamin A</label>
-                                                    <textarea class="form-control" id="exampleFormControlTextarea2" rows="1" name="witamin_a" placeholder="for example: 100"></textarea>
+                                                    <input type="text" class="form-control" id="exampleFormControlTextarea2" rows="1" name="witamin_a" value=0></input>
                                                 </div>
                                                 <div class="form-group text-center">
                                                     <label for="exampleFormControlTextarea1" >Witamin B1</label>
-                                                    <textarea class="form-control" id="exampleFormControlTextarea2" rows="1" name="witamin_b1" placeholder="for example: 100"></textarea>
+                                                    <input type="text" class="form-control" id="exampleFormControlTextarea2" rows="1" name="witamin_b1" value=0></input>
                                                 </div>
                                                 <div class="form-group text-center">
                                                     <label for="exampleFormControlTextarea1" >Witamin B2</label>
-                                                    <textarea class="form-control" id="exampleFormControlTextarea2" rows="1" name="witamin_b2" placeholder="for example: 100"></textarea>
+                                                    <input type="text" class="form-control" id="exampleFormControlTextarea2" rows="1" name="witamin_b2" value=0></input>
                                                 </div>
                                                 <div class="form-group text-center">
                                                     <label for="exampleFormControlTextarea1" >Witamin B5</label>
-                                                    <textarea class="form-control" id="exampleFormControlTextarea2" rows="1" name="witamin_b5" placeholder="for example: 100"></textarea>
+                                                    <input type="text" class="form-control" id="exampleFormControlTextarea2" rows="1" name="witamin_b5" value=0></input>
                                                 </div>
                                                 <div class="form-group text-center">
                                                     <label for="exampleFormControlTextarea1" >Witamin B6</label>
-                                                    <textarea class="form-control" id="exampleFormControlTextarea2" rows="1" name="witamin_b6" placeholder="for example: 100"></textarea>
+                                                    <input type="text" class="form-control" id="exampleFormControlTextarea2" rows="1" name="witamin_b6" value=0></input>
                                                 </div>
                                                 <div class="form-group text-center">
                                                     <label for="exampleFormControlTextarea1" >Biotin</label>
-                                                    <textarea class="form-control" id="exampleFormControlTextarea2" rows="1" name="biotin" placeholder="for example: 100"></textarea>
+                                                    <input type="text" class="form-control" id="exampleFormControlTextarea2" rows="1" name="biotin" value=0></input>
                                                 </div>
                                                 <div class="form-group text-center">
                                                     <label for="exampleFormControlTextarea1" >Folic Acid</label>
-                                                    <textarea class="form-control" id="exampleFormControlTextarea2" rows="1" name="folic_acid" placeholder="for example: 100"></textarea>
+                                                    <input type="text" class="form-control" id="exampleFormControlTextarea2" rows="1" name="folic_acid" value=0></input>
                                                 </div>
                                                 <div class="form-group text-center">
                                                     <label for="exampleFormControlTextarea1" >Witamin B12</label>
-                                                    <textarea class="form-control" id="exampleFormControlTextarea2" rows="1" name="witamin_b12" placeholder="for example: 100"></textarea>
+                                                    <input type="text" class="form-control" id="exampleFormControlTextarea2" rows="1" name="witamin_b12" value=0></input>
                                                 </div>
                                                 <div class="form-group text-center">
                                                     <label for="exampleFormControlTextarea1" >Witamin C</label>
-                                                    <textarea class="form-control" id="exampleFormControlTextarea2" rows="1" name="witamin_c" placeholder="for example: 100"></textarea>
+                                                    <input type="text" class="form-control" id="exampleFormControlTextarea2" rows="1" name="witamin_c" value=0></input>
                                                 </div>
                                                 <div class="form-group text-center">
                                                     <label for="exampleFormControlTextarea1" >Witamin D</label>
-                                                    <textarea class="form-control" id="exampleFormControlTextarea2" rows="1" name="witamin_d" placeholder="for example: 100"></textarea>
+                                                    <input type="text" class="form-control" id="exampleFormControlTextarea2" rows="1" name="witamin_d" value=0></input>
                                                 </div>
                                                 <div class="form-group text-center">
                                                     <label for="exampleFormControlTextarea1" >Witamin E</label>
-                                                    <textarea class="form-control" id="exampleFormControlTextarea2" rows="1" name="witamin_e" placeholder="for example: 100"></textarea>
+                                                    <input type="text" class="form-control" id="exampleFormControlTextarea2" rows="1" name="witamin_e"value=0></input>
                                                 </div>
                                                 <div class="form-group text-center">
                                                     <label for="exampleFormControlTextarea1" >Witamin PP</label>
-                                                    <textarea class="form-control" id="exampleFormControlTextarea2" rows="1" name="witamin_pp" placeholder="for example: 100"></textarea>
+                                                    <input type="text" class="form-control" id="exampleFormControlTextarea2" rows="1" name="witamin_pp" value=0></input>
                                                 </div>
                                                 <div class="form-group text-center">
                                                     <label for="exampleFormControlTextarea1" >Calcium</label>
-                                                    <textarea class="form-control" id="exampleFormControlTextarea2" rows="1" name="calcium" placeholder="for example: 100"></textarea>
+                                                    <input type="text" class="form-control" id="exampleFormControlTextarea2" rows="1" name="calcium" value=0></input>
                                                 </div>
                                                 <div class="form-group text-center">
                                                     <label for="exampleFormControlTextarea1" >Chlorine</label>
-                                                    <textarea class="form-control" id="exampleFormControlTextarea2" rows="1" name="chlorine" placeholder="for example: 100"></textarea>
+                                                    <input type="text" class="form-control" id="exampleFormControlTextarea2" rows="1" name="chlorine" value=0></input>
                                                 </div>
                                                 <div class="form-group text-center">
                                                     <label for="exampleFormControlTextarea1" >Magnesium</label>
-                                                    <textarea class="form-control" id="exampleFormControlTextarea2" rows="1" name="magnesium" placeholder="for example: 100"></textarea>
+                                                    <input type="text" class="form-control" id="exampleFormControlTextarea2" rows="1" name="magnesium" value=0></input>
                                                 </div>
                                                 <div class="form-group text-center">
                                                     <label for="exampleFormControlTextarea1" >Phosphorus</label>
-                                                    <textarea class="form-control" id="exampleFormControlTextarea2" rows="1" name="phosphorus" placeholder="for example: 100"></textarea>
+                                                    <input type="text" class="form-control" id="exampleFormControlTextarea2" rows="1" name="phosphorus" value=0></input>
                                                 </div>
                                                 <div class="form-group text-center">
                                                     <label for="exampleFormControlTextarea1" >Potassium</label>
-                                                    <textarea class="form-control" id="exampleFormControlTextarea2" rows="1" name="potassium" placeholder="for example: 100"></textarea>
+                                                    <input type="text" class="form-control" id="exampleFormControlTextarea2" rows="1" name="potassium" value=0></input>
                                                 </div>
                                                 <div class="form-group text-center">
                                                     <label for="exampleFormControlTextarea1" >Sodium</label>
-                                                    <textarea class="form-control" id="exampleFormControlTextarea2" rows="1" name="sodium" placeholder="for example: 100"></textarea>
+                                                    <input type="text" class="form-control" id="exampleFormControlTextarea2" rows="1" name="sodium" value=0></input>
                                                 </div>
                                                 <div class="form-group text-center">
                                                     <label for="exampleFormControlTextarea1" >Iron</label>
-                                                    <textarea class="form-control" id="exampleFormControlTextarea2" rows="1" name="iron" placeholder="for example: 100"></textarea>
+                                                    <input type="text" class="form-control" id="exampleFormControlTextarea2" rows="1" name="iron" value=0></input>
                                                 </div>
                                                 <div class="form-group text-center">
                                                     <label for="exampleFormControlTextarea1" >Zinc</label>
-                                                    <textarea class="form-control" id="exampleFormControlTextarea2" rows="1" name="zinc" placeholder="for example: 100"></textarea>
+                                                    <input type="text" class="form-control" id="exampleFormControlTextarea2" rows="1" name="zinc" value=0></input>
                                                 </div>
                                                 <div class="form-group text-center">
                                                     <label for="exampleFormControlTextarea1" >Copper</label>
-                                                    <textarea class="form-control" id="exampleFormControlTextarea3" rows="1" name="copper" placeholder="for example: 100"></textarea>
+                                                    <input type="text" class="form-control" id="exampleFormControlTextarea3" rows="1" name="copper"value=0></input>
                                                 </div>
                                                 <div class="form-group text-center">
                                                     <label for="exampleFormControlTextarea1" >Manganese</label>
-                                                    <textarea class="form-control" id="exampleFormControlTextarea3" rows="1" name="manganese" placeholder="for example: 100"></textarea>
+                                                    <input type="text" class="form-control" id="exampleFormControlTextarea3" rows="1" name="manganese" value=0></input>
                                                 </div>
                                                 <div class="form-group text-center">
                                                     <label for="exampleFormControlTextarea1" >Molybdenum</label>
-                                                    <textarea class="form-control" id="exampleFormControlTextarea3" rows="1" name="molybdenum" placeholder="for example: 100"></textarea>
+                                                    <input type="text" class="form-control" id="exampleFormControlTextarea3" rows="1" name="molybdenum" value=0></input>
                                                 </div>
                                                 <div class="form-group text-center">
                                                     <label for="exampleFormControlTextarea1" >Iodine</label>
-                                                    <textarea class="form-control" id="exampleFormControlTextarea3" rows="1" name="iodine" placeholder="for example: 100"></textarea>
+                                                    <input type="text" class="form-control" id="exampleFormControlTextarea3" rows="1" name="iodine" value=0></input>
                                                 </div>
                                                 <div class="form-group text-center">
                                                     <label for="exampleFormControlTextarea1" >Fluorine</label>
-                                                    <textarea class="form-control" id="exampleFormControlTextarea3" rows="1" name="fluorine" placeholder="for example: 100"></textarea>
+                                                    <input type="text" class="form-control" id="exampleFormControlTextarea3" rows="1" name="fluorine" value=0></input>
                                                 </div>
                                                 <div class="form-group text-center">
                                                     <label for="exampleFormControlTextarea1" >Chrome</label>
-                                                    <textarea class="form-control" id="exampleFormControlTextarea3" rows="1" name="chrome" placeholder="for example: 100"></textarea>
+                                                    <input type="text" class="form-control" id="exampleFormControlTextarea3" rows="1" name="chrome" value=0></input>
                                                 </div>
                                                 <div class="form-group text-center">
                                                     <label for="exampleFormControlTextarea1" >Selenium</label>
-                                                    <textarea class="form-control" id="exampleFormControlTextarea3" rows="1" name="selenium" placeholder="for example: 100"></textarea>
+                                                    <input type="text" class="form-control" id="exampleFormControlTextarea3" rows="1" name="selenium" value=0></input>
                                                 </div>
                                                 <div class="form-group text-center">
                                                         <label for="exampleFormControlTextarea1" >Description</label>
-                                                        <textarea class="form-control" id="exampleFormControlTextarea4" rows="2" name="description" placeholder="for example: 100"></textarea>
+                                                        <input type="text" class="form-control" id="exampleFormControlTextarea4" rows="2" name="description" ></input>
                                                 </div>
                                             </div>  
                                         </div>
