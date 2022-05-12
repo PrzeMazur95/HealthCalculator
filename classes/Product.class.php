@@ -54,6 +54,25 @@ class Product extends Dbh {
  
     }
 
+
+    protected function getProducts(){
+
+        $sql = "SELECT * FROM Products";
+        $stmt = $this->connect()->query($sql);
+        $results = $stmt->fetchAll();
+
+        if(!$results){
+
+            return false;
+
+        } else {
+
+            return $results;
+
+        }
+
+    }
+
     
 
 }
