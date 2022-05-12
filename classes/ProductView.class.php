@@ -1,10 +1,10 @@
 <?php
 
-class WeightView extends Weight {
+class ProductView extends Product {
     
-    public function showWeight($user_id){
+    public function showProducts(){
 
-        $results = $this->getWeight($user_id);
+        $results = $this->getProducts();
 
         return $results;
 
