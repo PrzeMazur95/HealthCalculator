@@ -1,5 +1,7 @@
 <?php 
 
+session_start();
+
 include_once "autoloader.inc.php";
 
 if(!isset($_SESSION['username'])){
@@ -25,9 +27,31 @@ if(isset($_GET['id'])){
 
         }
 
-    }elseif($_GET['table']=="product"){
+    }elseif($_GET['table']=="Products"){
 
-        echo "FUTURE PHP CODE TO DELETE PRODUCTS";
+        $product = new DbObjectView();
+        
+        $specific_product = $product->Find_by_id($_GET['table'], $_GET['id'], $_GET['userid']);
+
+        if($specific_product[0]['user_id'] === $_SESSION['userid']){
+
+            $deleteDbRow = new DbObjectController();
+
+            if($deleteDbRow->DeleteDbRow($_GET['table'], $_GET['id'], $_GET['userid']) && $deletePhoto = ProductController::deletePhoto($specific_product[0]['filename'])){ 
+
+                    header("location: ../products.php?info=deleted");
+
+                } else {
+
+                    header("location: ../products.php?error=stmtfailed");
+                    
+                }
+
+        } else {
+
+            header("location: ../products.php?error=id");
+
+        }
 
     }else{
 
