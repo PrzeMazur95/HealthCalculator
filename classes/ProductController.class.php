@@ -55,7 +55,6 @@ class ProductController extends Product{
     public $tmp_path;
     public $ype;
     public $filename;
-    public $upload_directory = "/uploads/images";
     public static $uploads_directory = "/uploads/images";
     public $errors = array();
     public $upload_errors_array = array (
@@ -245,6 +244,23 @@ class ProductController extends Product{
 
         }
 
+
+    }
+
+    public static function deletePhoto($filename){
+
+        $target_path = SITE_ROOT . DS . ProductController::$uploads_directory . DS . $filename;
+
+        if(unlink($target_path)){
+
+            return true;
+
+        } else {
+
+            return false;
+
+        }
+        
 
     }
     
