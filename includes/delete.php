@@ -2,6 +2,11 @@
 
 include_once "autoloader.inc.php";
 
+if(!isset($_SESSION['username'])){
+
+    header("location: login.php?error=loginfirst");
+}
+
 if(isset($_GET['id'])){
 
     if($_GET['table']=="Weight"){
