@@ -56,6 +56,7 @@ class ProductController extends Product{
     public $ype;
     public $filename;
     public $upload_directory = "/uploads/images";
+    public static $uploads_directory = "/uploads/images";
     public $errors = array();
     public $upload_errors_array = array (
 
@@ -223,7 +224,7 @@ class ProductController extends Product{
 
         }
 
-        $target_path = SITE_ROOT . DS . $this->upload_directory . DS . $this->filename;
+        $target_path = SITE_ROOT . DS . ProductController::$uploads_directory . DS . $this->filename;
 
         if(file_exists($target_path)){
 
