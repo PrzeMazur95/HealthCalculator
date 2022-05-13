@@ -80,6 +80,46 @@
                                 <div class="card mb-12">
 
                                 <?php 
+
+                                    if(isset($_GET['error'])){
+                                                                                
+                                        echo "<div class='alert alert-danger text-center' role='alert'>";
+                                        switch ($_GET['error']){
+
+                                            case "id":
+                                                echo "You could not delete this product, it is not yours!";
+                                                break;
+
+                                            case "stmtfailed":
+                                                echo "Something went wrong with Db connection, contact with Admin!";
+                                                break;  
+                                                
+                                            case "image":
+                                                echo "Something went wrong with Db connection, contact with Admin!";
+                                                break; 
+
+                                        }
+                                        echo "</div>";
+
+                                    }
+
+                                        if(isset($_GET['info'])){
+
+                                            echo "<div class='alert alert-success text-center' role='alert'>";
+                                            switch ($_GET['info']){
+                                                
+                                                case "deleted":
+                                                    echo "Succes! You have succesfully deleted this result!"; 
+                                                    break;
+
+                                                case "edited":
+                                                    echo "Succes! You have succesfully edited this result!"; 
+                                                    break;
+                                            }
+
+                                            echo "</div>";
+
+                                        }
                                 
                                 $Products = new ProductView;
                                 $Results = $Products->showProducts();
