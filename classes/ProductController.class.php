@@ -49,6 +49,7 @@ class ProductController extends Product{
     private $chrome;
     private $selenium;
     private $description;
+    private $userid;
 
 
     public $tmp_path;
@@ -72,7 +73,7 @@ class ProductController extends Product{
   
 
 
-    public function __construct($name,  $kcal,  $protein,  $animal_protein, $vegetable_protein,  $fat,  $saturated_fat,  $monounsaturated_fat, $polyunsaturated_fat, $omega3_acid, $omega6_acid, $carbohydrates, $net_carbohydrates, $sugar,  $fiber,  $salt, $cholesterol,  $witamin_k, $witamin_a, $witamin_b1,  $witamin_b2,  $witamin_b5, $witamin_b6,  $biotin,  $folic_acid,  $witamin_b12,  $witamin_c,  $witamin_d,  $witamin_e, $witamin_pp, $calcium, $chlorine, $magnesium, $phosphorus, $potassium, $sodium, $iron, $zinc, $copper,  $manganese, $molybdenum, $iodine, $fluorine, $chrome, $selenium, $description){
+    public function __construct($name,  $kcal,  $protein,  $animal_protein, $vegetable_protein,  $fat,  $saturated_fat,  $monounsaturated_fat, $polyunsaturated_fat, $omega3_acid, $omega6_acid, $carbohydrates, $net_carbohydrates, $sugar,  $fiber,  $salt, $cholesterol,  $witamin_k, $witamin_a, $witamin_b1,  $witamin_b2,  $witamin_b5, $witamin_b6,  $biotin,  $folic_acid,  $witamin_b12,  $witamin_c,  $witamin_d,  $witamin_e, $witamin_pp, $calcium, $chlorine, $magnesium, $phosphorus, $potassium, $sodium, $iron, $zinc, $copper,  $manganese, $molybdenum, $iodine, $fluorine, $chrome, $selenium, $description, $userid){
         
         $this-> name = $name;
         $this-> kcal = $kcal;
@@ -120,6 +121,7 @@ class ProductController extends Product{
         $this-> chrome = $chrome;
         $this-> selenium = $selenium;
         $this-> description = $description;
+        $this->userid = $userid;
   
 
     }
@@ -128,12 +130,12 @@ class ProductController extends Product{
         
         if($this->emptyInput()){
 
-            header("location: ../product.php?error=emptyfields");
+            header("location: ../add_product.php?error=emptyfields");
 
 
         }else{
 
-          $this->setProduct($this->name,  $this->kcal,  $this->protein,  $this->animal_protein, $this->vegetable_protein,  $this->fat,  $this->saturated_fat,  $this->monounsaturated_fat, $this->polyunsaturated_fat, $this->omega3_acid, $this->omega6_acid, $this->carbohydrates, $this->net_carbohydrates, $this->sugar,  $this->fiber,  $this->salt, $this->cholesterol,  $this->witamin_k, $this->witamin_a, $this->witamin_b1,  $this->witamin_b2, $this->witamin_b5, $this->witamin_b6,  $this->biotin,  $this->folic_acid,  $this->witamin_b12,  $this->witamin_c,  $this->witamin_d,  $this->witamin_e, $this->witamin_pp, $this->calcium, $this->chlorine, $this->magnesium, $this->phosphorus, $this->potassium, $this->sodium, $this->iron, $this->zinc, $this->copper,  $this->manganese, $this->molybdenum, $this->iodine, $this->fluorine, $this->chrome, $this->selenium, $this->description);
+          $this->setProduct($this->name,  $this->kcal,  $this->protein,  $this->animal_protein, $this->vegetable_protein,  $this->fat,  $this->saturated_fat,  $this->monounsaturated_fat, $this->polyunsaturated_fat, $this->omega3_acid, $this->omega6_acid, $this->carbohydrates, $this->net_carbohydrates, $this->sugar,  $this->fiber,  $this->salt, $this->cholesterol,  $this->witamin_k, $this->witamin_a, $this->witamin_b1,  $this->witamin_b2, $this->witamin_b5, $this->witamin_b6,  $this->biotin,  $this->folic_acid,  $this->witamin_b12,  $this->witamin_c,  $this->witamin_d,  $this->witamin_e, $this->witamin_pp, $this->calcium, $this->chlorine, $this->magnesium, $this->phosphorus, $this->potassium, $this->sodium, $this->iron, $this->zinc, $this->copper,  $this->manganese, $this->molybdenum, $this->iodine, $this->fluorine, $this->chrome, $this->selenium, $this->description, $this->userid);
         
         }
 
@@ -143,12 +145,12 @@ class ProductController extends Product{
         
         if($this->emptyInput()){
 
-            header("location: ../product.php?error=emptyfields");
+            header("location: ../add_product.php?error=emptyfields");
 
 
         }else{
 
-            if($this->setProductAndPhoto($this->name,  $this->kcal,  $this->protein,  $this->animal_protein, $this->vegetable_protein,  $this->fat,  $this->saturated_fat,  $this->monounsaturated_fat, $this->polyunsaturated_fat, $this->omega3_acid, $this->omega6_acid, $this->carbohydrates, $this->net_carbohydrates, $this->sugar,  $this->fiber,  $this->salt, $this->cholesterol,  $this->witamin_k, $this->witamin_a, $this->witamin_b1,  $this->witamin_b2, $this->witamin_b5, $this->witamin_b6,  $this->biotin,  $this->folic_acid,  $this->witamin_b12,  $this->witamin_c,  $this->witamin_d,  $this->witamin_e, $this->witamin_pp, $this->calcium, $this->chlorine, $this->magnesium, $this->phosphorus, $this->potassium, $this->sodium, $this->iron, $this->zinc, $this->copper,  $this->manganese, $this->molybdenum, $this->iodine, $this->fluorine, $this->chrome, $this->selenium, $this->description, $this->filename)){
+            if($this->setProductAndPhoto($this->name,  $this->kcal,  $this->protein,  $this->animal_protein, $this->vegetable_protein,  $this->fat,  $this->saturated_fat,  $this->monounsaturated_fat, $this->polyunsaturated_fat, $this->omega3_acid, $this->omega6_acid, $this->carbohydrates, $this->net_carbohydrates, $this->sugar,  $this->fiber,  $this->salt, $this->cholesterol,  $this->witamin_k, $this->witamin_a, $this->witamin_b1,  $this->witamin_b2, $this->witamin_b5, $this->witamin_b6,  $this->biotin,  $this->folic_acid,  $this->witamin_b12,  $this->witamin_c,  $this->witamin_d,  $this->witamin_e, $this->witamin_pp, $this->calcium, $this->chlorine, $this->magnesium, $this->phosphorus, $this->potassium, $this->sodium, $this->iron, $this->zinc, $this->copper,  $this->manganese, $this->molybdenum, $this->iodine, $this->fluorine, $this->chrome, $this->selenium, $this->description, $this->filename, $this->userid)){
 
                 return true;
 
