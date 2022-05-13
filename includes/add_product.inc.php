@@ -53,24 +53,25 @@ if(isset($_POST['submit'])){
     $description = $_POST["description"];
     $photo = $_FILES['photo'];
     $_SESSION['error'] = "";
+    $userid = $_SESSION['userid'];
  
-    $file = new ProductController($name,  $kcal,  $protein,  $animal_protein, $vegetable_protein,  $fat,  $saturated_fat,  $monounsaturated_fat, $polyunsaturated_fat, $omega3_acid, $omega6_acid, $carbohydrates, $net_carbohydrates, $sugar,  $fiber,  $salt, $cholesterol, $witamin_k, $witamin_a, $witamin_b1,  $witamin_b2,  $witamin_b5, $witamin_b6,  $biotin,  $folic_acid,  $witamin_b12,  $witamin_c,  $witamin_d,  $witamin_e, $witamin_pp, $calcium, $chlorine, $magnesium, $phosphorus, $potassium, $sodium, $iron, $zinc, $copper,  $manganese, $molybdenum, $iodine, $fluorine, $chrome, $selenium, $description);
+    $file = new ProductController($name,  $kcal,  $protein,  $animal_protein, $vegetable_protein,  $fat,  $saturated_fat,  $monounsaturated_fat, $polyunsaturated_fat, $omega3_acid, $omega6_acid, $carbohydrates, $net_carbohydrates, $sugar,  $fiber,  $salt, $cholesterol, $witamin_k, $witamin_a, $witamin_b1,  $witamin_b2,  $witamin_b5, $witamin_b6,  $biotin,  $folic_acid,  $witamin_b12,  $witamin_c,  $witamin_d,  $witamin_e, $witamin_pp, $calcium, $chlorine, $magnesium, $phosphorus, $potassium, $sodium, $iron, $zinc, $copper,  $manganese, $molybdenum, $iodine, $fluorine, $chrome, $selenium, $description, $userid);
 
     if(!$file->set_file($photo)){
 
         $_SESSION['error'] = $file->errors[0];
-        header("location: ../product.php?error=photo");
+        header("location: ../add_product.php?error=photo");
         
     } 
 
     if($file->save()){
 
         $_SESSION['error'] = "";
-        header("location: ../product.php?info=properlyAdded");
+        header("location: ../add_product.php?info=properlyAdded");
 
     } else {
         $_SESSION['error'] = $file->errors[0];
-        header("location: ../product.php?error=save");
+        header("location: ../add_product.php?error=save");
     }
 
 }
