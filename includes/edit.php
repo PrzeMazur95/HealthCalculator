@@ -33,6 +33,8 @@ if(isset($_GET['action'])){
 
         echo "FUTURE PHP CODE TO EDIT PRODUCTS";
 
+        // created new page to eddit products -> edit_product.php
+
     }else{
 
         header ("location: ../index.php");
