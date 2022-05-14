@@ -242,170 +242,38 @@
                                 Makro and Micro elements - optional informations
                             </div>
                             <div class="card-body">
-                                    <div class="container-fluid overflow-auto form-inline" style="height: 200px;">
+                                <div class="container-fluid overflow-auto form-inline" style="height: 200px;">
                                         <div class="col-sm-12 overflow-auto">
                                             <div id="product_details"> 
+ 
+                                            <?php 
+                                            
+                                            $fields = array('Ani. Protein', 'Vege. Protein', 'Sat. Fat', 
+                                            'Mono_Fat', 'Poly Fat', 'Omega3', 'Omega6', 
+                                            'Mono Fat', 'Fiber', 'Vege_Protein', 'Vege_Protein', 
+                                            'Netto Carbs', 'Salt', 'Salt', 'Cholesterol', 
+                                            'Witamin K', 'Witamin A', 'Witamin B1', 'Witamin B2', 
+                                            'Witamin B5', 'Witamin B6', 'Biotin', 'Folic Acid', 
+                                            'Witamin B12', 'Witamin C', 'Witamin D', 'Witamin E', 
+                                            'Witamin PP', 'Calcium', 'Chlorine', 'Magnesium', 
+                                            'Phosphorus', 'Potassium', 'Sodium', 'Iron', 
+                                            'Zinc', 'Copper', 'Manganese', 'Molybdenum', 
+                                            'Iodine', 'Fluorine', 'Chrome', 'Selenium');
+
+                                            foreach ($fields as $field) { ?>
+
                                                 <div class="form-group text-center">
-                                                    <label for="exampleFormControlTextarea1" >Ani. Protein</label>
-                                                    <input type="text" class="form-control text-center" id="exampleFormControlTextarea2" rows="1" name="animal_protein" value=0></input>
+                                                    <label for="exampleFormControlTextarea1" ><?php echo $field ?></label>
+                                                    <input type="text" class="form-control text-center" id="exampleFormControlTextarea2" rows="1" name="<?php echo $field ?>" value=0></input>
                                                 </div>
-                                                <div class="form-group text-center">
-                                                    <label for="exampleFormControlTextarea1" >Vege. Protein</label>
-                                                    <input type="text" class="form-control text-center"  id="exampleFormControlTextarea2" rows="1" name="vegetable_protein" value=0></input>
-                                                </div>
-                                                <div class="form-group text-center">
-                                                    <label for="exampleFormControlTextarea1" >Sat. Fat </label>
-                                                    <input type="text" class="form-control text-center" id="exampleFormControlTextarea2" rows="1" name="saturated_fat" value=0></input>
-                                                </div>
-                                                <div class="form-group text-center">
-                                                    <label for="exampleFormControlTextarea1" >Mono Fat</label>
-                                                    <input type="text" class="form-control text-center" id="exampleFormControlTextarea2" rows="1" name="monounsaturated_fat" value=0></input>
-                                                </div>
-                                                <div class="form-group text-center">
-                                                    <label for="exampleFormControlTextarea1" >Poly Fat</label>
-                                                    <input type="text" class="form-control text-center" id="exampleFormControlTextarea2" rows="1" name="polyunsaturated_fat" value=0></input>
-                                                </div>
-                                                <div class="form-group text-center">
-                                                    <label for="exampleFormControlTextarea1" >Omega3</label>
-                                                    <input type="text" class="form-control text-center" id="exampleFormControlTextarea2" rows="1" name="omega3_acid" value=0></input>
-                                                </div>
-                                                <div class="form-group text-center">
-                                                    <label for="exampleFormControlTextarea1" >Omega6</label>
-                                                    <input type="text" class="form-control text-center" id="exampleFormControlTextarea2" rows="1" name="omega6_acid" value=0></input>
-                                                </div>
-                                                <div class="form-group text-center">
-                                                    <label for="exampleFormControlTextarea1" >Netto Carbs</label>
-                                                    <input type="text" class="form-control text-center" id="exampleFormControlTextarea2" rows="1" name="net_carbohydrates" value=0></input>
-                                                </div>
-                                                <div class="form-group text-center">
-                                                    <label for="exampleFormControlTextarea1" >Fiber</label>
-                                                    <input type="text" class="form-control text-center" id="exampleFormControlTextarea2" rows="1" name="fiber" value=0></input>
-                                                </div>
-                                                <div class="form-group text-center">
-                                                    <label for="exampleFormControlTextarea1" >Salt</label>
-                                                    <input type="text" class="form-control text-center" id="exampleFormControlTextarea2" rows="1" name="salt" value=0></input>
-                                                </div>
-                                                <div class="form-group text-center">
-                                                    <label for="exampleFormControlTextarea1" >Cholesterol</label>
-                                                    <input type="text" class="form-control text-center" id="exampleFormControlTextarea2" rows="1" name="cholesterol" value=0></input>
-                                                </div>
-                                                <div class="form-group text-center">
-                                                    <label for="exampleFormControlTextarea1" >Witamin K</label>
-                                                    <input type="text" class="form-control text-center" id="exampleFormControlTextarea2" rows="1" name="witamin_k" value=0></input>
-                                                </div>
-                                                <div class="form-group text-center">
-                                                    <label for="exampleFormControlTextarea1" >Witamin A</label>
-                                                    <input type="text" class="form-control text-center" id="exampleFormControlTextarea2" rows="1" name="witamin_a" value=0></input>
-                                                </div>
-                                                <div class="form-group text-center">
-                                                    <label for="exampleFormControlTextarea1" >Witamin B1</label>
-                                                    <input type="text" class="form-control text-center" id="exampleFormControlTextarea2" rows="1" name="witamin_b1" value=0></input>
-                                                </div>
-                                                <div class="form-group text-center">
-                                                    <label for="exampleFormControlTextarea1" >Witamin B2</label>
-                                                    <input type="text" class="form-control text-center" id="exampleFormControlTextarea2" rows="1" name="witamin_b2" value=0></input>
-                                                </div>
-                                                <div class="form-group text-center">
-                                                    <label for="exampleFormControlTextarea1" >Witamin B5</label>
-                                                    <input type="text" class="form-control text-center" id="exampleFormControlTextarea2" rows="1" name="witamin_b5" value=0></input>
-                                                </div>
-                                                <div class="form-group text-center">
-                                                    <label for="exampleFormControlTextarea1" >Witamin B6</label>
-                                                    <input type="text" class="form-control text-center" id="exampleFormControlTextarea2" rows="1" name="witamin_b6" value=0></input>
-                                                </div>
-                                                <div class="form-group text-center">
-                                                    <label for="exampleFormControlTextarea1" >Biotin</label>
-                                                    <input type="text" class="form-control text-center" id="exampleFormControlTextarea2" rows="1" name="biotin" value=0></input>
-                                                </div>
-                                                <div class="form-group text-center">
-                                                    <label for="exampleFormControlTextarea1" >Folic Acid</label>
-                                                    <input type="text" class="form-control text-center" id="exampleFormControlTextarea2" rows="1" name="folic_acid" value=0></input>
-                                                </div>
-                                                <div class="form-group text-center">
-                                                    <label for="exampleFormControlTextarea1" >Witamin B12</label>
-                                                    <input type="text" class="form-control text-center" id="exampleFormControlTextarea2" rows="1" name="witamin_b12" value=0></input>
-                                                </div>
-                                                <div class="form-group text-center">
-                                                    <label for="exampleFormControlTextarea1" >Witamin C</label>
-                                                    <input type="text" class="form-control text-center" id="exampleFormControlTextarea2" rows="1" name="witamin_c" value=0></input>
-                                                </div>
-                                                <div class="form-group text-center">
-                                                    <label for="exampleFormControlTextarea1" >Witamin D</label>
-                                                    <input type="text" class="form-control text-center" id="exampleFormControlTextarea2" rows="1" name="witamin_d" value=0></input>
-                                                </div>
-                                                <div class="form-group text-center">
-                                                    <label for="exampleFormControlTextarea1" >Witamin E</label>
-                                                    <input type="text" class="form-control text-center" id="exampleFormControlTextarea2" rows="1" name="witamin_e"value=0></input>
-                                                </div>
-                                                <div class="form-group text-center">
-                                                    <label for="exampleFormControlTextarea1" >Witamin PP</label>
-                                                    <input type="text" class="form-control text-center" id="exampleFormControlTextarea2" rows="1" name="witamin_pp" value=0></input>
-                                                </div>
-                                                <div class="form-group text-center">
-                                                    <label for="exampleFormControlTextarea1" >Calcium</label>
-                                                    <input type="text" class="form-control text-center" id="exampleFormControlTextarea2" rows="1" name="calcium" value=0></input>
-                                                </div>
-                                                <div class="form-group text-center">
-                                                    <label for="exampleFormControlTextarea1" >Chlorine</label>
-                                                    <input type="text" class="form-control text-center" id="exampleFormControlTextarea2" rows="1" name="chlorine" value=0></input>
-                                                </div>
-                                                <div class="form-group text-center">
-                                                    <label for="exampleFormControlTextarea1" >Magnesium</label>
-                                                    <input type="text" class="form-control text-center" id="exampleFormControlTextarea2" rows="1" name="magnesium" value=0></input>
-                                                </div>
-                                                <div class="form-group text-center">
-                                                    <label for="exampleFormControlTextarea1" >Phosphorus</label>
-                                                    <input type="text" class="form-control text-center" id="exampleFormControlTextarea2" rows="1" name="phosphorus" value=0></input>
-                                                </div>
-                                                <div class="form-group text-center">
-                                                    <label for="exampleFormControlTextarea1" >Potassium</label>
-                                                    <input type="text" class="form-control text-center" id="exampleFormControlTextarea2" rows="1" name="potassium" value=0></input>
-                                                </div>
-                                                <div class="form-group text-center">
-                                                    <label for="exampleFormControlTextarea1" >Sodium</label>
-                                                    <input type="text" class="form-control text-center" id="exampleFormControlTextarea2" rows="1" name="sodium" value=0></input>
-                                                </div>
-                                                <div class="form-group text-center">
-                                                    <label for="exampleFormControlTextarea1" >Iron</label>
-                                                    <input type="text" class="form-control text-center" id="exampleFormControlTextarea2" rows="1" name="iron" value=0></input>
-                                                </div>
-                                                <div class="form-group text-center">
-                                                    <label for="exampleFormControlTextarea1" >Zinc</label>
-                                                    <input type="text" class="form-control text-center" id="exampleFormControlTextarea2" rows="1" name="zinc" value=0></input>
-                                                </div>
-                                                <div class="form-group text-center">
-                                                    <label for="exampleFormControlTextarea1" >Copper</label>
-                                                    <input type="text" class="form-control text-center" id="exampleFormControlTextarea3" rows="1" name="copper"value=0></input>
-                                                </div>
-                                                <div class="form-group text-center">
-                                                    <label for="exampleFormControlTextarea1" >Manganese</label>
-                                                    <input type="text" class="form-control text-center" id="exampleFormControlTextarea3" rows="1" name="manganese" value=0></input>
-                                                </div>
-                                                <div class="form-group text-center">
-                                                    <label for="exampleFormControlTextarea1" >Molybdenum</label>
-                                                    <input type="text" class="form-control text-center" id="exampleFormControlTextarea3" rows="1" name="molybdenum" value=0></input>
-                                                </div>
-                                                <div class="form-group text-center">
-                                                    <label for="exampleFormControlTextarea1" >Iodine</label>
-                                                    <input type="text" class="form-control text-center" id="exampleFormControlTextarea3" rows="1" name="iodine" value=0></input>
-                                                </div>
-                                                <div class="form-group text-center">
-                                                    <label for="exampleFormControlTextarea1" >Fluorine</label>
-                                                    <input type="text" class="form-control text-center" id="exampleFormControlTextarea3" rows="1" name="fluorine" value=0></input>
-                                                </div>
-                                                <div class="form-group text-center">
-                                                    <label for="exampleFormControlTextarea1" >Chrome</label>
-                                                    <input type="text" class="form-control text-center" id="exampleFormControlTextarea3" rows="1" name="chrome" value=0></input>
-                                                </div>
-                                                <div class="form-group text-center">
-                                                    <label for="exampleFormControlTextarea1" >Selenium</label>
-                                                    <input type="text" class="form-control text-center" id="exampleFormControlTextarea3" rows="1" name="selenium" value=0></input>
-                                                </div>
-                                                <div class="form-group text-center">
-                                                        <label for="exampleFormControlTextarea1" >Description</label>
-                                                        <input type="text" class="form-control text-center" id="exampleFormControlTextarea4" rows="2" name="description" ></input>
-                                                </div>
-                                            </div>  
+                                            
+                                            <?php 
+
+                                            }
+                                            
+                                            ?>
+                                
+                                           </div>  
                                         </div>
                                     </div>
                                         <div class="container-fluid">
