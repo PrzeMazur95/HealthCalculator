@@ -189,14 +189,6 @@
                                                     echo "<div class='alert alert-success text-center' role='alert'>";
                                                     switch ($_GET['info']){
                                                         
-                                                        case "properlyAdded":
-                                                            echo "Succes! You have succesfylly added your product!"; 
-                                                            break;
-
-                                                        case "deleted":
-                                                            echo "Succes! You have succesfully deleted this product!"; 
-                                                            break;
-
                                                         case "edited":
                                                             echo "Succes! You have succesfully edited this product!"; 
                                                             break;
