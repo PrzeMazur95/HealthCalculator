@@ -197,6 +197,11 @@
                                                     echo "</div>";
     
                                                 }
+
+
+                                                $product = new DbObjectView();
+                                                $specific_product = $product->Find_by_id($_GET['table'], $_GET['id'], $_GET['userid']);
+
                                             ?>
                                     <div class="card-header text-center">
                                         <i class="fas fa-chart-area me-1"></i>
