@@ -80,6 +80,10 @@
                             <div class="col-xl-12">
                                 <div class="card mb-12">
                                             <?php 
+
+                                            $product = new DbObjectView();
+
+                                            $specific_product = $product->Find_by_id($_GET['table'], $_GET['id'], $_GET['userid']);
                                 
                                             if(isset($_GET['error'])){
                                                 
@@ -144,7 +148,9 @@
                                     <!-- Put here image and description -->
 
                                     <div class="row text-center">
-                                        <div class="col-lg-6">div 1</div>
+                                        <div class="col-lg-6">
+                                        <img src="uploads/images/<?php echo $specific_product[0]['filename']; ?>" class="img-fluid" alt="Responsive image">
+                                        </div>
                                         <div class="col-lg-6">div 2</div>
                                     </div>
 
@@ -203,10 +209,6 @@
                                                     echo "</div>";
     
                                                 }
-
-
-                                                $product = new DbObjectView();
-                                                $specific_product = $product->Find_by_id($_GET['table'], $_GET['id'], $_GET['userid']);
 
                                             ?>
                                     <div class="card-header text-center">
