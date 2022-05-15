@@ -16,7 +16,7 @@ class DbObjectView extends DbObject {
 
             } else { 
 
-                header("location: products.php?error=stmtfailed");
+                header("location: products.php?error=id");
                 exit();
 
             }
