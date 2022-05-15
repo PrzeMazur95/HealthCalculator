@@ -6,12 +6,22 @@ class DbObjectView extends DbObject {
 
         if(!is_numeric($id) || is_string($table || !is_numeric($userid))){
 
-            header("location: ../index.php");
+            header("location: index.php");
 
         } else {
 
-            $object = $this->Find_by_id_and_table($table, $id, $userid);
-            return $object;
+            if($object = $this->Find_by_id_and_table($table, $id, $userid)){
+
+                return $object;
+
+            } else { 
+
+                header("location: products.php?error=stmtfailed");
+                exit();
+
+            }
+            
+            
 
         }
 
