@@ -141,7 +141,13 @@
                                         <h3>Avocado <?php //echo $_GET['name']; ?></h2>
                                     </div>
 
-                                    Put here image and description
+                                    <!-- Put here image and description -->
+
+                                    <div class="row text-center">
+                                        <div class="col-lg-6">div 1</div>
+                                        <div class="col-lg-6">div 2</div>
+                                    </div>
+
                                 </div>
                             </div>
                         </div>
