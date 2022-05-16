@@ -219,33 +219,21 @@
                                     </div>
                                     <form action="includes/add_product.inc.php" enctype="multipart/form-data" method="post">
                                         <div class="row">
+                                            <?php 
+
+                                            $main = array('Name'=>'name', 'kCal'=>'kcal', 'Protein'=>'protein', 'Carbs'=>'carbohydrates', 'Fat'=>'fat');
+
+                                            foreach ($main as $key => $value) { ?>
                                             <div class="col-lg-4 text-center">
-                                            <label for="exampleFormControlTextarea1" >Name</label>
-                                            <input type="text" class="form-control text-center" name="name" value=<?php echo $specific_product[0]['name']?> required>
+                                            <label for="exampleFormControlTextarea1" ><?php echo $key; ?></label>
+                                            <input type="text" class="form-control text-center" name="name" value=<?php echo $specific_product[0][$value]; ?> required>
                                             </div>
+
+                                            <?php } ?>
+
                                             <div class="col-lg-4 text-center">
                                             <label for="exampleFormControlTextarea1" >Photo</label>
                                             <input type="file" class="form-control text-center" name="photo" required>
-                                            </div>
-                                            <div class="col-lg-4 text-center">
-                                            <label for="exampleFormControlTextarea1" >kCal</label>
-                                            <input type="text" class="form-control text-center" name="kcal" value=<?php echo $specific_product[0]['kcal']?>  required>
-                                            </div>
-                                            <div class="col-lg-3 text-center">
-                                            <label for="exampleFormControlTextarea1" >Protein</label>
-                                            <input type="text" class="form-control text-center" name="protein" value=<?php echo $specific_product[0]['protein']?> required>
-                                            </div>
-                                            <div class="col-lg-3 text-center">
-                                            <label for="exampleFormControlTextarea1" >Carbs</label>
-                                            <input type="text" class="form-control text-center" name="carbohydrates" value=<?php echo $specific_product[0]['carbohydrates']?> required>
-                                            </div>
-                                            <div class="col-lg-3 text-center">
-                                            <label for="exampleFormControlTextarea1" >Fat</label>
-                                            <input type="text" class="form-control text-center" name="fat" value=<?php echo $specific_product[0]['fat']?>  required>
-                                            </div>
-                                            <div class="col-lg-3 text-center">
-                                            <label for="exampleFormControlTextarea1" >Sugar</label>
-                                            <input type="text" class="form-control text-center" name="sugar" value=<?php echo $specific_product[0]['sugar']?> required>
                                             </div>
                                         </div>
                                 </div>
