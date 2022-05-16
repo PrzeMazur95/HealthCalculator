@@ -3,9 +3,61 @@
 
 <?php
 
+$properties=array();
+
+$mainInformations = array('Name'=>'name', 'kCal'=>'kcal', 'Protein'=>'protein', 'Carbs'=>'carbohydrates', 'Fat'=>'fat');
+
+$additionalFields = array('Ani. Protein'=>'animal_protein', 'Vege. Protein'=>'vegetable_protein', 'Sat. Fat'=>'saturated_fat', 
+'Mono_Fat'=>'monounsaturated_fat', 'Poly Fat'=>'polyunsaturated_fat', 'Omega3'=>'omega3_acid', 'Omega6'=>'omega6_acid', 
+'Netto Carbs'=>'net_carbohydrates', 'Fiber'=>'fiber', 'Salt'=>'salt', 'Cholesterol'=>'cholesterol', 
+'Witamin K'=>'witamin_k', 'Witamin A'=>'witamin_a', 'Witamin B1'=>'witamin_b1', 'Witamin B2'=>'witamin_b2', 
+'Witamin B5'=>'witamin_b5', 'Witamin B6'=>'witamin_b6', 'Biotin'=>'biotin', 'Folic Acid'=>'folic_acid', 
+'Witamin B12'=>'witamin_b12', 'Witamin C'=>'witamin_c', 'Witamin D'=>'witamin_d', 'Witamin E'=>'witamin_e', 
+'Witamin PP'=>'witamin_pp', 'Calcium'=>'calcium', 'Chlorine'=>'chlorine', 'Magnesium'=>'magnesium', 
+'Phosphorus'=>'phosphorus', 'Potassium'=>'potassium', 'Sodium'=>'sodium', 'Iron'=>'iron', 
+'Zinc'=>'zinc', 'Copper'=>'copper', 'Manganese'=>'manganese', 'Molybdenum'=>'molybdenum', 
+'Iodine'=>'iodine', 'Fluorine'=>'fluorine', 'Chrome'=>'chrome', 'Selenium'=>'selenium');
+
     if(!isset($_SESSION['username'])){
 
         header("location: login.php?error=loginfirst");
+    }
+
+    if(isset($_POST['update'])){
+
+        foreach ($mainInformations as $key => $value){
+
+            $properties[$key]=$_POST[$value];
+
+        }
+
+        foreach ($additionalFields as $key => $value){
+
+            if(strpos($key, '.')){
+                    
+                $key = str_replace(".", "_", $key);
+                $properties[$key]=$_POST[$value];
+            } elseif (strpos($key, '. ')){
+
+                $key = str_replace(". ", "_", $key);
+                $properties[$key]=$_POST[$value];
+            } elseif (strpos($key, ' ')){
+
+                $key = str_replace(" ", "_", $key);
+                $properties[$key]=$_POST[$value];
+            } else {
+
+                $key = $key;
+                $properties[$key]=$_POST[$value];
+
+            }
+
+        }
+
+        print_r($properties);
+        die();  
+       
+
     }
 
 ?>
@@ -221,12 +273,10 @@
                                         <div class="row">
                                             <?php 
 
-                                            $main = array('Name'=>'name', 'kCal'=>'kcal', 'Protein'=>'protein', 'Carbs'=>'carbohydrates', 'Fat'=>'fat');
-
-                                            foreach ($main as $key => $value) { ?>
+                                            foreach ($mainInformations as $key => $value) { ?>
                                             <div class="col-lg-4 text-center">
                                             <label for="exampleFormControlTextarea1" ><?php echo $key; ?></label>
-                                            <input type="text" class="form-control text-center" name="name" value=<?php echo $specific_product[0][$value]; ?> required>
+                                            <input type="text" class="form-control text-center" name="<?php echo $value ?>" value=<?php echo $specific_product[0][$value]; ?> required>
                                             </div>
 
                                             <?php } ?>
@@ -250,23 +300,12 @@
                                             <div id="product_details"> 
  
                                             <?php 
-                                            
-                                            $fields = array('Ani. Protein'=>'animal_protein', 'Vege. Protein'=>'vegetable_protein', 'Sat. Fat'=>'saturated_fat', 
-                                            'Mono_Fat'=>'monounsaturated_fat', 'Poly Fat'=>'polyunsaturated_fat', 'Omega3'=>'omega3_acid', 'Omega6'=>'omega6_acid', 
-                                            'Netto Carbs'=>'net_carbohydrates', 'Fiber'=>'fiber', 'Salt'=>'salt', 'Cholesterol'=>'cholesterol', 
-                                            'Witamin K'=>'witamin_k', 'Witamin A'=>'witamin_a', 'Witamin B1'=>'witamin_b1', 'Witamin B2'=>'witamin_b2', 
-                                            'Witamin B5'=>'witamin_b5', 'Witamin B6'=>'witamin_b6', 'Biotin'=>'biotin', 'Folic Acid'=>'folic_acid', 
-                                            'Witamin B12'=>'witamin_b12', 'Witamin C'=>'witamin_c', 'Witamin D'=>'witamin_d', 'Witamin E'=>'witamin_e', 
-                                            'Witamin PP'=>'witamin_pp', 'Calcium'=>'calcium', 'Chlorine'=>'chlorine', 'Magnesium'=>'magnesium', 
-                                            'Phosphorus'=>'phosphorus', 'Potassium'=>'potassium', 'Sodium'=>'sodium', 'Iron'=>'iron', 
-                                            'Zinc'=>'zinc', 'Copper'=>'copper', 'Manganese'=>'manganese', 'Molybdenum'=>'molybdenum', 
-                                            'Iodine'=>'iodine', 'Fluorine'=>'fluorine', 'Chrome'=>'chrome', 'Selenium'=>'selenium');
 
-                                            foreach ($fields as $key => $value) { ?>
+                                            foreach ($additionalFields as $key => $value) { ?>
 
                                                 <div class="form-group text-center">
                                                     <label for="exampleFormControlTextarea1" ><?php echo $key; ?></label>
-                                                    <input type="text" class="form-control text-center" id="exampleFormControlTextarea2" rows="1" name="<?php echo $key ?>" value=<?php echo $specific_product[0][$value] ?>></input>
+                                                    <input type="text" class="form-control text-center" id="exampleFormControlTextarea2" rows="1" name="<?php echo $value ?>" value=<?php echo $specific_product[0][$value] ?>></input>
                                                 </div>
                                             
                                             <?php 
