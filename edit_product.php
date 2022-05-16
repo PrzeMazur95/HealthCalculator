@@ -221,31 +221,31 @@
                                         <div class="row">
                                             <div class="col-lg-4 text-center">
                                             <label for="exampleFormControlTextarea1" >Name</label>
-                                            <input type="text" class="form-control text-center" name="name" required>
+                                            <input type="text" class="form-control text-center" name="name" value=<?php echo $specific_product[0]['name']?> required>
                                             </div>
                                             <div class="col-lg-4 text-center">
                                             <label for="exampleFormControlTextarea1" >Photo</label>
-                                            <input type="file" class="form-control text-center" name="photo">
+                                            <input type="file" class="form-control text-center" name="photo" required>
                                             </div>
                                             <div class="col-lg-4 text-center">
                                             <label for="exampleFormControlTextarea1" >kCal</label>
-                                            <input type="text" class="form-control text-center" name="kcal" required>
+                                            <input type="text" class="form-control text-center" name="kcal" value=<?php echo $specific_product[0]['kcal']?>  required>
                                             </div>
                                             <div class="col-lg-3 text-center">
                                             <label for="exampleFormControlTextarea1" >Protein</label>
-                                            <input type="text" class="form-control text-center" name="protein" required>
+                                            <input type="text" class="form-control text-center" name="protein" value=<?php echo $specific_product[0]['protein']?> required>
                                             </div>
                                             <div class="col-lg-3 text-center">
                                             <label for="exampleFormControlTextarea1" >Carbs</label>
-                                            <input type="text" class="form-control text-center" name="carbohydrates" required>
+                                            <input type="text" class="form-control text-center" name="carbohydrates" value=<?php echo $specific_product[0]['carbohydrates']?> required>
                                             </div>
                                             <div class="col-lg-3 text-center">
                                             <label for="exampleFormControlTextarea1" >Fat</label>
-                                            <input type="text" class="form-control text-center" name="fat" required>
+                                            <input type="text" class="form-control text-center" name="fat" value=<?php echo $specific_product[0]['fat']?>  required>
                                             </div>
                                             <div class="col-lg-3 text-center">
                                             <label for="exampleFormControlTextarea1" >Sugar</label>
-                                            <input type="text" class="form-control text-center" name="sugar" required>
+                                            <input type="text" class="form-control text-center" name="sugar" value=<?php echo $specific_product[0]['sugar']?> required>
                                             </div>
                                         </div>
                                 </div>
@@ -263,23 +263,22 @@
  
                                             <?php 
                                             
-                                            $fields = array('Ani. Protein', 'Vege. Protein', 'Sat. Fat', 
-                                            'Mono_Fat', 'Poly Fat', 'Omega3', 'Omega6', 
-                                            'Mono Fat', 'Fiber', 'Vege_Protein', 'Vege_Protein', 
-                                            'Netto Carbs', 'Salt', 'Salt', 'Cholesterol', 
-                                            'Witamin K', 'Witamin A', 'Witamin B1', 'Witamin B2', 
-                                            'Witamin B5', 'Witamin B6', 'Biotin', 'Folic Acid', 
-                                            'Witamin B12', 'Witamin C', 'Witamin D', 'Witamin E', 
-                                            'Witamin PP', 'Calcium', 'Chlorine', 'Magnesium', 
-                                            'Phosphorus', 'Potassium', 'Sodium', 'Iron', 
-                                            'Zinc', 'Copper', 'Manganese', 'Molybdenum', 
-                                            'Iodine', 'Fluorine', 'Chrome', 'Selenium');
+                                            $fields = array('Ani. Protein'=>'animal_protein', 'Vege. Protein'=>'vegetable_protein', 'Sat. Fat'=>'saturated_fat', 
+                                            'Mono_Fat'=>'monounsaturated_fat', 'Poly Fat'=>'polyunsaturated_fat', 'Omega3'=>'omega3_acid', 'Omega6'=>'omega6_acid', 
+                                            'Netto Carbs'=>'net_carbohydrates', 'Fiber'=>'fiber', 'Salt'=>'salt', 'Cholesterol'=>'cholesterol', 
+                                            'Witamin K'=>'witamin_k', 'Witamin A'=>'witamin_a', 'Witamin B1'=>'witamin_b1', 'Witamin B2'=>'witamin_b2', 
+                                            'Witamin B5'=>'witamin_b5', 'Witamin B6'=>'witamin_b6', 'Biotin'=>'biotin', 'Folic Acid'=>'folic_acid', 
+                                            'Witamin B12'=>'witamin_b12', 'Witamin C'=>'witamin_c', 'Witamin D'=>'witamin_d', 'Witamin E'=>'witamin_e', 
+                                            'Witamin PP'=>'witamin_pp', 'Calcium'=>'calcium', 'Chlorine'=>'chlorine', 'Magnesium'=>'magnesium', 
+                                            'Phosphorus'=>'phosphorus', 'Potassium'=>'potassium', 'Sodium'=>'sodium', 'Iron'=>'iron', 
+                                            'Zinc'=>'zinc', 'Copper'=>'copper', 'Manganese'=>'manganese', 'Molybdenum'=>'molybdenum', 
+                                            'Iodine'=>'iodine', 'Fluorine'=>'fluorine', 'Chrome'=>'chrome', 'Selenium'=>'selenium');
 
-                                            foreach ($fields as $field) { ?>
+                                            foreach ($fields as $key => $value) { ?>
 
                                                 <div class="form-group text-center">
-                                                    <label for="exampleFormControlTextarea1" ><?php echo $field ?></label>
-                                                    <input type="text" class="form-control text-center" id="exampleFormControlTextarea2" rows="1" name="<?php echo $field ?>" value=0></input>
+                                                    <label for="exampleFormControlTextarea1" ><?php echo $key; ?></label>
+                                                    <input type="text" class="form-control text-center" id="exampleFormControlTextarea2" rows="1" name="<?php echo $field ?>" value=<?php echo $specific_product[0][$value] ?>></input>
                                                 </div>
                                             
                                             <?php 
