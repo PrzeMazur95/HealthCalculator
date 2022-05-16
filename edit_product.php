@@ -217,7 +217,7 @@
                                         <i class="fas fa-chart-area me-1"></i>
                                         <h3>Type all informations per 100g</h2>
                                     </div>
-                                    <form action="includes/add_product.inc.php" enctype="multipart/form-data" method="post">
+                                    <form action="#" enctype="multipart/form-data" method="post">
                                         <div class="row">
                                             <?php 
 
@@ -266,7 +266,7 @@
 
                                                 <div class="form-group text-center">
                                                     <label for="exampleFormControlTextarea1" ><?php echo $key; ?></label>
-                                                    <input type="text" class="form-control text-center" id="exampleFormControlTextarea2" rows="1" name="<?php echo $field ?>" value=<?php echo $specific_product[0][$value] ?>></input>
+                                                    <input type="text" class="form-control text-center" id="exampleFormControlTextarea2" rows="1" name="<?php echo $key ?>" value=<?php echo $specific_product[0][$value] ?>></input>
                                                 </div>
                                             
                                             <?php 
@@ -281,7 +281,7 @@
                                         <div class="container-fluid">
                                             <div class="row">
                                                 <div class="col-sm-12 text-center">
-                                                <button type="submit" class="btn btn-primary text-center" name="submit">Update this product !</button>
+                                                <button type="submit" class="btn btn-primary text-center" name="update">Update this product !</button>
                                             </div>
                                         </div>
                                     </div>
