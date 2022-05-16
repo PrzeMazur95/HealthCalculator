@@ -142,7 +142,7 @@
                                             ?>
                                     <div class="card-header text-center">
                                         <i class="fas fa-chart-area me-1"></i>
-                                        <h3>Avocado <?php //echo $_GET['name']; ?></h2>
+                                        <h3><?php echo $specific_product[0]['name']; ?></h2>
                                     </div>
 
                                     <!-- Put here image and description -->
