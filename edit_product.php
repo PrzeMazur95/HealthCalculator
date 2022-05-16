@@ -144,14 +144,16 @@
                                         <i class="fas fa-chart-area me-1"></i>
                                         <h3><?php echo $specific_product[0]['name']; ?></h2>
                                     </div>
-
-                                    <!-- Put here image and description -->
-
                                     <div class="row text-center">
                                         <div class="col-lg-6">
-                                        <img src="uploads/images/<?php echo $specific_product[0]['filename']; ?>" class="img-fluid" alt="Responsive image">
+                                            <img src="uploads/images/<?php echo $specific_product[0]['filename']; ?>" class="img-thumbnail" alt="Responsive image">
                                         </div>
-                                        <div class="col-lg-6">div 2</div>
+                                        <div class="col-lg-6">
+                                            <div class="form-group m-1">
+                                                <h6><label for="exampleFormControlTextarea1">Description</label></h6>
+                                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="15"><?php echo $specific_product[0]['description']; ?></textarea>
+                                            </div>
+                                        </div>
                                     </div>
 
                                 </div>
