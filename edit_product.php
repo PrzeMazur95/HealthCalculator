@@ -5,7 +5,7 @@
 
 $properties=array();
 
-$mainInformations = array('Name'=>'name', 'kCal'=>'kcal', 'Protein'=>'protein', 'Carbs'=>'carbohydrates', 'Fat'=>'fat');
+$mainInformations = array('Name'=>'name', 'kCal'=>'kcal', 'Protein'=>'protein', 'Carbs'=>'carbohydrates', 'Fat'=>'fat', 'Sugar'=>'sugar');
 
 $additionalFields = array('Ani. Protein'=>'animal_protein', 'Vege. Protein'=>'vegetable_protein', 'Sat. Fat'=>'saturated_fat', 
 'Mono_Fat'=>'monounsaturated_fat', 'Poly Fat'=>'polyunsaturated_fat', 'Omega3'=>'omega3_acid', 'Omega6'=>'omega6_acid', 
@@ -156,6 +156,7 @@ $additionalFields = array('Ani. Protein'=>'animal_protein', 'Vege. Protein'=>'ve
     
                                                 }
                                             ?>
+                                <form action="includes/edit_product.inc.php" enctype="multipart/form-data" method="post">
                                     <div class="card-header text-center">
                                         <i class="fas fa-chart-area me-1"></i>
                                         <h3><?php echo $specific_product[0]['name']; ?></h2>
@@ -164,7 +165,6 @@ $additionalFields = array('Ani. Protein'=>'animal_protein', 'Vege. Protein'=>'ve
                                         <div class="col-lg-6">
                                             <img src="uploads/images/<?php echo $specific_product[0]['filename']; ?>" class="img-thumbnail" alt="Responsive image">
                                         </div>
-                                        <form action="includes/edit_product.inc.php" enctype="multipart/form-data" method="post">
                                         <div class="col-lg-6">
                                             <div class="form-group m-1">
                                                 <h6><label for="exampleFormControlTextarea1">Description</label></h6>
@@ -275,7 +275,6 @@ $additionalFields = array('Ani. Protein'=>'animal_protein', 'Vege. Protein'=>'ve
                                             <?php 
 
                                             }
-                                            
                                             ?>
                                 
                                            </div>  
@@ -284,6 +283,7 @@ $additionalFields = array('Ani. Protein'=>'animal_protein', 'Vege. Protein'=>'ve
                                         <div class="container-fluid">
                                             <div class="row">
                                                 <div class="col-sm-12 text-center">
+                                                <input type="hidden" name="oldpicture" value=<?php echo $specific_product[0]['filename'] ?>></input>
                                                 <button type="submit" class="btn btn-primary text-center" name="update">Update this product !</button>
                                             </div>
                                         </div>
