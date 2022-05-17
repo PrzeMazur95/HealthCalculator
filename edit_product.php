@@ -164,10 +164,11 @@ $additionalFields = array('Ani. Protein'=>'animal_protein', 'Vege. Protein'=>'ve
                                         <div class="col-lg-6">
                                             <img src="uploads/images/<?php echo $specific_product[0]['filename']; ?>" class="img-thumbnail" alt="Responsive image">
                                         </div>
+                                        <form action="includes/edit_product.inc.php" enctype="multipart/form-data" method="post">
                                         <div class="col-lg-6">
                                             <div class="form-group m-1">
                                                 <h6><label for="exampleFormControlTextarea1">Description</label></h6>
-                                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="15"><?php echo $specific_product[0]['description']; ?></textarea>
+                                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="15" name="description"><?php echo $specific_product[0]['description']; ?></textarea>
                                             </div>
                                         </div>
                                     </div>
@@ -233,7 +234,6 @@ $additionalFields = array('Ani. Protein'=>'animal_protein', 'Vege. Protein'=>'ve
                                         <i class="fas fa-chart-area me-1"></i>
                                         <h3>Type all informations per 100g</h2>
                                     </div>
-                                    <form action="includes/edit_product.inc.php" enctype="multipart/form-data" method="post">
                                         <div class="row">
                                             <?php 
 
