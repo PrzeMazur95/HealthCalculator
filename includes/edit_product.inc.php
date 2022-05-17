@@ -3,6 +3,61 @@ include_once "autoloader.inc.php";
 
 session_start();
 
+$properties=array();
+
+$mainInformations = array('Name'=>'name', 'kCal'=>'kcal', 'Protein'=>'protein', 'Carbs'=>'carbohydrates', 'Fat'=>'fat');
+
+$additionalFields = array('Ani. Protein'=>'animal_protein', 'Vege. Protein'=>'vegetable_protein', 'Sat. Fat'=>'saturated_fat', 
+'Mono_Fat'=>'monounsaturated_fat', 'Poly Fat'=>'polyunsaturated_fat', 'Omega3'=>'omega3_acid', 'Omega6'=>'omega6_acid', 
+'Netto Carbs'=>'net_carbohydrates', 'Fiber'=>'fiber', 'Salt'=>'salt', 'Cholesterol'=>'cholesterol', 
+'Witamin K'=>'witamin_k', 'Witamin A'=>'witamin_a', 'Witamin B1'=>'witamin_b1', 'Witamin B2'=>'witamin_b2', 
+'Witamin B5'=>'witamin_b5', 'Witamin B6'=>'witamin_b6', 'Biotin'=>'biotin', 'Folic Acid'=>'folic_acid', 
+'Witamin B12'=>'witamin_b12', 'Witamin C'=>'witamin_c', 'Witamin D'=>'witamin_d', 'Witamin E'=>'witamin_e', 
+'Witamin PP'=>'witamin_pp', 'Calcium'=>'calcium', 'Chlorine'=>'chlorine', 'Magnesium'=>'magnesium', 
+'Phosphorus'=>'phosphorus', 'Potassium'=>'potassium', 'Sodium'=>'sodium', 'Iron'=>'iron', 
+'Zinc'=>'zinc', 'Copper'=>'copper', 'Manganese'=>'manganese', 'Molybdenum'=>'molybdenum', 
+'Iodine'=>'iodine', 'Fluorine'=>'fluorine', 'Chrome'=>'chrome', 'Selenium'=>'selenium');
+
+if(isset($_POST['update'])){
+
+    foreach ($mainInformations as $key => $value){
+
+        $properties[$key]=$_POST[$value];
+
+    }
+
+    foreach ($additionalFields as $key => $value){
+
+        if(strpos($key, '.')){
+                
+            $key = str_replace(".", "_", $key);
+            $properties[$key]=$_POST[$value];
+        } elseif (strpos($key, '. ')){
+
+            $key = str_replace(". ", "_", $key);
+            $properties[$key]=$_POST[$value];
+        } elseif (strpos($key, ' ')){
+
+            $key = str_replace(" ", "_", $key);
+            $properties[$key]=$_POST[$value];
+        } else {
+
+            $key = $key;
+            $properties[$key]=$_POST[$value];
+
+        }
+
+    }
+
+    $properties['filename']=$_FILES['photo']['name'];
+
+    print_r($properties);
+    die();  
+   
+
+}
+
+
 if(isset($_POST['submit'])){
 
     $name = $_POST["name"];
