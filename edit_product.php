@@ -23,44 +23,6 @@ $additionalFields = array('Ani. Protein'=>'animal_protein', 'Vege. Protein'=>'ve
         header("location: login.php?error=loginfirst");
     }
 
-    if(isset($_POST['update'])){
-
-        foreach ($mainInformations as $key => $value){
-
-            $properties[$key]=$_POST[$value];
-
-        }
-
-        foreach ($additionalFields as $key => $value){
-
-            if(strpos($key, '.')){
-                    
-                $key = str_replace(".", "_", $key);
-                $properties[$key]=$_POST[$value];
-            } elseif (strpos($key, '. ')){
-
-                $key = str_replace(". ", "_", $key);
-                $properties[$key]=$_POST[$value];
-            } elseif (strpos($key, ' ')){
-
-                $key = str_replace(" ", "_", $key);
-                $properties[$key]=$_POST[$value];
-            } else {
-
-                $key = $key;
-                $properties[$key]=$_POST[$value];
-
-            }
-
-        }
-
-        $properties['filename']=$_FILES['photo']['name'];
-
-        // print_r($properties);
-        // die();  
-       
-
-    }
 
 ?>
 
@@ -271,7 +233,7 @@ $additionalFields = array('Ani. Protein'=>'animal_protein', 'Vege. Protein'=>'ve
                                         <i class="fas fa-chart-area me-1"></i>
                                         <h3>Type all informations per 100g</h2>
                                     </div>
-                                    <form action="#" enctype="multipart/form-data" method="post">
+                                    <form action="includes/edit_product.inc.php" enctype="multipart/form-data" method="post">
                                         <div class="row">
                                             <?php 
 
