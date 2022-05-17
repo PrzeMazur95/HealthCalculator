@@ -54,8 +54,10 @@ $additionalFields = array('Ani. Protein'=>'animal_protein', 'Vege. Protein'=>'ve
 
         }
 
-        print_r($properties);
-        die();  
+        $properties['filename']=$_FILES['photo']['name'];
+
+        // print_r($properties);
+        // die();  
        
 
     }
