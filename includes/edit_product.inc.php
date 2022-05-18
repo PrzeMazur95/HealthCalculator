@@ -55,8 +55,8 @@ if(isset($_POST['update'])){
 
 
 
-    print_r($photo);
-    die();  
+    // print_r($photo);
+    // die();  
    
 
 }
@@ -71,10 +71,10 @@ if(isset($_POST['update'])){
      } 
 
 
-    if(!$file->set_file($photo)){
+    if(!$updatedProduct->set_file($photo)){
 
-        $_SESSION['error'] = $file->errors[0];
-        header("location: ../add_product.php?error=photo");
+        $_SESSION['error'] = $updatedProduct->errors[0];
+        header("location: ../edit_product.php?error=photo");
         
     } 
 
