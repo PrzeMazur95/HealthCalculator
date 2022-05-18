@@ -51,9 +51,12 @@ if(isset($_POST['update'])){
 
     $properties['filename']=$_FILES['photo']['name'];
     $properties['userid']=$_SESSION['userid'];
+    $photo = $_FILES['photo'];
 
-    // print_r($properties);
-    // die();  
+
+
+    print_r($photo);
+    die();  
    
 
 }
@@ -64,8 +67,7 @@ if(isset($_POST['update'])){
      if($properties['Old_picture'] === $properties['filename']){
 
        $updatedProduct->deletePhoto($properties['Old_picture']);
-        die();
-        
+
      } 
 
 
