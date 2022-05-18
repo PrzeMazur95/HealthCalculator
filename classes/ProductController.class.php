@@ -210,7 +210,7 @@ class ProductController extends Product{
 
     public function save() {
 
-        if(!empty($this->erorrs)){
+        if(!empty($this->errors)){
 
             return false;
 
