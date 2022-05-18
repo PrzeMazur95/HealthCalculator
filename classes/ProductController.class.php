@@ -263,6 +263,12 @@ class ProductController extends Product{
         
 
     }
+
+    public function updateProduct(){
+
+
+        
+    }
     
 }
 
