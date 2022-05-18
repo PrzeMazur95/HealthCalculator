@@ -63,15 +63,10 @@ if(isset($_POST['update'])){
 
      if($properties['Old_picture'] === $properties['filename']){
 
-        echo "tak";
+       $updatedProduct->deletePhoto($properties['Old_picture']);
         die();
         
-
-     } else {
-
-        echo "nie";
-        die();
-     }
+     } 
 
 
     if(!$file->set_file($photo)){
