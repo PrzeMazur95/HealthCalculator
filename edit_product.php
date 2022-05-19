@@ -284,6 +284,7 @@ $additionalFields = array('Ani. Protein'=>'animal_protein', 'Vege. Protein'=>'ve
                                             <div class="row">
                                                 <div class="col-sm-12 text-center">
                                                 <input type="hidden" name="oldpicture" value=<?php echo $specific_product[0]['filename'] ?>></input>
+                                                <input type="hidden" name="id" value=<?php echo $specific_product[0]['id'] ?>></input>
                                                 <button type="submit" class="btn btn-primary text-center" name="update">Update this product !</button>
                                             </div>
                                         </div>
