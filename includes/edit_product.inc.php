@@ -62,23 +62,37 @@ if(isset($_POST['update'])){
 }
 
  
-     $updatedProduct = new ProductController($properties['Name'],  $properties['kCal'],  $properties['Protein'],  $properties['Ani_ Protein'], $properties['Vege_ Protein'],  $properties['Fat'],  $properties['Sat_ Fat'],  $properties['Mono_Fat'], $properties['Poly_Fat'], $properties['Omega3'], $properties['Omega6'], $properties['Carbs'], $properties['Netto_Carbs'], $properties['Sugar'], $properties['Fiber'],  $properties['Salt'], $properties['Cholesterol'], $properties['Witamin_K'], $properties['Witamin_A'], $properties['Witamin_B1'], $properties['Witamin_B2'],  $properties['Witamin_B5'], $properties['Witamin_B6'],  $properties['Biotin'],  $properties['Folic_Acid'],  $properties['Witamin_B12'],  $properties['Witamin_C'],  $properties['Witamin_D'],  $properties['Witamin_E'], $properties['Witamin_PP'], $properties['Calcium'], $properties['Chlorine'], $properties['Magnesium'], $properties['Phosphorus'], $properties['Potassium'], $properties['Sodium'], $properties['Iron'], $properties['Zinc'], $properties['Copper'],  $properties['Manganese'], $properties['Molybdenum'], $properties['Iodine'], $properties['Fluorine'], $properties['Chrome'], $properties['Selenium'], $properties['Description'], $properties['userid']);
+    $updatedProduct = new ProductController($properties['Name'],  $properties['kCal'],  $properties['Protein'],  $properties['Ani_ Protein'], $properties['Vege_ Protein'],  $properties['Fat'],  $properties['Sat_ Fat'],  $properties['Mono_Fat'], $properties['Poly_Fat'], $properties['Omega3'], $properties['Omega6'], $properties['Carbs'], $properties['Netto_Carbs'], $properties['Sugar'], $properties['Fiber'],  $properties['Salt'], $properties['Cholesterol'], $properties['Witamin_K'], $properties['Witamin_A'], $properties['Witamin_B1'], $properties['Witamin_B2'],  $properties['Witamin_B5'], $properties['Witamin_B6'],  $properties['Biotin'],  $properties['Folic_Acid'],  $properties['Witamin_B12'],  $properties['Witamin_C'],  $properties['Witamin_D'],  $properties['Witamin_E'], $properties['Witamin_PP'], $properties['Calcium'], $properties['Chlorine'], $properties['Magnesium'], $properties['Phosphorus'], $properties['Potassium'], $properties['Sodium'], $properties['Iron'], $properties['Zinc'], $properties['Copper'],  $properties['Manganese'], $properties['Molybdenum'], $properties['Iodine'], $properties['Fluorine'], $properties['Chrome'], $properties['Selenium'], $properties['Description'], $properties['userid']);
 
-     if($properties['Old_picture'] === $properties['filename']){
+    if($properties['Old_picture'] !== $properties['filename']){
 
-       $updatedProduct->deletePhoto($properties['Old_picture']);
+        if($updatedProduct->deletePhoto($properties['Old_picture'])){
 
-     } 
+            if(!$updatedProduct->set_file($photo)){
 
-
-    if(!$updatedProduct->set_file($photo)){
-
-        $_SESSION['error'] = $updatedProduct->errors[0];
-        header("location: ../edit_product.php?error=photo");
+                $_SESSION['error'] = $updatedProduct->errors[0];
+                header("location: ../edit_product.php?error=photo");
+                
+            } 
+ 
+        } 
         
-    } 
+    }else {
 
-    if($updatedProduct->updateProduct($properties['id'])){
+        if($updatedProduct->deletePhoto($properties['filename'])){
+
+            if(!$updatedProduct->set_file($photo)){
+    
+                 $_SESSION['error'] = $updatedProduct->errors[0];
+                 header("location: ../edit_product.php?error=photo");
+                    
+            } 
+        }
+
+    }
+
+
+    if($updatedProduct->updateProduct($properties['Id'])){
 
         $_SESSION['error'] = "";
         header("location: ../edit_product.php?info=properlyUpdated");
