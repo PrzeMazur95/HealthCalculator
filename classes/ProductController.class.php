@@ -287,7 +287,7 @@ class ProductController extends Product{
 
     }
 
-    public function updateProduct(){
+    public function updateProduct($id){
 
         if(!empty($this->errors)){
 
@@ -311,7 +311,7 @@ class ProductController extends Product{
 
         }
         
-        if($this->updateProductAndPhoto() && move_uploaded_file($this->tmp_path, $target_path) ) {
+        if($this->updateProductAndPhoto($id) && move_uploaded_file($this->tmp_path, $target_path) ) {
 
             unset($this->tmp_path);
             return true;
