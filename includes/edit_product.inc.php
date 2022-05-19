@@ -78,14 +78,14 @@ if(isset($_POST['update'])){
         
     } 
 
-    if($file->save()){
+    if($updatedProduct->updateProduct()){
 
         $_SESSION['error'] = "";
-        header("location: ../add_product.php?info=properlyAdded");
+        header("location: ../edit_product.php?info=properlyAdded");
 
     } else {
         $_SESSION['error'] = $file->errors[0];
-        header("location: ../add_product.php?error=save");
+        header("location: ../edit_product.php?error=save");
     }
 
 
