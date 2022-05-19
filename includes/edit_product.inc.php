@@ -16,7 +16,7 @@ $additionalFields = array('Ani. Protein'=>'animal_protein', 'Vege. Protein'=>'ve
 'Witamin PP'=>'witamin_pp', 'Calcium'=>'calcium', 'Chlorine'=>'chlorine', 'Magnesium'=>'magnesium', 
 'Phosphorus'=>'phosphorus', 'Potassium'=>'potassium', 'Sodium'=>'sodium', 'Iron'=>'iron', 
 'Zinc'=>'zinc', 'Copper'=>'copper', 'Manganese'=>'manganese', 'Molybdenum'=>'molybdenum', 
-'Iodine'=>'iodine', 'Fluorine'=>'fluorine', 'Chrome'=>'chrome', 'Selenium'=>'selenium', 'Description'=>'description','Old_picture'=>'oldpicture');
+'Iodine'=>'iodine', 'Fluorine'=>'fluorine', 'Chrome'=>'chrome', 'Selenium'=>'selenium', 'Description'=>'description','Old_picture'=>'oldpicture', 'Id'=>'id');
 
 if(isset($_POST['update'])){
 
@@ -55,7 +55,7 @@ if(isset($_POST['update'])){
 
 
 
-    // print_r($photo);
+    // print_r($properties);
     // die();  
    
 
@@ -78,10 +78,10 @@ if(isset($_POST['update'])){
         
     } 
 
-    if($updatedProduct->updateProduct()){
+    if($updatedProduct->updateProduct($properties['id'])){
 
         $_SESSION['error'] = "";
-        header("location: ../edit_product.php?info=properlyAdded");
+        header("location: ../edit_product.php?info=properlyUpdated");
 
     } else {
         $_SESSION['error'] = $file->errors[0];
