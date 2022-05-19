@@ -139,8 +139,8 @@ $additionalFields = array('Ani. Protein'=>'animal_protein', 'Vege. Protein'=>'ve
                                                     echo "<div class='alert alert-success text-center' role='alert'>";
                                                     switch ($_GET['info']){
                                                         
-                                                        case "properlyAdded":
-                                                            echo "Succes! You have succesfylly added your product!"; 
+                                                        case "properlyUpdated":
+                                                            echo "Succes! You have succesfylly updated your product!"; 
                                                             break;
 
                                                         case "deleted":
