@@ -266,6 +266,41 @@ class ProductController extends Product{
 
     public function updateProduct(){
 
+        if(!empty($this->errors)){
+
+            return false;
+
+        }
+
+        if(empty($this->filename) || empty($this->tmp_path)){
+
+            $this->errors[] = "The file was not available";
+            return false;
+
+        }
+
+        $target_path = SITE_ROOT . DS . ProductController::$uploads_directory . DS . $this->filename;
+
+        if(file_exists($target_path)){
+
+            $this->errors[] = "The file {$this->filename} already exists";
+            return false; 
+
+        }
+        
+        if($this->updateProductAndPhoto() && move_uploaded_file($this->tmp_path, $target_path) ) {
+
+            unset($this->tmp_path);
+            return true;
+
+        } else {
+
+            $this->errors[] = "The file directory probably doesn't have permission, or something went wrong with Db query, contact with Admin";
+            return false;
+
+        }
+
+
 
         
     }
