@@ -53,7 +53,7 @@ class ProductController extends Product{
 
 
     public $tmp_path;
-    public $ype;
+    public $type;
     public $filename;
     public static $uploads_directory = "/uploads/images";
     public $errors = array();
