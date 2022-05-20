@@ -143,13 +143,16 @@ $additionalFields = array('Ani. Protein'=>'animal_protein', 'Vege. Protein'=>'ve
                                         <h3><?php echo $specific_product[0]['name']; ?></h2>
                                     </div>
                                     <div class="row text-center">
-                                        <div class="col-lg-6">
+                                        <div class="col-lg-6 mt-4">
                                             <img src="uploads/images/<?php echo $specific_product[0]['filename']; ?>" class="img-thumbnail" alt="Responsive image">
                                         </div>
-                                        <div class="col-lg-6">
-                                            <div class="form-group m-1">
-                                                <h6><label for="exampleFormControlTextarea1">Description</label></h6>
-                                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="15" name="description"><?php echo $specific_product[0]['description']; ?></textarea>
+                                        <div class="col-lg-6 mt-4 mb-4">
+                                            <div class="form-group">
+
+                                            <blockquote class="blockquote text-center">
+                                            <p class="mb-0"><?php echo $specific_product[0]['description']; ?></p>
+                                            <!-- <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer> -->
+                                            </blockquote>
                                             </div>
                                         </div>
                                     </div>
