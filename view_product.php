@@ -90,7 +90,7 @@ $additionalFields = array('Ani. Protein'=>'animal_protein', 'Vege. Protein'=>'ve
             <div id="layoutSidenav_content">
                 <main>
                     <div class="container-fluid px-4">
-                        <h1 class="mt-4 text-center">Edit Product!</h1>
+                        <h1 class="mt-4 text-center">Product Details</h1>
 
                         <div class="row">
                             <div class="col-xl-12">
@@ -100,6 +100,9 @@ $additionalFields = array('Ani. Protein'=>'animal_protein', 'Vege. Protein'=>'ve
                                             $product = new DbObjectView();
 
                                             $specific_product = $product->Find_by_id($_GET['table'], $_GET['id'], $_GET['userid']);
+
+                                            // print_r($specific_product);
+                                            // die();
                                 
                                             if(isset($_GET['error'])){
                                                 
@@ -134,29 +137,7 @@ $additionalFields = array('Ani. Protein'=>'animal_protein', 'Vege. Protein'=>'ve
 
                                                 }
 
-                                                if(isset($_GET['info'])){
-
-                                                    echo "<div class='alert alert-success text-center' role='alert'>";
-                                                    switch ($_GET['info']){
-                                                        
-                                                        case "properlyUpdated":
-                                                            echo "Succes! You have succesfylly updated your product!"; 
-                                                            break;
-
-                                                        case "deleted":
-                                                            echo "Succes! You have succesfully deleted this product!"; 
-                                                            break;
-
-                                                        case "edited":
-                                                            echo "Succes! You have succesfully edited this product!"; 
-                                                            break;
-                                                    }
- 
-                                                    echo "</div>";
-    
-                                                }
                                             ?>
-                                <form action="includes/edit_product.inc.php" enctype="multipart/form-data" method="post">
                                     <div class="card-header text-center">
                                         <i class="fas fa-chart-area me-1"></i>
                                         <h3><?php echo $specific_product[0]['name']; ?></h2>
@@ -232,7 +213,7 @@ $additionalFields = array('Ani. Protein'=>'animal_protein', 'Vege. Protein'=>'ve
                                             ?>
                                     <div class="card-header text-center">
                                         <i class="fas fa-chart-area me-1"></i>
-                                        <h3>Type all informations per 100g</h2>
+                                        <h3>Informations are per 100g</h2>
                                     </div>
                                         <div class="row">
                                             <?php 
@@ -246,8 +227,6 @@ $additionalFields = array('Ani. Protein'=>'animal_protein', 'Vege. Protein'=>'ve
                                             <?php } ?>
 
                                             <div class="col-lg-4 text-center">
-                                            <label for="exampleFormControlTextarea1" >Photo</label>
-                                            <input type="file" class="form-control text-center" name="photo" required>
                                             </div>
                                         </div>
                                 </div>
@@ -283,13 +262,12 @@ $additionalFields = array('Ani. Protein'=>'animal_protein', 'Vege. Protein'=>'ve
                                         <div class="container-fluid">
                                             <div class="row">
                                                 <div class="col-sm-12 text-center">
-                                                <input type="hidden" name="oldpicture" value=<?php echo $specific_product[0]['filename'] ?>></input>
-                                                <input type="hidden" name="id" value=<?php echo $specific_product[0]['id'] ?>></input>
-                                                <button type="submit" class="btn btn-primary text-center" name="update">Update this product !</button>
+                                                <a href="products.php">
+                                                <button class="btn btn-primary text-center">Back to product list</button>
+                                                </a>
                                             </div>
                                         </div>
                                     </div>
-                                </form>
                             </div>
                         </div> 
                     </div>
