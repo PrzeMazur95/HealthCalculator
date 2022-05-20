@@ -87,7 +87,7 @@
                                         switch ($_GET['error']){
 
                                             case "id":
-                                                echo "You could not delete or edit this product, it is not yours!";
+                                                echo "You could not delete or edit this product, it is not yours, or you have typed wrong informations!";
                                                 break;
 
                                             case "stmtfailed":
