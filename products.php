@@ -144,7 +144,7 @@
                                             <td class="text-center">
                                             <a href="edit_product.php?id=<?php echo $Result['id']; ?>&table=Products&action=edit&userid=<?php echo $_SESSION['userid'] ?>" class="btn btn-primary btn-sm">Edit</a>
                                             <a href="includes/delete.php?id=<?php echo $Result['id']; ?>&table=Products&userid=<?php echo $_SESSION['userid'] ?>" class="btn btn-danger btn-sm" onclick="return confirm('Are you sure, you want to delete this result?')">Delete</a>
-                                            <a href="includes/view_product.php?id=<?php echo $Result['id']; ?>" class="btn btn-info btn-sm">View</a>
+                                            <a href="view_product.php?id=<?php echo $Result['id']; ?>" class="btn btn-info btn-sm">View</a>
                                             </td>      
                                         </tr>
 
