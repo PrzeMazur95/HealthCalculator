@@ -101,42 +101,6 @@ $additionalFields = array('Ani. Protein'=>'animal_protein', 'Vege. Protein'=>'ve
 
                                             $specific_product = $product->Find_by_id($_GET['table'], $_GET['id'], $_GET['userid']);
 
-                                            // print_r($specific_product);
-                                            // die();
-                                
-                                            if(isset($_GET['error'])){
-                                                
-                                                echo "<div class='alert alert-danger text-center' role='alert'>";
-                                                switch ($_GET['error']){
-
-                                                    case "submit":
-                                                        echo "You have to submit the form!";
-                                                        break;
-
-                                                    case "photo":
-                                                        echo "There were some troubles with uploading your photo!";
-                                                        break;
-
-                                                    case "save":
-                                                        echo "There were some troubles with saving photo!";
-                                                        break;
-
-                                                    case "emptyfields":
-                                                        echo "Those fields are reuired : name, kcal, protein, fat, carbohydrates, sugar and photo)";
-                                                        break;
-
-                                                    case "stmtfailed":
-                                                        echo "Something went wrong with Db connection, contact with Admin!";
-                                                        break;    
-
-                                                }
-
-                                                echo "</br>".$_SESSION['error'];
-
-                                                echo "</div>";
-
-                                                }
-
                                             ?>
                                     <div class="card-header text-center">
                                         <i class="fas fa-chart-area me-1"></i>
@@ -151,7 +115,6 @@ $additionalFields = array('Ani. Protein'=>'animal_protein', 'Vege. Protein'=>'ve
 
                                             <blockquote class="blockquote text-center">
                                             <p class="mb-0"><?php echo $specific_product[0]['description']; ?></p>
-                                            <!-- <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer> -->
                                             </blockquote>
                                             </div>
                                         </div>
@@ -164,56 +127,6 @@ $additionalFields = array('Ani. Protein'=>'animal_protein', 'Vege. Protein'=>'ve
                         <div class="row">
                             <div class="col-xl-12">
                                 <div class="card mb-12">
-                                            <?php 
-                                
-                                            if(isset($_GET['error'])){
-                                                
-                                                echo "<div class='alert alert-danger text-center' role='alert'>";
-                                                switch ($_GET['error']){
-
-                                                    case "submit":
-                                                        echo "You have to submit the form!";
-                                                        break;
-
-                                                    case "photo":
-                                                        echo "There were some troubles with uploading your photo!";
-                                                        break;
-
-                                                    case "save":
-                                                        echo "There were some troubles with saving photo!";
-                                                        break;
-
-                                                    case "emptyfields":
-                                                        echo "Those fields are reuired : name, kcal, protein, fat, carbohydrates, sugar and photo)";
-                                                        break;
-
-                                                    case "stmtfailed":
-                                                        echo "Something went wrong with Db connection, contact with Admin!";
-                                                        break;    
-
-                                                }
-
-                                                echo "</br>".$_SESSION['error'];
-
-                                                echo "</div>";
-
-                                                }
-
-                                                if(isset($_GET['info'])){
-
-                                                    echo "<div class='alert alert-success text-center' role='alert'>";
-                                                    switch ($_GET['info']){
-                                                        
-                                                        case "edited":
-                                                            echo "Succes! You have succesfully edited this product!"; 
-                                                            break;
-                                                    }
- 
-                                                    echo "</div>";
-    
-                                                }
-
-                                            ?>
                                     <div class="card-header text-center">
                                         <i class="fas fa-chart-area me-1"></i>
                                         <h3>Informations are per 100g</h2>
@@ -238,7 +151,7 @@ $additionalFields = array('Ani. Protein'=>'animal_protein', 'Vege. Protein'=>'ve
                         <div class="card mb-4">
                             <div class="card-header text-center">
                                 <i class="fas fa-table me-1"></i>
-                                Makro and Micro elements - optional informations
+                                Makro and Micro elements
                             </div>
                             <div class="card-body">
                                 <div class="container-fluid overflow-auto form-inline" style="height: 200px;">
