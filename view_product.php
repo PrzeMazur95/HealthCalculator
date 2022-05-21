@@ -23,6 +23,21 @@ $additionalFields = array('Ani. Protein'=>'animal_protein', 'Vege. Protein'=>'ve
     }
 
 
+
+    $firstRow = array('kCal'=>'kcal', 'Protein'=>'protein', 'Carbs'=>'carbohydrates');
+    $secondRow = array('Fat'=>'fat', 'Sugar'=>'sugar','Salt'=>'salt');
+    $thirdRow = array('Fiber'=>'fiber','Cholesterol'=>'cholesterol', 'Netto Carbs'=>'net_carbohydrates');
+    
+    $fourthRow = array('Ani. Protein'=>'animal_protein', 'Vege. Protein'=>'vegetable_protein', 'Sat. Fat'=>'saturated_fat', 'Mono_Fat'=>'monounsaturated_fat', 'Poly Fat'=>'polyunsaturated_fat');
+    $fifthRow = array('Omega3'=>'omega3_acid', 'Omega6'=>'omega6_acid', 'Witamin K'=>'witamin_k', 'Witamin A'=>'witamin_a', 'Witamin B1'=>'witamin_b1');
+    $sixthRow = array('Witamin B2'=>'witamin_b2', 'Witamin B5'=>'witamin_b5', 'Witamin B6'=>'witamin_b6', 'Biotin'=>'biotin', 'Folic Acid'=>'folic_acid');
+    $seventhRow = array('Witamin B12'=>'witamin_b12', 'Witamin C'=>'witamin_c', 'Witamin D'=>'witamin_d', 'Witamin E'=>'witamin_e', 'Witamin PP'=>'witamin_pp');
+    $eightRow = array('Calcium'=>'calcium', 'Chlorine'=>'chlorine', 'Magnesium'=>'magnesium', 'Phosphorus'=>'phosphorus', 'Potassium'=>'potassium');
+    $ninethRow = array('Sodium'=>'sodium', 'Iron'=>'iron','Zinc'=>'zinc', 'Copper'=>'copper', 'Manganese'=>'manganese');
+    $tenthRow = array('Molybdenum'=>'molybdenum', 'Iodine'=>'iodine', 'Fluorine'=>'fluorine', 'Chrome'=>'chrome', 'Selenium'=>'selenium');
+    
+    
+
 ?>
 
 <!DOCTYPE html>
