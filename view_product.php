@@ -248,17 +248,17 @@ $additionalFields = array('Ani. Protein'=>'animal_protein', 'Vege. Protein'=>'ve
                                             </div>
                                         </div>
                                     </div>
-                                        <div class="container-fluid">
-                                            <div class="row">
-                                                <div class="col-sm-12 text-center">
-                                                <a href="products.php">
-                                                <button class="btn btn-primary text-center">Back to product list</button>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
                             </div>
                         </div> 
+                        <div class="container-fluid">
+                            <div class="row">
+                             <div class="col-sm-12 text-center">
+                             <a href="products.php">
+                              <button class="btn btn-primary text-center">Back to product list</button>
+                              </a>
+                            </div>
+                        </div>
+                     </div>
                     </div>
                 </main>
                 <footer class="py-4 bg-light mt-auto">
