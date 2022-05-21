@@ -185,7 +185,6 @@ $additionalFields = array('Ani. Protein'=>'animal_protein', 'Vege. Protein'=>'ve
                                 <i class="fas fa-table me-1"></i>
                                 Makro and Micro elements
                             </div>
-                            <div class="card-body">
                                 <div class="container-fluid overflow-auto form-inline" style="height: 200px;">
                                         <div class="col-sm-12 overflow-auto">
                                             <div id="product_details"> 
@@ -248,7 +247,6 @@ $additionalFields = array('Ani. Protein'=>'animal_protein', 'Vege. Protein'=>'ve
                                             </div>
                                         </div>
                                     </div>
-                            </div>
                         </div> 
                         <div class="container-fluid">
                             <div class="row">
