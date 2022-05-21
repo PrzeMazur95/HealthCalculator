@@ -8,7 +8,7 @@ $properties=array();
 $mainInformations = array('kCal'=>'kcal', 'Protein'=>'protein', 'Carbs'=>'carbohydrates', 'Fat'=>'fat', 'Sugar'=>'sugar','Salt'=>'salt', 'Fiber'=>'fiber','Cholesterol'=>'cholesterol', 'Netto Carbs'=>'net_carbohydrates');
 
 $additionalFields = array('Ani. Protein'=>'animal_protein', 'Vege. Protein'=>'vegetable_protein', 'Sat. Fat'=>'saturated_fat', 
-'Mono_Fat'=>'monounsaturated_fat', 'Poly Fat'=>'polyunsaturated_fat', 'Omega3'=>'omega3_acid', 'Omega6'=>'omega6_acid', 
+'Mono. Fat'=>'monounsaturated_fat', 'Poly Fat'=>'polyunsaturated_fat', 'Omega3'=>'omega3_acid', 'Omega6'=>'omega6_acid', 
 'Witamin K'=>'witamin_k', 'Witamin A'=>'witamin_a', 'Witamin B1'=>'witamin_b1', 'Witamin B2'=>'witamin_b2', 
 'Witamin B5'=>'witamin_b5', 'Witamin B6'=>'witamin_b6', 'Biotin'=>'biotin', 'Folic Acid'=>'folic_acid', 
 'Witamin B12'=>'witamin_b12', 'Witamin C'=>'witamin_c', 'Witamin D'=>'witamin_d', 'Witamin E'=>'witamin_e', 
@@ -189,22 +189,63 @@ $additionalFields = array('Ani. Protein'=>'animal_protein', 'Vege. Protein'=>'ve
                                 <div class="container-fluid overflow-auto form-inline" style="height: 200px;">
                                         <div class="col-sm-12 overflow-auto">
                                             <div id="product_details"> 
- 
-                                            <?php 
+                                            <div class="row text-center">
+                                                <div class="table-responsive">      
+                                                    <table class="table">
+                                                        <tbody>
+                                                            <tr>
+                                                            <?php foreach ($fourthRow as $key => $value){ ?>
 
-                                            foreach ($additionalFields as $key => $value) { ?>
+                                                                <td><?php echo $key.": ".$specific_product[0][$value]; ?></td>
 
-                                                <div class="form-group text-center">
-                                                    <label for="exampleFormControlTextarea1" ><?php echo $key; ?></label>
-                                                    <input type="text" class="form-control text-center" id="exampleFormControlTextarea2" rows="1" name="<?php echo $value ?>" value=<?php echo $specific_product[0][$value] ?>></input>
+                                                            <?php } ?>
+                                                            </tr>
+                                                            <tr>
+                                                            <?php foreach ($fifthRow as $key => $value){ ?>
+
+                                                                <td><?php echo $key.": ".$specific_product[0][$value]; ?></td>
+
+                                                            <?php } ?>
+                                                            </tr>
+                                                            <tr>
+                                                            <?php foreach ($sixthRow as $key => $value){ ?>
+
+                                                                <td><?php echo $key.": ".$specific_product[0][$value]; ?></td>
+
+                                                            <?php } ?>
+                                                            </tr>
+                                                            <tr>
+                                                            <?php foreach ($seventhRow as $key => $value){ ?>
+
+                                                                <td><?php echo $key.": ".$specific_product[0][$value]; ?></td>
+
+                                                            <?php } ?>
+                                                            </tr>
+                                                            <tr>
+                                                            <?php foreach ($eightRow as $key => $value){ ?>
+
+                                                                <td><?php echo $key.": ".$specific_product[0][$value]; ?></td>
+
+                                                            <?php } ?>
+                                                            </tr>
+                                                            <tr>
+                                                            <?php foreach ($ninethRow as $key => $value){ ?>
+
+                                                                <td><?php echo $key.": ".$specific_product[0][$value]; ?></td>
+
+                                                            <?php } ?>
+                                                            </tr>
+                                                            <tr>
+                                                            <?php foreach ($tenthRow as $key => $value){ ?>
+
+                                                                <td><?php echo $key.": ".$specific_product[0][$value]; ?></td>
+
+                                                            <?php } ?>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
                                                 </div>
-                                            
-                                            <?php 
-
-                                            }
-                                            ?>
-                                
-                                           </div>  
+                                            </div>
                                         </div>
                                     </div>
                                         <div class="container-fluid">
