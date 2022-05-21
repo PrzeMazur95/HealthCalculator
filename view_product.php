@@ -5,11 +5,10 @@
 
 $properties=array();
 
-$mainInformations = array('Name'=>'name', 'kCal'=>'kcal', 'Protein'=>'protein', 'Carbs'=>'carbohydrates', 'Fat'=>'fat', 'Sugar'=>'sugar');
+$mainInformations = array('kCal'=>'kcal', 'Protein'=>'protein', 'Carbs'=>'carbohydrates', 'Fat'=>'fat', 'Sugar'=>'sugar','Salt'=>'salt', 'Fiber'=>'fiber','Cholesterol'=>'cholesterol', 'Netto Carbs'=>'net_carbohydrates');
 
 $additionalFields = array('Ani. Protein'=>'animal_protein', 'Vege. Protein'=>'vegetable_protein', 'Sat. Fat'=>'saturated_fat', 
 'Mono_Fat'=>'monounsaturated_fat', 'Poly Fat'=>'polyunsaturated_fat', 'Omega3'=>'omega3_acid', 'Omega6'=>'omega6_acid', 
-'Netto Carbs'=>'net_carbohydrates', 'Fiber'=>'fiber', 'Salt'=>'salt', 'Cholesterol'=>'cholesterol', 
 'Witamin K'=>'witamin_k', 'Witamin A'=>'witamin_a', 'Witamin B1'=>'witamin_b1', 'Witamin B2'=>'witamin_b2', 
 'Witamin B5'=>'witamin_b5', 'Witamin B6'=>'witamin_b6', 'Biotin'=>'biotin', 'Folic Acid'=>'folic_acid', 
 'Witamin B12'=>'witamin_b12', 'Witamin C'=>'witamin_c', 'Witamin D'=>'witamin_d', 'Witamin E'=>'witamin_e', 
@@ -131,16 +130,34 @@ $additionalFields = array('Ani. Protein'=>'animal_protein', 'Vege. Protein'=>'ve
                                         <i class="fas fa-chart-area me-1"></i>
                                         <h3>Informations are per 100g</h2>
                                     </div>
-                                        <div class="row">
-                                            <?php 
+                                        <div class="row text-center">
+                                            <div class="table-responsive">
+                                                <table class="table">
+                                                <tbody>
+                                                    <tr>
+                                                    <?php foreach ($firstRow as $key => $value){ ?>
 
-                                            foreach ($mainInformations as $key => $value) { ?>
-                                            <div class="col-lg-4 text-center">
-                                            <label for="exampleFormControlTextarea1" ><?php echo $key; ?></label>
-                                            <input type="text" class="form-control text-center" name="<?php echo $value ?>" value=<?php echo $specific_product[0][$value]; ?> required>
+                                                        <td><?php echo $key.": ".$specific_product[0][$value]; ?></td>
+
+                                                    <?php } ?>
+                                                    </tr>
+                                                    <tr>
+                                                    <?php foreach ($secondRow as $key => $value){ ?>
+
+                                                        <td><?php echo $key.": ".$specific_product[0][$value]; ?></td>
+
+                                                    <?php } ?>
+                                                    </tr>
+                                                    <tr>
+                                                    <?php foreach ($thirdRow as $key => $value){ ?>
+
+                                                        <td><?php echo $key.": ".$specific_product[0][$value]; ?></td>
+
+                                                    <?php } ?>
+                                                    </tr>
+                                                </tbody>
+                                                </table>
                                             </div>
-
-                                            <?php } ?>
 
                                             <div class="col-lg-4 text-center">
                                             </div>
