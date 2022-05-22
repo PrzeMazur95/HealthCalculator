@@ -100,7 +100,6 @@
                 <main>
                     <div class="container-fluid px-4">
                         <h1 class="mt-4">Weight control</h1>
-                        <button id="edit">Weight control</button>
                         <div class="row">
                             <div class="col-xl-12">
                                 <div class="card mb-4">
