@@ -97,6 +97,16 @@
                                             <td class="text-center">x</td>  
                                                 
                                         </tr>
+                                        <tr>
+                                            <td class="text-center table-secondary" colspan="5">Summary!</td>  
+                                        </tr>
+                                    <tr class="table-success">   
+                                        <td class="text-center">x</td>
+                                        <td class="text-center">x</td>
+                                        <td class="text-center">x</td>
+                                        <td class="text-center">x</td>  
+                                        <td class="text-center">x</td>        
+                                    </tr>
                                     </tbody>
                                 </table>
                                 <button class="btn btn-primary text-center">End this day, and start a new one!</button>
