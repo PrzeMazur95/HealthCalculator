@@ -74,7 +74,7 @@
             <div id="layoutSidenav_content">
                 <main>
                     <div class="container-fluid px-4">
-                        <h1 class="mt-4 text-center">Caluculate todays meals!</h1>
+                        <h1 class="mt-4 text-center">Calculate todays meals!</h1>
                         <div class="row">
                             <div class="col-xl-12">
                                 <div class="card mb-12">
@@ -101,7 +101,7 @@
                                             <td class="text-center table-secondary" colspan="5">Summary!</td>  
                                         </tr>
                                     <tr class="table-success">   
-                                        <td class="text-center">x</td>
+                                        <td class="text-center"></td>
                                         <td class="text-center">x</td>
                                         <td class="text-center">x</td>
                                         <td class="text-center">x</td>  
