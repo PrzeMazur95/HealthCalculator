@@ -74,81 +74,29 @@
             <div id="layoutSidenav_content">
                 <main>
                     <div class="container-fluid px-4">
-                        <h1 class="mt-4 text-center">List of your products!</h1>
+                        <h1 class="mt-4 text-center">Caluculate todays meals!</h1>
                         <div class="row">
                             <div class="col-xl-12">
                                 <div class="card mb-12">
-
-                                <?php 
-
-                                    if(isset($_GET['error'])){
-                                                                                
-                                        echo "<div class='alert alert-danger text-center' role='alert'>";
-                                        switch ($_GET['error']){
-
-                                            case "id":
-                                                echo "You could not delete or edit this product, it is not yours, or you have typed wrong informations!";
-                                                break;
-
-                                            case "stmtfailed":
-                                                echo "Something went wrong with Db connection, contact with Admin!";
-                                                break;  
-                                                
-                                            case "image":
-                                                echo "Something went wrong with Db connection, contact with Admin!";
-                                                break; 
-
-                                        }
-                                        echo "</div>";
-
-                                    }
-
-                                        if(isset($_GET['info'])){
-
-                                            echo "<div class='alert alert-success text-center' role='alert'>";
-                                            switch ($_GET['info']){
-                                                
-                                                case "deleted":
-                                                    echo "Succes! You have succesfully deleted this result!"; 
-                                                    break;
-
-                                                case "edited":
-                                                    echo "Succes! You have succesfully edited this result!"; 
-                                                    break;
-                                            }
-
-                                            echo "</div>";
-
-                                        }
-                                
-                                $Products = new ProductView;
-                                $Results = $Products->showProducts();
-                                
-                                ?>
-
                                 <table id="datatablesSimple">
                                     <thead>
                                         <tr>
                                             <th class="text-center">Image</th>
                                             <th class="text-center">Name</th>
+                                            <th class="text-center">Quantity</th>
                                             <th class="text-center">kCal</th>
                                             <th class="text-center">Options</th>
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <?php foreach ($Results as $Result) { ?>
                                         <tr>
-                                            <td width="100" class="text-center"><img src="uploads/images/<?php echo $Result['filename'] ?>" width= "50" height="50" alt=""></td>
-                                            <td class="text-center"><?php echo $Result['name'] ?></td>
-                                            <td class="text-center"><?php echo $Result['kcal'] ?></td>
-                                            <td class="text-center">
-                                            <a href="edit_product.php?id=<?php echo $Result['id']; ?>&table=Products&action=edit&userid=<?php echo $_SESSION['userid'] ?>" class="btn btn-primary btn-sm">Edit</a>
-                                            <a href="includes/delete.php?id=<?php echo $Result['id']; ?>&table=Products&userid=<?php echo $_SESSION['userid'] ?>" class="btn btn-danger btn-sm" onclick="return confirm('Are you sure, you want to delete this result?')">Delete</a>
-                                            <a href="view_product.php?id=<?php echo $Result['id']; ?>&table=Products&userid=<?php echo $Result['user_id'] ?>" class="btn btn-info btn-sm">View</a>
-                                            </td>      
+                                            <td class="text-center">x</td>
+                                            <td class="text-center">x</td>
+                                            <td class="text-center">x</td>
+                                            <td class="text-center">x</td>  
+                                            <td class="text-center">x</td>  
+                                                
                                         </tr>
-
-                                        <?php }; ?>
                                     </tbody>
                                 </table>
                                 </div>
