@@ -78,6 +78,7 @@
                         <div class="row">
                             <div class="col-xl-12">
                                 <div class="card mb-12">
+                                <button class="btn btn-primary text-center" id="Add">Add a product!</button>
                                 <table id="datatablesSimple">
                                     <thead>
                                         <tr>
