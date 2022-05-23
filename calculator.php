@@ -78,7 +78,12 @@
                         <div class="row">
                             <div class="col-xl-12">
                                 <div class="card mb-12">
-                                <button class="btn btn-primary text-center" id="Add">Add a product!</button>
+                                <form class="form text-center" id="Add">
+                                <div class="form-group mb-1">
+                                    <input type="text" class="form-control text-center" id="product" placeholder="Search something!">
+                                </div>
+                                <button type="submit" class="btn btn-primary mb-2">Add !</button>
+                                </form>
                                 <table id="datatablesSimple">
                                     <thead>
                                         <tr>
