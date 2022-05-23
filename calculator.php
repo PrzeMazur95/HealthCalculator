@@ -99,6 +99,7 @@
                                         </tr>
                                     </tbody>
                                 </table>
+                                <button class="btn btn-primary text-center">End this day, and start a new one!</button>
                                 </div>
                             </div> 
                         </div>
