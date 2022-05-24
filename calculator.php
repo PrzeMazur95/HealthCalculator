@@ -110,7 +110,6 @@
                                 <thead>
                                         <tr>
                                         <th scope="col" colspan="5" class="table-info">Summary !</th>
-
                                         </tr>
                                     </thead>
                                     <thead>
