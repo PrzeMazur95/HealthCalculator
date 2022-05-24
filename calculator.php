@@ -122,10 +122,10 @@
                                     </thead>
                                     <tbody>
                                         <tr>
-                                        <td style="font-size: 35px;">3000</td>
-                                        <td style="font-size: 20px;">300</td>
-                                        <td style="font-size: 20px;">120</td>
-                                        <td style="font-size: 20px;">99</td>
+                                        <td style="font-size: 35px;">3000g</td>
+                                        <td style="font-size: 20px;">300g</td>
+                                        <td style="font-size: 20px;">120g</td>
+                                        <td style="font-size: 20px;">99g</td>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -143,6 +143,30 @@
                 </footer>
             </div>
         </div>
+
+        
+
+        <script>
+
+        function init() {
+
+         var theObject = new XMLHttpRequest();
+
+         theObject.open("GET", "includes/ajax.inc.php", true);
+
+         theObject.onreadystatechange = function() {
+
+             if(theObject.readyState == 4 && theObject.status == 200)
+
+            document.getElementById("container").innerHTML = theObject.responseText;
+
+         }
+
+         theObject.send("user=Przemek&email=nowy@nowy.pl&role=admin");
+
+        }
+
+        </script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
         <script src="js/scripts.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
