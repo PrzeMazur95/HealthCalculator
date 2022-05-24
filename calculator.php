@@ -82,7 +82,7 @@
                                 <div class="form-group mb-1">
                                     <input type="text" class="form-control text-center" id="product" placeholder="Search something!">
                                 </div>
-                                <button type="submit" class="btn btn-primary mb-2">Add !</button>
+                                <button type="submit" class="btn btn-success mb-2">Add !</button>
                                 </form>
                                 <table id="datatablesSimple">
                                     <thead>
@@ -103,16 +103,31 @@
                                             <td class="text-center">x</td>  
                                                 
                                         </tr>
+                                    </tbody>
+                                </table>
+
+                                <table class="table text-center">
+                                <thead>
                                         <tr>
-                                            <td class="text-center table-secondary" colspan="5">Summary!</td>  
+                                        <th scope="col" colspan="5" class="table-info">Summary !</th>
+
                                         </tr>
-                                    <tr class="table-success">   
-                                        <td class="text-center"></td>
-                                        <td class="text-center">x</td>
-                                        <td class="text-center">x</td>
-                                        <td class="text-center">x</td>  
-                                        <td class="text-center">x</td>        
-                                    </tr>
+                                    </thead>
+                                    <thead>
+                                        <tr>
+                                        <th scope="col">kCal</th>
+                                        <th scope="col">Carbs</th>
+                                        <th scope="col">Protein</th>
+                                        <th scope="col">Fat</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                        <td style="font-size: 35px;">3000</td>
+                                        <td style="font-size: 20px;">300</td>
+                                        <td style="font-size: 20px;">120</td>
+                                        <td style="font-size: 20px;">99</td>
+                                        </tr>
                                     </tbody>
                                 </table>
                                 <button class="btn btn-primary text-center">End this day, and start a new one!</button>
