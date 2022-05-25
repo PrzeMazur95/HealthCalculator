@@ -27,6 +27,21 @@ class DbObjectView extends DbObject {
 
     }
 
+    public function Find_by_name($table, $search){
+
+        if($object = $this->Find_by_name_ajax($table, $search)){
+
+            return $object;
+
+        } else { 
+
+            return false;
+            exit();
+
+        }
+            
+    }
+
 }
     
 
