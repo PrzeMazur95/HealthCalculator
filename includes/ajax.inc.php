@@ -25,9 +25,23 @@ if(isset($_POST['search'])){
 
     $Products = $Results->Find_by_name($table, $search);
 
+    if(!$Products){
+
+        echo "Sorry, we do not have this product";
+    
+    } else {
+    
+        foreach ($Products as $row) {
+    
+            echo $row['name'];
+            echo $row['id']."</br>";
+    
+        }
+    
+    }
+    
+} else {
+    
+    header("location: index.php");
+    
 }
-
-
-
-
-
