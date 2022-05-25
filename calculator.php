@@ -150,6 +150,32 @@
 
         <script>
 
+            $(document).ready(function(){
+
+                $('#product').keyup(function(){
+
+                    var search = $('#product').val();
+
+                    $.ajax({
+
+                        url:' includes/ajax.inc.php',
+                        data: {search:search},
+                        type: 'POST',
+                        success: function(data){
+
+                            if(!data.error) {
+
+                                $('#container').html(data);
+
+                            }
+
+                        }
+
+                    });
+
+                });
+
+            });
         // function init() {
 
         //  var theObject = new XMLHttpRequest();
