@@ -159,7 +159,7 @@
                     $.ajax({
 
                         url:' includes/ajax.inc.php',
-                        data: {search:search},
+                        data: {search:search, table:'products'},
                         type: 'POST',
                         success: function(data){
 
