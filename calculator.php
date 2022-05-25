@@ -83,7 +83,6 @@
                                 <div class="form-group mb-1">
                                     <input type="text" class="form-control text-center" id="product" placeholder="Search something!">
                                 </div>
-                                <button type="submit" class="btn btn-success mb-2">Add !</button>
                                 </form>
                                 <div id="container"></div>
                                 <button onclick="init()">Send info</button>
@@ -151,23 +150,23 @@
 
         <script>
 
-        function init() {
+        // function init() {
 
-         var theObject = new XMLHttpRequest();
+        //  var theObject = new XMLHttpRequest();
 
-         theObject.open("GET", "includes/ajax.inc.php", true);
+        //  theObject.open("GET", "includes/ajax.inc.php", true);
 
-         theObject.onreadystatechange = function() {
+        //  theObject.onreadystatechange = function() {
 
-             if(theObject.readyState == 4 && theObject.status == 200)
+        //      if(theObject.readyState == 4 && theObject.status == 200)
 
-            document.getElementById("container").innerHTML = theObject.responseText;
+        //     document.getElementById("container").innerHTML = theObject.responseText;
 
-         }
+        //  }
 
-         theObject.send("user=Przemek&email=nowy@nowy.pl&role=admin");
+        //  theObject.send("user=Przemek&email=nowy@nowy.pl&role=admin");
 
-        }
+        // }
 
         </script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
