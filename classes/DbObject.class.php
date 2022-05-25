@@ -51,6 +51,30 @@ class DbObject extends Dbh {
         return $results;
 
     }  
+
+    protected function Find_by_name_ajax($table, $search){
+
+        $stmt = $this->connect()->prepare("SELECT * FROM ".$table." WHERE name like '%".$search."%' ");
+
+        $stmt->execute();
+
+        $results = $stmt->fetchAll();
+
+        if(!$results){
+
+            return false;
+            $stmt = null;
+            exit();
+
+        } else {
+
+            return $results;
+            $stmt = null;
+            exit();
+
+        }
+
+    }  
         
 
 }
