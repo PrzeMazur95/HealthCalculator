@@ -83,9 +83,9 @@
                                 <div class="form-group mb-1">
                                     <input type="text" class="form-control text-center" id="product" placeholder="Search something!">
                                 </div>
+                                <button type="submit" class="btn btn-success mb-2">Add !</button>
                                 </form>
                                 <div id="container"></div>
-                                <button onclick="init()">Send info</button>
                                 <table id="datatablesSimple">
                                     <thead>
                                         <tr>
