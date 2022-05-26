@@ -1,3 +1,18 @@
+<script>
+
+    $('.link-info').on('click', function(){
+
+    var id = $(this).attr("id");
+
+    var name = $(this).attr("rel");
+
+    alert(name);
+
+});
+
+
+</script>
+
 <?php 
 session_start();
 include_once "autoloader.inc.php";
@@ -60,3 +75,5 @@ if(isset($_POST['search'])){
     header("location: index.php");
     
 }
+
+?>
