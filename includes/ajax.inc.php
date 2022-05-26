@@ -30,13 +30,18 @@ if(isset($_POST['search'])){
         echo "Sorry, we do not have this product";
     
     } else {
-    
+        echo "<table class='table table-striped text-center'>";
+        echo "<tbody>";
         foreach ($Products as $row) {
-    
+
+
             echo $row['name'];
             echo $row['id']."</br>";
+           
     
         }
+    echo "</tbody";
+    echo "</table";
     
     }
     
