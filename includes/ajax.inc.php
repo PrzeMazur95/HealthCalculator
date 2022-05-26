@@ -6,7 +6,8 @@
 
     var name = $(this).attr("rel");
 
-    alert(name);
+    // alert(name);
+    $('#quantity').show();
 
 });
 
