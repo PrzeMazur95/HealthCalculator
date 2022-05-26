@@ -21,6 +21,12 @@ if(isset($_POST['search'])){
 
     }
 
+    if($search === ""){
+
+        echo "";
+        die();
+    }
+
     $Results = new DbObjectView();
 
     $Products = $Results->Find_by_name($table, $search);
