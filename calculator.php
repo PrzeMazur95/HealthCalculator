@@ -86,7 +86,7 @@
                                 <div class="col-xl-12 text-center" id="quantity">
                                     <?php echo "something"; ?>
                                 </div>
-                                <button type="submit" class="btn btn-success mb-2">Add !</button>
+                                <button type="submit" class="btn btn-success mb-2" id="add_button">Add !</button>
                                 </form>
                                 <div id="container"></div>
                                 <table id="datatablesSimple">
@@ -156,6 +156,7 @@
             $(document).ready(function(){
 
                 $('#quantity').hide();
+                $('#add_button').hide();
 
                 $('#product').keyup(function(){
 
