@@ -34,10 +34,14 @@ if(isset($_POST['search'])){
         echo "<tbody>";
         foreach ($Products as $row) {
 
-
-            echo $row['name'];
-            echo $row['id']."</br>";
-           
+            $name = $row['name'];
+            $productId = $row['id'];
+    
+            echo "<tr>";
+            echo "<td>";
+            echo "<a class='link-info' rel='".$name."' id='".$productId."' href='#'>".$name."</a>";
+            echo "</td>";
+            echo "</tr>";
     
         }
     echo "</tbody";
