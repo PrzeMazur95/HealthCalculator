@@ -8,6 +8,7 @@
 
     // alert(name);
     $('#quantity').show();
+    $('#add_button').show();
 
 });
 
@@ -39,6 +40,13 @@ if(isset($_POST['search'])){
 
     if($search === ""){
 
+        echo "<script>
+
+        $('#quantity').hide();
+        $('#add_button').hide();
+
+        </script>";
+        
         echo "";
         die();
     }
