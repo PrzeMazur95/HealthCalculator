@@ -48,7 +48,7 @@ if(isset($_POST['search'])){
 
     if(!$Products){
 
-        echo "Sorry, we do not have this product";
+        echo "<div class='text-center text-info mb-3'>Sorry, we do not have this product</div>";
     
     } else {
         echo "<table class='table table-striped text-center'>";
