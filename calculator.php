@@ -85,10 +85,10 @@
                                 </div>
                                 <div class="col-xl-12 text-center" id="quantity">
                                     <div class="row">
-                                        <div class="col-xl-6"><input type="text" class="form-control text-center" id="name"></div>
+                                        <div class="col-xl-6"><h4><span id="name"></span></h4></div>
                                         <div class="col-xl-6"><input type="text" class="form-control text-center" id="quantity" placeholder="Type quantity"></div>
                                     </div>
-                                   <?php //echo "something"; ?>
+                                   <?php //echo "something"; <input type="text" class="form-control text-center" id="name"> ?>
                                 </div>
                                 <button type="submit" class="btn btn-success mb-2" id="add_button">Add !</button>
                                 </form>
