@@ -10,7 +10,7 @@
     $('#quantity').show();
     $('#add_button').show();
 
-    $('#name').val(name);
+    $('#name').text(name);
 });
 
 
