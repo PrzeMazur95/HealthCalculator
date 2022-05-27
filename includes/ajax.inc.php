@@ -10,6 +10,7 @@
     $('#quantity').show();
     $('#add_button').show();
 
+    $('#name').val(name);
 });
 
 
@@ -46,7 +47,7 @@ if(isset($_POST['search'])){
         $('#add_button').hide();
 
         </script>";
-        
+
         echo "";
         die();
     }
