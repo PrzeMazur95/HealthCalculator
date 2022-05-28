@@ -88,7 +88,7 @@
                                         <div class="col-xl-4-8 text-center"><h2><span id="name"></span></h2></div>
                                     </div>
                                     <div class="col-xl-4-8">
-                                        <div><input type="text" class="form-control text-center d-flex justify-content-center" id="quantity" placeholder="Type quantity"></div>
+                                        <div><input type="text" class="form-control text-center d-flex justify-content-center" id="quantity" name="quantity" placeholder="Type quantity"></div>
                                     </div>
                                    <?php //echo "something"; <input type="text" class="form-control text-center" id="name"> ?>
                                 </div>
