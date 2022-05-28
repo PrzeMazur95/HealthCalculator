@@ -186,6 +186,22 @@
                     });
 
                 });
+
+
+
+                $("#Add").submit(function(evt){
+
+                evt.preventDefault();
+
+                var addData = $(this).serialize();
+
+                var url = $(this).attr('action');
+
+                alert(url);
+
+                });
+
+
             });
         // function init() {
 
