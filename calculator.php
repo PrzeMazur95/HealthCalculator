@@ -79,7 +79,7 @@
                         <div class="row">
                             <div class="col-xl-12">
                                 <div class="card mb-12">
-                                <form class="form text-center" id="Add">
+                                <form class="form text-center" id="Add" action="includes/ajax.inc.php">
                                 <div class="form-group mb-1">
                                     <input type="text" class="form-control text-center" id="product" name="product" placeholder="Search something!">
                                 </div>
@@ -186,7 +186,6 @@
                     });
 
                 });
-
             });
         // function init() {
 
