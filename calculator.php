@@ -81,7 +81,7 @@
                                 <div class="card mb-12">
                                 <form class="form text-center" id="Add">
                                 <div class="form-group mb-1">
-                                    <input type="text" class="form-control text-center" id="product" placeholder="Search something!">
+                                    <input type="text" class="form-control text-center" id="product" name="product" placeholder="Search something!">
                                 </div>
                                 <div class="col-xl-12 text-center" id="quantity">
                                     <div class="row">
