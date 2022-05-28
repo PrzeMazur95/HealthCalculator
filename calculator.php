@@ -80,19 +80,19 @@
                             <div class="col-xl-12">
                                 <div class="card mb-12">
                                 <form class="form text-center" id="Add" action="includes/ajax.inc.php">
-                                <div class="form-group mb-1">
-                                    <input type="text" class="form-control text-center" id="product" name="product" placeholder="Search something!">
-                                </div>
-                                <div class="col-xl-12 text-center" id="quantity">
-                                    <div class="row">
-                                        <div class="col-xl-4-8 text-center"><h2><span id="name"></span></h2></div>
+                                    <div class="form-group mb-1">
+                                        <input type="text" class="form-control text-center" id="product" name="product" placeholder="Search something!">
                                     </div>
-                                    <div class="col-xl-4-8">
-                                        <div><input type="text" class="form-control text-center d-flex justify-content-center" id="quantity" name="quantity" placeholder="Type quantity"></div>
+                                    <div class="col-xl-12 text-center" id="quantity">
+                                        <div class="row">
+                                            <div class="col-xl-4-8 text-center"><h2><span id="name"></span></h2></div>
+                                        </div>
+                                        <div class="col-xl-4-8">
+                                            <div><input type="text" class="form-control text-center d-flex justify-content-center" id="quantity" name="quantity" placeholder="Type quantity"></div>
+                                        </div>
+                                    <?php //echo "something"; <input type="text" class="form-control text-center" id="name"> ?>
                                     </div>
-                                   <?php //echo "something"; <input type="text" class="form-control text-center" id="name"> ?>
-                                </div>
-                                <button type="submit" class="btn btn-success mb-2" id="add_button">Add !</button>
+                                    <button type="submit" class="btn btn-success mb-2" id="add_button">Add !</button>
                                 </form>
                                 <div id="container"></div>
                                 <table id="datatablesSimple">
