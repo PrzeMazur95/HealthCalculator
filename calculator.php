@@ -93,6 +93,7 @@
                                             <div><input type="hidden" name="add_calc_product"></div>
                                         </div>
                                     </div>
+                                    <div id="result"></div>
                                     <button type="submit" class="btn btn-success mb-2" id="add_button">Add !</button>
                                 </form>
                                 <div id="container"></div>
