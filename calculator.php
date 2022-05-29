@@ -90,6 +90,7 @@
                                         <div class="col-xl-4-8">
                                             <div><input type="text" class="form-control text-center d-flex justify-content-center" id="quantity" name="quantity" placeholder="Type quantity"></div>
                                             <div><input type="hidden" id="userid" name="userid" value="<?php echo $_SESSION['userid'] ?>"></div>
+                                            <div><input type="hidden" name="add_calc_product"></div>
                                         </div>
                                     </div>
                                     <button type="submit" class="btn btn-success mb-2" id="add_button">Add !</button>
