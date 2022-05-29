@@ -191,13 +191,17 @@
 
                 $("#Add").submit(function(evt){
 
-                evt.preventDefault();
+                    evt.preventDefault();
 
-                var addData = $(this).serialize();
+                    var addData = $(this).serialize();
 
-                var url = $(this).attr('action');
+                    var url = $(this).attr('action');
 
-                alert(addData);
+                    $.post(url, addData, function(add_data){
+
+                        $("#result").html(add_data);
+
+                    });
 
                 });
 
