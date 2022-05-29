@@ -1,14 +1,7 @@
 <?php
 
-class WeightView extends Weight {
+class CalculatorView extends Calculator {
     
-    public function showWeight($user_id){
-
-        $results = $this->getWeight($user_id);
-
-        return $results;
-
-    }
 
 }
 ?>
