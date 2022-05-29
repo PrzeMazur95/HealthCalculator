@@ -80,10 +80,14 @@ if(isset($_POST['search'])){
     
     }
     
+} elseif (isset($_POST['add_calc_product'])) {
+    
+    echo "data received";
+    
 } else {
-    
+
     header("location: index.php");
-    
+
 }
 
 ?>
