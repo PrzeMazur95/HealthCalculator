@@ -91,6 +91,7 @@
                                             <div><input type="text" class="form-control text-center d-flex justify-content-center" id="quantity" name="quantity" placeholder="Type quantity"></div>
                                             <div><input type="hidden" id="userid" name="userid" value="<?php echo $_SESSION['userid'] ?>"></div>
                                             <div><input type="hidden" name="add_calc_product"></div>
+                                            <div><input type="hidden" id="add_calc_product_id" name="add_calc_product_id"></div>
                                         </div>
                                     </div>
                                     <div id="result"></div>
