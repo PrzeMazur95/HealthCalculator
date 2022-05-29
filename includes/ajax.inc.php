@@ -11,6 +11,7 @@
     $('#add_button').show();
 
     $('#name').text(name);
+    $('#add_calc_product_id').val(id);
 });
 
 
@@ -82,7 +83,11 @@ if(isset($_POST['search'])){
     
 } elseif (isset($_POST['add_calc_product'])) {
     
-    echo "data received";
+    echo $_POST['userid'];
+    echo $_POST['product'];
+    echo $_POST['quantity'];
+    echo $_POST['add_calc_product_id'];
+    
     
 } else {
 
