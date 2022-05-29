@@ -203,23 +203,6 @@
 
 
             });
-        // function init() {
-
-        //  var theObject = new XMLHttpRequest();
-
-        //  theObject.open("GET", "includes/ajax.inc.php", true);
-
-        //  theObject.onreadystatechange = function() {
-
-        //      if(theObject.readyState == 4 && theObject.status == 200)
-
-        //     document.getElementById("container").innerHTML = theObject.responseText;
-
-        //  }
-
-        //  theObject.send("user=Przemek&email=nowy@nowy.pl&role=admin");
-
-        // }
 
         </script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
