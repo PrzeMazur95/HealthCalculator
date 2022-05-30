@@ -24,7 +24,11 @@ class CalculatorController extends Calculator {
             
     }
 
+    public function setData(){
 
+        $this->data = date("m.d.y");
+
+    }
 
 }
 
