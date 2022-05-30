@@ -10,9 +10,9 @@ class CalculatorController extends Calculator {
     
     public function setMeal($userId, $productId, $quantity){
 
-        $this->userId = $userId;
-        $this->productId = $productId;
-        $this->quantity = $quantity;
+        $this->userId = htmlspecialchars(trim($userId));
+        $this->productId = htmlspecialchars(trim($productId));
+        $this->quantity = htmlspecialchars(trim($quantity));
 
         $this->setData();
 
