@@ -83,10 +83,8 @@ if(isset($_POST['search'])){
     
 } elseif (isset($_POST['add_calc_product'])) {
     
-    echo $_POST['userid'];
-    echo $_POST['product'];
-    echo $_POST['quantity'];
-    echo $_POST['add_calc_product_id'];
+    $meal = new CalculatorController();
+    $meal->setMeal($_POST['userid'], $_POST['add_calc_product_id'], $_POST['quantity']);
     
     
 } else {
