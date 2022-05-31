@@ -77,6 +77,27 @@
                     <div class="container-fluid px-4">
                         <h1 class="mt-4 text-center">Calculate todays meals!</h1>
                         <div class="row">
+                            <?php
+                            
+                            if(isset($_GET['error'])){
+                                                
+                                echo "<div class='alert alert-danger text-center' role='alert'>";
+                                switch ($_GET['error']){
+
+                                    case "emptyinput":
+                                        echo "You have to fill all fields!";
+                                        break;  
+
+                                    }
+                                echo "</div>";
+
+                                }
+
+
+                            
+                            ?>
+                        </div>
+                        <div class="row">
                             <div class="col-xl-12">
                                 <div class="card mb-12">
                                 <form class="form text-center" id="Add" action="includes/ajax.inc.php">
