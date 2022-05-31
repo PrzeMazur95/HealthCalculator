@@ -8,7 +8,7 @@ class CalculatorController extends Calculator {
     private $quantity;
 
     
-    public function setMeal($userId, $productId, $quantity){
+    public function newMeal($userId, $productId, $quantity){
 
         $this->userId = htmlspecialchars(trim($userId));
         $this->productId = htmlspecialchars(trim($productId));
