@@ -93,7 +93,20 @@
 
                                 }
 
+                                if(isset($_GET['info'])){
 
+                                    echo "<div class='alert alert-success text-center' role='alert'>";
+                                    switch ($_GET['info']){
+                                        
+                                        case "properlyAdded":
+                                            echo "Succes! You have added a meal!"; 
+                                            break;
+
+                                    }
+
+                                    echo "</div>";
+
+                                }
                             
                             ?>
                         </div>
