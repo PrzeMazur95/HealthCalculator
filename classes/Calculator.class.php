@@ -6,8 +6,17 @@ class Calculator extends Dbh {
 
         $stmt = $this->connect()->prepare('INSERT INTO Calculator (user_id, product_id, quantity, datte) VALUES (?,?,?,?)');
 
+        if(!$stmt->execute(array($userId, $productId, $quantity, $date))){
+
+            $stmt = null;
+            header("location: ../calculator.php?error=stmtfailed");
+
+        }
+
+        $stmt = null;
+        header("location: ../calculator.php?info=properlyAdded");
+
     }
     
 }
 ?>
-
