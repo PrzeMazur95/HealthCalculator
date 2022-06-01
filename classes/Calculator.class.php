@@ -2,7 +2,7 @@
 
 class Calculator extends Dbh {
 
-    public function setMeal($userId, $productId, $quantity, $date){
+    protected function setMeal($userId, $productId, $quantity, $date){
 
 
 
