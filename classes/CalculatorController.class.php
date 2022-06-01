@@ -23,11 +23,6 @@ class CalculatorController extends Calculator {
 
         }
 
-        // echo $this->userId."</br>";
-        // echo $this->productId."</br>";
-        // echo $this->data."</br>";
-        // echo $this->quantity."</br>";
-
         $this->setMeal($this->userId, $this->productId, $this->quantity, $this->data);
             
     }
