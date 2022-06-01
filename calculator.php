@@ -88,6 +88,10 @@
                                         echo "You have to fill all fields!";
                                         break;  
 
+                                    case "stmtfailed":
+                                        echo "Something went wrong with Db connection, contact with admin!";
+                                        break;  
+
                                     }
                                 echo "</div>";
 
