@@ -9,7 +9,12 @@ class Calculator extends Dbh {
         if(!$stmt->execute(array($userId, $productId, $quantity, $date))){
 
             $stmt = null;
-            header("location: ../calculator.php?error=stmtfailed");
+            
+            echo "<div class='alert alert-danger text-center' role='alert'>";
+                                         
+                echo "Something went wrong with Db connection, contact with admin!";
+                    
+            echo "</div>";
 
         }
 
