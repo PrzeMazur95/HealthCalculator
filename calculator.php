@@ -240,6 +240,8 @@
 
                     $.post(url, addData, function(add_data){
 
+                        $('#quantity').val("");
+
                         $("#result").html(add_data);
 
                     });
