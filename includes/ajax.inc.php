@@ -7,7 +7,7 @@
     var name = $(this).attr("rel");
 
     // alert(name);
-    $('#quantity').show();
+    $('#info').show();
     $('#add_button').show();
 
     $('#name').text(name);
@@ -44,7 +44,7 @@ if(isset($_POST['search'])){
 
         echo "<script>
 
-        $('#quantity').hide();
+        $('#info').hide();
         $('#add_button').hide();
 
         </script>";
