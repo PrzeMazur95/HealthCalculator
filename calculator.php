@@ -209,6 +209,8 @@
 
                     var search = $('#product').val();
 
+                    $('#addedInfo').hide();
+
                     $.ajax({
 
                         url:' includes/ajax.inc.php',
