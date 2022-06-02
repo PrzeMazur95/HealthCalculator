@@ -121,7 +121,7 @@
                                     <div class="form-group mb-1">
                                         <input type="text" class="form-control text-center" id="product" name="product" placeholder="Search something!">
                                     </div>
-                                    <div class="col-xl-12 text-center" id="quantity">
+                                    <div class="col-xl-12 text-center" id="info">
                                         <div class="row">
                                             <div class="col-xl-4-8 text-center"><h2><span id="name"></span></h2></div>
                                         </div>
@@ -202,7 +202,7 @@
 
             $(document).ready(function(){
 
-                $('#quantity').hide();
+                $('#info').hide();
                 $('#add_button').hide();
 
                 $('#product').keyup(function(){
