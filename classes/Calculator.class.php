@@ -14,7 +14,12 @@ class Calculator extends Dbh {
         }
 
         $stmt = null;
-        header("location: ../calculator.php?info=properlyAdded");
+
+        echo "<div class='alert alert-success text-center' role='alert' id='addedInfo'>";
+
+            echo "Succes! You have added a meal!"; 
+
+         echo "</div>";
 
     }
     
