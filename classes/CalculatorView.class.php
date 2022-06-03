@@ -2,7 +2,7 @@
 
 class CalculatorView extends Calculator {
     
-    public function showDailyUserResults($date){
+    public function showDailyUserResults($date, $userId){
 
 
 
