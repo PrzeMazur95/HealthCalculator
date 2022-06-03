@@ -27,6 +27,12 @@ class Calculator extends Dbh {
          echo "</div>";
 
     }
+
+    protected function getMeals($date, $userId){
+
+        
+
+    }
     
 }
 ?>
