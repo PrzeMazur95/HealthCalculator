@@ -30,7 +30,7 @@ class Calculator extends Dbh {
 
     protected function getMeals($date, $userId){
 
-        
+        $stmt = $this->connect()->prepare('SELECT Products.*, Calculator.* FROM Products, Calculator WHERE Products.id = Calculator.product_id AND Calculator.user_id=? AND Calculator.datte="?"');
 
     }
     
