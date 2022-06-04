@@ -34,6 +34,8 @@ class Calculator extends Dbh {
 
         $stmt->execute([$user_id, $date]);
 
+        $results = $stmt->fetchAll();
+
     }
     
 }
