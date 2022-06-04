@@ -136,6 +136,14 @@
                                     <button type="submit" class="btn btn-success mb-2" id="add_button">Add !</button>
                                 </form>
                                 <div id="container"></div>
+
+                                <?php 
+                                
+                                $result = new CalculatorView();
+                                $result->showDailyUserResults(2022-06-17, 7);
+                                
+                                
+                                ?>
                                 <table id="datatablesSimple">
                                     <thead>
                                         <tr>
