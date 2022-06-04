@@ -35,7 +35,20 @@ class Calculator extends Dbh {
         $stmt->execute([$user_id, $date]);
 
         $results = $stmt->fetchAll();
+        
+        if(!$results){
 
+            return false;
+            $stmt = null;
+            exit();
+
+        } else {
+
+            return $results;
+            $stmt = null;
+            exit();
+
+        }
     }
     
 }
