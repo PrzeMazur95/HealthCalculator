@@ -8,10 +8,12 @@ class CalculatorView extends Calculator {
 
         if($results){
 
-            print_r($results);
+            return $results;
+            exit();
         }else {
 
             echo "There was a problem with connection to DB, contact with admin!";
+            exit();
         }
 
     }
