@@ -140,7 +140,8 @@
                                 <?php 
                                 
                                 $result = new CalculatorView();
-                                $result->showDailyUserResults(2022-06-17, 7);
+                                $result->showDailyUserResults("2022-06-03", 7);
+                                
                                 
                                 
                                 ?>
