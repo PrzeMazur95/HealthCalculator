@@ -143,8 +143,7 @@
                                 $datte = (string)$date;
 
                                 $result = new CalculatorView();
-                                $result->showDailyUserResults($datte, $_SESSION['userid']);
-            
+                                $results = $result->showDailyUserResults($datte, $_SESSION['userid']);
                                 ?>
                                 <table id="datatablesSimple">
                                     <thead>
