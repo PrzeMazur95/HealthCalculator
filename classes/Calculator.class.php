@@ -30,9 +30,9 @@ class Calculator extends Dbh {
 
     protected function getMeals($date, $userId){
 
-        $stmt = $this->connect()->prepare('SELECT Products.*, Calculator.* FROM Products, Calculator WHERE Products.id = Calculator.product_id AND Calculator.user_id=? AND Calculator.datte="?"');
+        $stmt = $this->connect()->prepare('SELECT Products.*, Calculator.* FROM Products, Calculator WHERE Products.id = Calculator.product_id AND Calculator.user_id=(?) AND Calculator.datte=(?)');
 
-        $stmt->execute([$user_id, $date]);
+        $stmt->execute(array($userId, $date));
 
         $results = $stmt->fetchAll();
         
