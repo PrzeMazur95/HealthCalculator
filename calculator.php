@@ -139,11 +139,12 @@
 
                                 <?php 
                                 
+                                $date = date("Y-m-d");
+                                $datte = (string)$date;
+
                                 $result = new CalculatorView();
-                                $result->showDailyUserResults("2022-06-03", 7);
-                                
-                                
-                                
+                                $result->showDailyUserResults($datte, $_SESSION['userid']);
+            
                                 ?>
                                 <table id="datatablesSimple">
                                     <thead>
