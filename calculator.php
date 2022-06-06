@@ -196,9 +196,9 @@
                                         </tr>
                                     </tbody>
                                 </table>
-                                <button class="btn btn-info text-center">Get more informations!</button>
+                                <button class="btn btn-info text-center" id="showInformations">Get more informations!</button>
                                 </div>
-                                    <table class='table table-condensed table-striped'>
+                                    <table class='table table-condensed table-striped' id="informations">
                                         <tr>
                                             <td>one</td>
                                             <td>two</td>
@@ -240,6 +240,7 @@
 
                 $('#info').hide();
                 $('#add_button').hide();
+                $('#informations').hide();
 
                 $('#product').keyup(function(){
 
