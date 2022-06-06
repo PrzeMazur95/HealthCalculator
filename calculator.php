@@ -290,6 +290,25 @@
                 });
 
 
+                $("#showInformations").on('click', function() {
+                    var $this = $("#informations");
+
+                    $this.show();
+                    
+                    if ($this.hasClass("clicked")) {
+                        // already been clicked once, hide it
+                        $this.hide();
+                        $this.removeClass("clicked");
+                    }
+                    else {
+                        // first time this is clicked, mark it
+                        $this.addClass("clicked");
+                    }
+                });
+
+
+
+
             });
 
         </script>
