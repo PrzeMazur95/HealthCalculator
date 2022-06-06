@@ -155,13 +155,21 @@
                                         </tr>
                                     </thead>
                                     <tbody>
+
+                                        <?php foreach($results as $result){ ?>        
+                            
                                         <tr>
-                                            <td class="text-center">x</td>
-                                            <td class="text-center">x</td>
-                                            <td class="text-center">x</td>  
-                                            <td class="text-center">x</td>  
+                                            <td class="text-center"><?php echo $result['name']; ?></td>
+                                            <td class="text-center"><?php echo $result['quantity']; ?></td>
+                                            <td class="text-center"><?php echo $result['kcal']; ?></td>  
+                                            <td class="text-center">
+                                                <a href="includes/edit.php?id=<?php echo $row['id']; ?>&table=Calculator&action=edit&userid=<?php echo $_SESSION['userid'] ?>" class="btn btn-primary btn-sm">Edit</a>
+                                                <a href="includes/delete.php?id=<?php echo $row['id']; ?>&table=Calculator&userid=<?php echo $_SESSION['userid'] ?>" class="btn btn-danger btn-sm" onclick="return confirm('Are you sure, you want to delete this meal?')">Delete</a>
+                                            </td>
                                                 
                                         </tr>
+                                        
+                                        <?php } ?>
                                     </tbody>
                                 </table>
 
