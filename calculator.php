@@ -168,7 +168,7 @@
                                             </td>
                                                 
                                         </tr>
-                                        
+
                                         <?php } ?>
                                     </tbody>
                                 </table>
@@ -260,6 +260,8 @@
                         $('#quantity').val("");
 
                         $("#result").html(add_data);
+
+                        location.reload();
 
                     });
 
