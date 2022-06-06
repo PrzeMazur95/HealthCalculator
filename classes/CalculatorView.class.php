@@ -10,10 +10,12 @@ class CalculatorView extends Calculator {
 
             return $results;
             exit();
+            
         }else {
 
-            echo "There was a problem with connection to DB, contact with admin!";
-            exit();
+           echo '<div class="alert alert-info text-center" role="alert">';
+            echo "Add your first meal!";
+            echo "</div>";
         }
 
     }
