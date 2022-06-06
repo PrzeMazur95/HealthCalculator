@@ -148,7 +148,6 @@
                                 <table id="datatablesSimple">
                                     <thead>
                                         <tr>
-                                            <th class="text-center">Image</th>
                                             <th class="text-center">Name</th>
                                             <th class="text-center">Quantity</th>
                                             <th class="text-center">kCal</th>
@@ -157,7 +156,6 @@
                                     </thead>
                                     <tbody>
                                         <tr>
-                                            <td class="text-center">x</td>
                                             <td class="text-center">x</td>
                                             <td class="text-center">x</td>
                                             <td class="text-center">x</td>  
