@@ -58,6 +58,16 @@ if(isset($_GET['id'])){
         $meal = new DbObjectView();
 
         $specific_meal = $meal->Find_by_id($_GET['table'], $_GET['id'], $_GET['userid']);
+
+        if($specific_meal[0]['user_id'] === $_SESSION['userid']){
+
+            
+
+        } else {
+
+            header("location: ../calculator.php?error=id");
+
+        }
         
     }else{
 
