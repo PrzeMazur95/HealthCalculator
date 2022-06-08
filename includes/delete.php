@@ -56,6 +56,8 @@ if(isset($_GET['id'])){
     }elseif($_GET['table']=="Calculator"){
 
         $meal = new DbObjectView();
+
+        $specific_meal = $meal->Find_by_id($_GET['table'], $_GET['id'], $_GET['userid']);
         
     }else{
 
