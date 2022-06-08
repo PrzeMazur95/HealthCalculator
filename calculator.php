@@ -156,7 +156,7 @@
                                     </thead>
                                     <tbody>
 
-                                        <?php foreach($results as $result){ ?>        
+                                        <?php if($results){ foreach($results as $result){ ?>        
                             
                                         <tr>
                                             <td class="text-center"><?php echo $result['name']; ?></td>
@@ -169,7 +169,7 @@
                                                 
                                         </tr>
 
-                                        <?php } ?>
+                                        <?php }} ?>
                                     </tbody>
                                 </table>
 
