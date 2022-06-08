@@ -109,6 +109,11 @@
                                             echo "Succes! You have added a meal!"; 
                                             break;
 
+                                        case "deleted":
+                                            echo "You have deleted this meal!"; 
+                                            break;
+    
+
                                     }
 
                                     echo "</div>";
