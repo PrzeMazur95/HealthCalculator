@@ -61,7 +61,13 @@ if(isset($_GET['id'])){
 
         if($specific_meal[0]['user_id'] === $_SESSION['userid']){
 
-            
+            $deleteDbRow = new DbObjectController();
+
+            if($deleteDbRow->DeleteDbRow($_GET['table'], $_GET['id'], $_GET['userid'])){
+
+                header("location: ../calculator.php?info=deleted");
+
+            }
 
         } else {
 
