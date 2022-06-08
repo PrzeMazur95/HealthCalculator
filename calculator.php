@@ -90,7 +90,10 @@
 
                                     case "stmtfailed":
                                         echo "Something went wrong with Db connection, contact with admin!";
-                                        break;  
+                                        break; 
+                                        
+                                    case "id":
+                                        echo "You could not delete this meal, it is not yours!";
 
                                     }
                                 echo "</div>";
