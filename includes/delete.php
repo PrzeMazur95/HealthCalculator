@@ -55,7 +55,7 @@ if(isset($_GET['id'])){
 
     }elseif($_GET['table']=="Calculator"){
 
-        echo "działa";
+        $meal = new DbObjectView();
         
     }else{
 
