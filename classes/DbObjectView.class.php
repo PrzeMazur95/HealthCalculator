@@ -6,7 +6,7 @@ class DbObjectView extends DbObject {
 
         if(!is_numeric($id) || is_string($table || !is_numeric($userid))){
 
-            header("location: index.php");
+            header("location: ../index.php");
 
         } else {
 
