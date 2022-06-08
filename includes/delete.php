@@ -53,6 +53,10 @@ if(isset($_GET['id'])){
 
         }
 
+    }elseif($_GET['table']=="Calculator"){
+
+        echo "działa";
+        
     }else{
 
         header ("location: ../index.php");
