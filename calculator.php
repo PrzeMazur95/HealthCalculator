@@ -212,15 +212,20 @@
                                     $dailyRequirements = $daily->Find_by_id("Daily_Requirement", 1, 1);
 
                                 ?>
-                                    <table class='table table-condensed table-striped' id="informations">
+                                    <table class='table table-condensed table-striped text-center' id="informations">
+                                        <thead>
+                                            <td style="font-size: 20px;">Name</td>
+                                            <td style="font-size: 20px;">Quantity</td>
+                                            <td style="font-size: 20px;">Requirements</td>
+                                        </thead>
                                         <tr>
                                             <td>Fiber</td>
                                             <td>
                                                 <div class="progress">
-                                                    <div class="progress-bar progress-bar-striped" role="progressbar" style="width:<?php echo $dailyRequirements[0]['fiber']?>%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+                                                    <div class="progress-bar progress-bar-striped" role="progressbar" style="width:<?php echo ($dailyRequirements[0]['fiber'] * 4)?>%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="25"></div>
                                                 </div>
                                             </td>
-                                            <td>three</td>
+                                            <td>25</td>
                                         </tr>
                                         <tr>
                                             <td>one</td>
