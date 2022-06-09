@@ -214,15 +214,10 @@
                                 ?>
                                     <table class='table table-condensed table-striped' id="informations">
                                         <tr>
-                                            <td>one</td>
-                                            <td>two</td>
-                                            <td>three</td>
-                                        </tr>
-                                        <tr>
-                                            <td>one</td>
+                                            <td>Fiber</td>
                                             <td>
                                                 <div class="progress">
-                                                    <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 50%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+                                                    <div class="progress-bar progress-bar-striped" role="progressbar" style="width:<?php echo $dailyRequirements[0]['fiber']?>%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
                                                 </div>
                                             </td>
                                             <td>three</td>
