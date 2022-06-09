@@ -206,11 +206,11 @@
                                 </table>
                                 <button class="btn btn-info text-center" id="showInformations">Get more informations!</button>
                                 </div>
-
                                 <?php
 
                                     $daily = new DbObjectView();
-                                
+                                    $dailyRequirements = $daily->Find_by_id("Daily_Requirement", 1, 1);
+
                                 ?>
                                     <table class='table table-condensed table-striped' id="informations">
                                         <tr>
