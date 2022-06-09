@@ -206,6 +206,12 @@
                                 </table>
                                 <button class="btn btn-info text-center" id="showInformations">Get more informations!</button>
                                 </div>
+
+                                <?php
+
+                                    $daily = new DbObjectView();
+                                
+                                ?>
                                     <table class='table table-condensed table-striped' id="informations">
                                         <tr>
                                             <td>one</td>
