@@ -212,19 +212,30 @@
                                     $dailyRequirements = $daily->Find_by_id("Daily_Requirement", 1, 1);
 
                                 ?>
+
+                                <?php
+
+                                echo $result['fiber']."</br>";
+                                echo $dailyRequirements[0]['fiber']."</br>";
+
+                                 echo (($result['fiber'] / $dailyRequirements[0]['fiber']) * 100) ;
+                                 
+                                 ?>
                                     <table class='table table-condensed table-striped text-center' id="informations">
                                         <thead>
                                             <td style="font-size: 20px;">Name</td>
                                             <td style="font-size: 20px;">Quantity</td>
+                                            <td style="font-size: 20px;">%</td>
                                             <td style="font-size: 20px;">Requirements</td>
                                         </thead>
                                         <tr>
                                             <td>Fiber</td>
                                             <td>
                                                 <div class="progress">
-                                                    <div class="progress-bar progress-bar-striped" role="progressbar" style="width:<?php echo ($dailyRequirements[0]['fiber'] * 4)?>%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="25"></div>
+                                                    <div class="progress-bar progress-bar-striped" role="progressbar" style="width:<?php echo (($result['fiber'] / $dailyRequirements[0]['fiber']) * 100); ?>%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="<?php echo $dailyRequirements[0]['fiber']; ?>"></div>
                                                 </div>
                                             </td>
+                                            <td><?php echo (($result['fiber'] / $dailyRequirements[0]['fiber']) * 100); ?>%</td>
                                             <td>25</td>
                                         </tr>
                                         <tr>
