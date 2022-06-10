@@ -239,9 +239,14 @@
                                             <td>25</td>
                                         </tr>
                                         <tr>
-                                            <td>one</td>
-                                            <td>two</td>
-                                            <td>three</td>
+                                            <td>Fiber</td>
+                                            <td>
+                                                <div class="progress">
+                                                    <div class="progress-bar progress-bar-striped" role="progressbar" style="width:<?php echo ((($result['fiber']*$result['quantity']) / $dailyRequirements[0]['fiber'])); ?>%"></div>
+                                                </div>
+                                            </td>
+                                            <td><?php echo ((($result['fiber']*$result['quantity']) / $dailyRequirements[0]['fiber'])); ?>%</td>
+                                            <td><?php echo $dailyRequirements[0]['fiber']; ?></td>
                                         </tr>
                                     </table>
                             </div> 
