@@ -212,15 +212,6 @@
                                     $dailyRequirements = $daily->Find_by_id("Daily_Requirement", 1, 1);
 
                                 ?>
-
-                                <?php
-
-                                echo $result['fiber']."</br>";
-                                echo $dailyRequirements[0]['fiber']."</br>";
-
-                                 echo (($result['fiber'] / $dailyRequirements[0]['fiber']) * 100) ;
-                                 
-                                 ?>
                                     <table class='table table-condensed table-striped text-center' id="informations">
                                         <thead>
                                             <td style="font-size: 20px;">Name</td>
