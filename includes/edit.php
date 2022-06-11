@@ -60,6 +60,13 @@ if(isset($_POST['Update'])){
 
 }
 
+if(isset($_POST['Calculator_edit_product_quantity'])){
+
+    echo $_POST['id'];
+    die();
+
+}
+
 
 
 ?>
