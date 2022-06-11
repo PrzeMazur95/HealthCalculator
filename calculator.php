@@ -344,7 +344,7 @@
 
                     $.post("includes/edit.php", {id: id, Calculator_edit_product_quantity:table}, function(data){
 
-                        alert(data);
+                        $(".edit_quantity").html(data);
 
                     });
 
