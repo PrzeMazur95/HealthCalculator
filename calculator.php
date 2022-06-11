@@ -171,7 +171,7 @@
                                             <td class="text-center"><?php echo $result['quantity']; ?></td>
                                             <td class="text-center"><?php echo ($result['kcal'] * $result['quantity']); ?></td>  
                                             <td class="text-center">
-                                                <a href="includes/edit.php?id=<?php echo $result['id']; ?>&table=Calculator&action=edit&userid=<?php echo $_SESSION['userid'] ?>" class="btn btn-primary btn-sm" id="edit">Edit</a>
+                                                <a href="includes/edit.php?id=<?php echo $result['id']; ?>&table=Calculator&action=edit&userid=<?php echo $_SESSION['userid'] ?>" class="btn btn-primary btn-sm edit_btn" id="edit_btn">Edit</a>
                                                 <a href="includes/delete.php?id=<?php echo $result['id']; ?>&table=Calculator&userid=<?php echo $_SESSION['userid'] ?>" class="btn btn-danger btn-sm" onclick="return confirm('Are you sure, you want to delete this meal?')">Delete</a>
                                             </td>
                                                 
@@ -262,6 +262,7 @@
                 $('#info').hide();
                 $('#add_button').hide();
                 $('#informations').hide();
+                $('.edit').hide();
 
                 $('#product').keyup(function(){
 
@@ -327,10 +328,10 @@
                     }
                 });
 
-                $("#edit").on('click', function (evt) {
+                $(".edit_btn").on('click', function(evt) {
 
                     evt.preventDefault();
-                    console.log("click");
+                    $('.edit').show();
 
                 })
 
