@@ -339,7 +339,14 @@
                     evt.preventDefault();
                     $('.edit').show();
                     var id = $(this).attr("rel");
-                    alert(id);
+                    var table = "Calculator";
+                    
+
+                    $.post("includes/edit.php", {id: id, Calculator_edit_product_quantity:table}, function(data){
+
+                        alert(data);
+
+                    });
 
                 })
 
