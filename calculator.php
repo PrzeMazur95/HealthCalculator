@@ -178,6 +178,12 @@
                                         </tr>
 
                                         <?php }} ?>
+                                        <tr class="edit">
+                                            <td>x</td>
+                                            <td class="edit_quantity">x</td>
+                                            <td>x</td>
+                                            <td>x</td>
+                                        </tr>
                                     </tbody>
                                 </table>
 
