@@ -25,6 +25,23 @@ class DbObjectController extends DbObject {
 
     }
 
+    public function EditDbRow($table, $id){
+
+        $data = array($table, $id);
+
+        if($this->CheckIsEmpty($data)){
+
+            echo "it works";
+            die;
+
+        } else {
+
+            echo "There were no informations";
+            die();
+
+        }
+
+    }
 
     public function CheckIsEmpty($data){
 
