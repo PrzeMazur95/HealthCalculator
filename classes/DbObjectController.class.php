@@ -25,12 +25,24 @@ class DbObjectController extends DbObject {
 
     }
 
-    public function EditDbRow(){
 
+    public function CheckIsEmpty($data){
 
+        foreach ($data as $date) {
+
+            if(empty($date)){
+
+                return false;
+
+            } else {
+
+                return true;
+
+            }
+
+        }
 
     }
-
 }
     
 
