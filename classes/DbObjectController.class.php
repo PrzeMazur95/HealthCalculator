@@ -25,6 +25,12 @@ class DbObjectController extends DbObject {
 
     }
 
+    public function EditDbRow(){
+
+
+
+    }
+
 }
     
 
