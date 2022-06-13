@@ -332,8 +332,23 @@
 
                     $("#datatablesSimple > tbody:last-child").append("<tr class='edit' id='edit'><td>x</td><td class='edit_quantity'>x</td><td>x</td><td>x</td></tr>");
 
+                    var $this = $(".edit");
+
                     evt.preventDefault();
+                    // $('.edit').show();
                     $('.edit').show();
+
+                        if ($this.hasClass("clicked")) {
+                            // already been clicked once, hide it
+                            $this.remove();
+                            // $this.hide();
+                            $this.removeClass("clicked");
+                        }
+                        else {
+                            // first time this is clicked, mark it
+                            $this.addClass("clicked");
+                        }
+
                     var id = $(this).attr("rel");
                     var table = "Calculator";
                     
