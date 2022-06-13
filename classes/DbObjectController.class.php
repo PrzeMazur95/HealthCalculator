@@ -25,15 +25,26 @@ class DbObjectController extends DbObject {
 
     }
 
-    public function EditDbRow($table, $id){
+    public function EditDbRow($table, $id, $user_id){
 
-        $data = array($table, $id);
+        $data = array($table, $id, $user_id);
 
         if($this->CheckIsEmpty($data)){
 
             $clearData = $this->ClearData($data);
-            print_r($clearData);
-            die();
+            $result = $this->Find_by_id_and_table($clearData[1], $clearData[0], $clearData[2]);
+            if(!$result){
+
+                echo "There is no result";
+                die;
+
+            }else{
+
+                print_r($result);
+                die;
+
+            }
+
 
 
         } else {
