@@ -31,8 +31,10 @@ class DbObjectController extends DbObject {
 
         if($this->CheckIsEmpty($data)){
 
-            echo "it works";
-            die;
+            $clearData = $this->ClearData($data);
+            print_r($clearData);
+            die();
+
 
         } else {
 
@@ -63,7 +65,15 @@ class DbObjectController extends DbObject {
 
     public function ClearData($data){
 
-        
+        $clearData = array();
+
+        foreach ($data as $date){
+
+            $clearData[] = trim(htmlspecialchars($date));
+
+        }
+
+        return $clearData;
 
     }
 }
