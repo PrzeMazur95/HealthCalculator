@@ -60,6 +60,12 @@ class DbObjectController extends DbObject {
         }
 
     }
+
+    public function ClearData($data){
+
+        
+
+    }
 }
     
 
