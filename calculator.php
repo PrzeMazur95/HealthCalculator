@@ -330,7 +330,7 @@
 
                 $(".edit_btn").on('click', function(evt) {
 
-                    $("#datatablesSimple > tbody:last-child").append("<tr class='edit'><td>x</td><td class='edit_quantity'>x</td><td>x</td><td>x</td></tr>");
+                    $("#datatablesSimple > tbody:last-child").append("<tr class='edit' id='edit'><td>x</td><td class='edit_quantity'>x</td><td>x</td><td>x</td></tr>");
 
                     evt.preventDefault();
                     $('.edit').show();
