@@ -221,6 +221,21 @@
                                             <td style="font-size: 20px;">%</td>
                                             <td style="font-size: 20px;">Requirements</td>
                                         </thead>
+
+                                        <?php 
+                                        
+                                        // print_r($result);
+                                        // die();
+                                        $informations = array('protein', 'sugar','animal_protein','vegetable_protein',
+                                        'saturated_fat','monounsaturated_fat','polyunsaturated_fat','protein','protein','omega3_acid',
+                                        'omega6_acid','net_carbohydrates','fiber','salt','cholesterol','witamin_k',
+                                        'witamin_a','witamin_b1','witamin_b2','witamin_b5','witamin_b6','biotin',
+                                        'folic_acid','witamin_b12','witamin_c','witamin_d','witamin_e','witamin_pp',
+                                        'calcium','chlorine','magnesium','phosphorus','potassium','sodium',
+                                        'iron','zinc','copper','manganese','molybdenum','iodine',
+                                        'fluorine','chrome','selenium');
+                                        
+                                        ?>
                                         <tr>
                                             <td>Fiber</td>
                                             <td>
