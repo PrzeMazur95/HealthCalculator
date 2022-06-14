@@ -36,12 +36,12 @@ class DbObjectController extends DbObject {
             if(!$result){
 
                 echo "There is no result";
-                die;
+                die();
 
             }else{
 
-                print_r($result);
-                die;
+                return $result;
+                die();
 
             }
 
