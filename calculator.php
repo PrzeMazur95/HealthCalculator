@@ -152,6 +152,8 @@
 
                                 $result = new CalculatorView();
                                 $results = $result->showDailyUserResults($datte, $_SESSION['userid']);
+
+                                if($results){
                                 ?>
                                 <table id="datatablesSimple">
                                     <thead>
@@ -240,6 +242,7 @@
                                             <td><?php echo $dailyRequirements[0]['fiber']; ?></td>
                                         </tr>
                                     </table>
+                                    <?php } ?>
                             </div> 
                         </div>
                 </main>
@@ -355,7 +358,10 @@
 
                     $.post("includes/edit.php", {id: id, Calculator_edit_product_quantity:table}, function(data){
 
-                        $(".edit_quantity").html(data);
+                        var arrayData = $.getJSON(data);
+                        $(".edit_quantity").html(arrayData.id);
+
+                        // $(".edit_quantity").html(data);
 
                     });
 
