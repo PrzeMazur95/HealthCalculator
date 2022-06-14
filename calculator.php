@@ -223,9 +223,7 @@
                                         </thead>
 
                                         <?php 
-                                        
-                                        // print_r($result);
-                                        // die();
+
                                         $informations = array('protein', 'sugar','animal_protein','vegetable_protein',
                                         'saturated_fat','monounsaturated_fat','polyunsaturated_fat','protein','protein','omega3_acid',
                                         'omega6_acid','net_carbohydrates','fiber','salt','cholesterol','witamin_k',
@@ -235,27 +233,20 @@
                                         'iron','zinc','copper','manganese','molybdenum','iodine',
                                         'fluorine','chrome','selenium');
                                         
+                                        foreach($informations as $information){
                                         ?>
                                         <tr>
-                                            <td>Fiber</td>
+                                            <td><?php echo $information; ?></td>
                                             <td>
                                                 <div class="progress">
-                                                    <div class="progress-bar progress-bar-striped" role="progressbar" style="width:<?php echo (($result['fiber'] / $dailyRequirements[0]['fiber']) * 100); ?>%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="<?php echo $dailyRequirements[0]['fiber']; ?>"></div>
+                                                    <div class="progress-bar progress-bar-striped" role="progressbar" style="width:<?php echo ((($result[$information]*$result['quantity']) / $dailyRequirements[0][$information])); ?>%"></div>
                                                 </div>
                                             </td>
-                                            <td><?php echo (($result['fiber'] / $dailyRequirements[0]['fiber']) * 100); ?>%</td>
-                                            <td>25</td>
+                                            <td><?php echo ((($result[$information]*$result['quantity']) / $dailyRequirements[0][$information])); ?>%</td>
+                                            <td><?php echo $dailyRequirements[0][$information]; ?></td>
                                         </tr>
-                                        <tr>
-                                            <td>Fiber</td>
-                                            <td>
-                                                <div class="progress">
-                                                    <div class="progress-bar progress-bar-striped" role="progressbar" style="width:<?php echo ((($result['fiber']*$result['quantity']) / $dailyRequirements[0]['fiber'])); ?>%"></div>
-                                                </div>
-                                            </td>
-                                            <td><?php echo ((($result['fiber']*$result['quantity']) / $dailyRequirements[0]['fiber'])); ?>%</td>
-                                            <td><?php echo $dailyRequirements[0]['fiber']; ?></td>
-                                        </tr>
+
+                                        <?php } ?>
                                     </table>
                                     <?php } ?>
                             </div> 
