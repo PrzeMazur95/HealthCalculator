@@ -226,12 +226,14 @@
 
                                         $informations = array('protein', 'sugar','animal_protein','vegetable_protein',
                                         'saturated_fat','monounsaturated_fat','polyunsaturated_fat','protein','protein','omega3_acid',
-                                        'omega6_acid','net_carbohydrates','fiber','salt','cholesterol','witamin_k',
+                                        'omega6_acid','fiber','salt','cholesterol','witamin_k',
                                         'witamin_a','witamin_b1','witamin_b2','witamin_b5','witamin_b6','biotin',
                                         'folic_acid','witamin_b12','witamin_c','witamin_d','witamin_e','witamin_pp',
                                         'calcium','chlorine','magnesium','phosphorus','potassium','sodium',
                                         'iron','zinc','copper','manganese','molybdenum','iodine',
                                         'fluorine','chrome','selenium');
+
+                                        //here we have also 'net_carbohydrates' to show. 
                                         
                                         foreach($informations as $information){
                                         ?>
