@@ -242,7 +242,7 @@
                                                     <div class="progress-bar progress-bar-striped" role="progressbar" style="width:<?php echo ((($result[$information]*$result['quantity']) / $dailyRequirements[0][$information])); ?>%"></div>
                                                 </div>
                                             </td>
-                                            <td><?php echo ((($result[$information]*$result['quantity']) / $dailyRequirements[0][$information])); ?>%</td>
+                                            <td><?php echo (floor((($result[$information]*$result['quantity']) / $dailyRequirements[0][$information]))); ?>%</td>
                                             <td><?php echo $dailyRequirements[0][$information]; ?></td>
                                         </tr>
 
