@@ -63,8 +63,9 @@ if(isset($_POST['Update'])){
 if(isset($_POST['Calculator_edit_product_quantity'])){
 
     $edit = new DbObjectController();
-    $edit->EditDbRow($_POST['id'], $_POST['Calculator_edit_product_quantity'], $_SESSION['userid']);
-
+    $editResult = $edit->EditDbRow($_POST['id'], $_POST['Calculator_edit_product_quantity'], $_SESSION['userid']);
+    print_r($editResult[0]['quantity']);
+    die();
 }
 
 
