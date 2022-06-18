@@ -341,7 +341,7 @@
 
                 $(".edit_btn").on('click', function(evt) {
 
-                    $("#datatablesSimple > tbody:last-child").append("<tr class='edit' id='edit'><td>x</td><td class='edit_quantity'>x</td><td>x</td><td>x</td></tr>");
+                    $("#datatablesSimple > tbody:last-child").append("<tr class='edit text-center' id='edit'><td>x</td><td class='edit_quantity'>x</td><td>x</td><td>x</td></tr>");
 
                     var $this = $(".edit");
 
@@ -366,10 +366,7 @@
 
                     $.post("includes/edit.php", {id: id, Calculator_edit_product_quantity:table}, function(data){
 
-                        var arrayData = $.getJSON(data);
-                        $(".edit_quantity").html(arrayData.id);
-
-                        // $(".edit_quantity").html(data);
+                        $(".edit_quantity").html(data);
 
                     });
 
