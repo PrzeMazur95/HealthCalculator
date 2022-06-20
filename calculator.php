@@ -341,7 +341,7 @@
 
                 $(".edit_btn").on('click', function(evt) {
 
-                    $("#datatablesSimple > tbody:last-child").append("<tr class='edit text-center' id='edit'><td>x</td><td class='edit_quantity'>x</td><td>x</td><td>x</td></tr>");
+                    $("#datatablesSimple > tbody:last-child").append("<tr class='edit text-center' id='edit'><td>x</td><td class='edit_quantity'>x</td><td>x</td><td><button type='submit' class='btn btn-success btn-sm' id='add_button'>Update!</button></td></tr>");
 
                     var $this = $(".edit");
 
