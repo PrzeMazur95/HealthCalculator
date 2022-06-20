@@ -173,7 +173,7 @@
                                             <td class="text-center"><?php echo $result['quantity']; ?></td>
                                             <td class="text-center"><?php echo ($result['kcal'] * $result['quantity']); ?></td>  
                                             <td class="text-center">
-                                                <a rel= "<?php echo $result['id']; ?>" href="includes/edit.php?id=<?php echo $result['id']; ?>&table=Calculator&action=edit&userid=<?php echo $_SESSION['userid'] ?>" class="btn btn-primary btn-sm edit_btn" id="edit_btn">Edit</a>
+                                                <a name="<?php echo $result['name']?>" rel= "<?php echo $result['id']; ?>" href="includes/edit.php?id=<?php echo $result['id']; ?>&table=Calculator&action=edit&userid=<?php echo $_SESSION['userid'] ?>" class="btn btn-primary btn-sm edit_btn" id="edit_btn">Edit</a>
                                                 <a href="includes/delete.php?id=<?php echo $result['id']; ?>&table=Calculator&userid=<?php echo $_SESSION['userid'] ?>" class="btn btn-danger btn-sm" onclick="return confirm('Are you sure, you want to delete this meal?')">Delete</a>
                                             </td>
                                                 
@@ -341,7 +341,7 @@
 
                 $(".edit_btn").on('click', function(evt) {
 
-                    $("#datatablesSimple > tbody:last-child").append("<tr class='edit text-center' id='edit'><td>x</td><td class='edit_quantity' id='new_quantity' contenteditable='true'>x</td><td>x</td><td><button type='submit' class='btn btn-success btn-sm' id='update_quantity_button'>Update!</button></td></tr>");
+                    $("#datatablesSimple > tbody:last-child").append("<tr class='edit text-center' id='edit'><td id='edited_product_name'></td><td class='edit_quantity' id='new_quantity' contenteditable='true'>x</td><td>Enter the new quantity on the left</td><td><button type='submit' class='btn btn-success btn-sm' id='update_quantity_button'>Update!</button></td></tr>");
 
                     var $this = $(".edit");
 
@@ -362,6 +362,9 @@
 
                     var id = $(this).attr("rel");
                     var table = "Calculator";
+                    var name = $(this).attr("name");
+
+                    $("#edited_product_name").html(name);
                     
 
                     $.post("includes/edit.php", {id: id, Calculator_edit_product_quantity:table}, function(data){
