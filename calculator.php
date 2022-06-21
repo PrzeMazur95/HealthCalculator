@@ -341,11 +341,14 @@
 
                 $(".edit_btn").on('click', function(evt) {
 
+                    var $this = $(".edit");
+                    var id = $(this).attr("rel");
+
                     // $("#datatablesSimple > tbody:last-child").append("<tr class='edit text-center' id='edit'><form action='includes/edit.php' id='update_quantity_form' method='POST'></form><td id='edited_product_name'></td><td class='edit_quantity' name='new_quantity' form='update_quantity_form' contenteditable='true'>x</td><td>Enter the new quantity on the left</td><td><button type='submit' class='btn btn-success btn-sm' name='update_quantity_button' form='update_quantity_form'>Update!</button></td></tr>");
                     // $("#datatablesSimple > tbody:last-child").append("<tr class='edit text-center' id='edit'></form><td id='edited_product_name'></td><td><form class='form-group' action='includes/edit.php' id='update_quantity_form' method='POST'><input type='text' name='new_quantity'></form></td><td>Enter the new quantity on the left</td><td><button type='submit' class='btn btn-success btn-sm' name='update_quantity_button' form='update_quantity_form'>Update!</button></td></tr>");
                     $("#datatablesSimple > tbody:last-child").append("<tr class='edit text-center' id='edit'></form><td id='edited_product_name'></td><td colspan='2' class='text-center'><form action='includes/edit.php' id='update_quantity_form' method='POST'><div class='form-group text-center'><label for='new_quantity'>Type here new quantity</label><input type='text' name='new_quantity'><input type='hidden' id='product_id' name='product_id'></div></form></td><td><button type='submit' class='btn btn-success btn-sm' name='update_quantity_button' form='update_quantity_form'>Update!</button></td></tr>");
 
-                    var $this = $(".edit");
+                    $('#product_id').val(id);
 
                     evt.preventDefault();
                     // $('.edit').show();
@@ -362,7 +365,7 @@
                             $this.addClass("clicked");
                         }
 
-                    var id = $(this).attr("rel");
+                    
                     var table = "Calculator";
                     var name = $(this).attr("name");
 
