@@ -68,6 +68,13 @@ if(isset($_POST['Calculator_edit_product_quantity'])){
     die();
 }
 
+if(isset($_POST['update_quantity_button'])){
+
+print_r($_POST);
+die();
+
+}
+
 
 
 ?>
