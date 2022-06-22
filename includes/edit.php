@@ -60,20 +60,22 @@ if(isset($_POST['Update'])){
 
 }
 
-if(isset($_POST['Calculator_edit_product_quantity'])){
+// cut and paste to edit_calculator.php
 
-    $edit = new DbObjectController();
-    $editResult = $edit->EditDbRow($_POST['id'], $_POST['Calculator_edit_product_quantity'], $_SESSION['userid']);
-    print_r($editResult[0]['quantity']);
-    die();
-}
+// if(isset($_POST['Calculator_edit_product_quantity'])){
 
-if(isset($_POST['update_quantity_button'])){
+//     $edit = new DbObjectController();
+//     $editResult = $edit->EditDbRow($_POST['id'], $_POST['Calculator_edit_product_quantity'], $_SESSION['userid']);
+//     print_r($editResult[0]['quantity']);
+//     die();
+// }
 
-print_r($_POST);
-die();
+// if(isset($_POST['update_quantity_button'])){
 
-}
+// print_r($_POST);
+// die();
+
+// }
 
 
 
