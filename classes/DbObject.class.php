@@ -75,6 +75,12 @@ class DbObject extends Dbh {
         }
 
     }  
+
+    protected function UpdateDbCell($table, $column, $value, $id){
+
+
+
+    }
         
 
 }
