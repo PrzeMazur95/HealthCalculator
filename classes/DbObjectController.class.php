@@ -87,6 +87,12 @@ class DbObjectController extends DbObject {
         return $clearData;
 
     }
+
+    public function UpdateOneDbCell($table, $column, $value, $id){
+
+
+
+    }
 }
     
 
