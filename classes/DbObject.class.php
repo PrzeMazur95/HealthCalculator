@@ -78,7 +78,23 @@ class DbObject extends Dbh {
 
     protected function UpdateDbCell($table, $column, $value, $id){
 
+        $stmt = $this->connect()->prepare("UPDATE ? SET ? = ? WHERE id = ?");
 
+        $result = $stmt->execeute([$table, $column, $value, $id]);
+
+        if(!$result){
+
+            return false;
+            $stmt=null;
+            exit();
+
+        }else{
+
+            return true;
+            $stmt=null;
+            exit();
+
+        }
 
     }
         
