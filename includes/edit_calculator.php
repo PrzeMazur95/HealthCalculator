@@ -20,8 +20,14 @@ if(isset($_POST['Calculator_edit_product_quantity'])){
 
 if(isset($_POST['update_quantity_button'])){
 
-print_r($_POST);
-die();
+    $newQuantity = $_POST['new_quantity'];
+    $productId = $_POST['product_id'];
+
+    echo $newQuantity;
+    echo $productId;
+    die();
+// print_r($_POST);
+// die();
 
 }
 
